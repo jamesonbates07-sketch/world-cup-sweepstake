@@ -399,8 +399,9 @@ function renderMatches(matches) {
   const upcomingEmpty = document.getElementById('upcoming-empty');
   if (!liveContainer || !upcomingContainer) return;
   const live = matches.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED' || m.status === 'HALFTIME');
-  const recent = matches.filter(m => m.status === 'FINISHED').sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate)).slice(0, 8);
-  const upcoming = matches.filter(m => m.status === 'SCHEDULED' || m.status === 'TIMED').sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 12);
+  // Recent: show the last 20 finished matches. Upcoming: show ALL remaining fixtures.
+  const recent = matches.filter(m => m.status === 'FINISHED').sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate)).slice(0, 20);
+  const upcoming = matches.filter(m => m.status === 'SCHEDULED' || m.status === 'TIMED').sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
   const liveAndRecent = [...live, ...recent];
   liveEmpty.style.display = liveAndRecent.length ? 'none' : 'block';
   upcomingEmpty.style.display = upcoming.length ? 'none' : 'block';
