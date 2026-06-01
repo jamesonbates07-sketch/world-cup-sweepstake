@@ -1,0 +1,14 @@
+{
+  "name": "world-cup-sweepstake-updater",
+  "version": "1.0.0",
+  "description": "Script to update World Cup sweepstake results",
+  "main": "update-results.js",
+  "scripts": {
+    "update": "node update-results.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
