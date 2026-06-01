@@ -152,6 +152,16 @@ function knockoutWinner(match) {
   return null;
 }
 
+// The score that decides win/draw/loss points. Per the rules, a win in 90 mins
+// OR extra time = 3 pts, so use the extra-time score when a match went to ET.
+// A penalty shootout means it was level through ET, so it counts as a DRAW
+// (1 pt each) — the shootout winner is rewarded separately via the knockout bonus.
+function resultScore(match) {
+  const s = match.score || {};
+  if (Array.isArray(s.et) && s.et.length >= 2) return [num(s.et[0]), num(s.et[1])];
+  return [num(s.ft[0]), num(s.ft[1])];
+}
+
 // Pure computation — takes raw openfootball matches, returns the results payload.
 // Exported so it can be unit-tested without any network access.
 function computeResults(rawMatches) {
@@ -162,12 +172,12 @@ function computeResults(rawMatches) {
   const goals = {};
   PARTICIPANTS.forEach(p => { points[p.name] = 0; goals[p.name] = 0; });
 
-  // Points & goals from every played match (group + knockout full-time result).
+  // Points & goals from every played match. Uses the decisive score (extra time
+  // if the match went to ET, otherwise 90 mins) so ET wins correctly score 3 pts.
   rawMatches.filter(isPlayed).forEach(m => {
     const home = findParticipant(m.team1);
     const away = findParticipant(m.team2);
-    const hs = num(m.score.ft[0]);
-    const as = num(m.score.ft[1]);
+    const [hs, as] = resultScore(m);
     if (home) {
       goals[home.name] += hs;
       if (hs > as) points[home.name] += WIN_POINTS;
