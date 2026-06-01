@@ -204,14 +204,19 @@ function computeResults(rawMatches) {
     const played = isPlayed(m);
     const homeP = findParticipant(m.team1);
     const awayP = findParticipant(m.team2);
+    // Display the decisive score (extra time if it went to ET) so the card
+    // matches the points awarded. Penalty shootouts are flagged separately.
+    const [dispHome, dispAway] = played ? resultScore(m) : [null, null];
+    const pens = Array.isArray(m.score?.p) ? [num(m.score.p[0]), num(m.score.p[1])] : null;
     return {
       utcDate: parseUtcDate(m.date, m.time),
       status: played ? 'FINISHED' : 'SCHEDULED',
       stage: roundToStage(m.round),
       homeTeam: { name: homeP ? homeP.team : (m.team1 || 'TBD') },
       awayTeam: { name: awayP ? awayP.team : (m.team2 || 'TBD') },
+      penalties: pens,
       score: {
-        fullTime: { home: played ? num(m.score.ft[0]) : null, away: played ? num(m.score.ft[1]) : null },
+        fullTime: { home: dispHome, away: dispAway },
         halfTime: {
           home: Array.isArray(m.score?.ht) ? num(m.score.ht[0]) : null,
           away: Array.isArray(m.score?.ht) ? num(m.score.ht[1]) : null,
