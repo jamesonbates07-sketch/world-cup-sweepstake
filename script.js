@@ -422,6 +422,10 @@ function renderMatchCard(m) {
   const hs = safeInt(m.score?.fullTime?.home ?? m.score?.halfTime?.home);
   const as = safeInt(m.score?.fullTime?.away ?? m.score?.halfTime?.away);
   const scoreDisplay = (hs !== null && as !== null) ? `${hs} – ${as}` : 'vs';
+  const pens = Array.isArray(m.penalties) ? m.penalties : null;
+  const penNote = (pens && safeInt(pens[0]) !== null && safeInt(pens[1]) !== null)
+    ? `<div style="font-size:0.65rem;color:var(--text-secondary);text-align:center;margin-top:2px">pens ${safeInt(pens[0])}–${safeInt(pens[1])}</div>`
+    : '';
   const stageLabel = esc((m.stage || '').replace(/_/g, ' '));
   return `
     <div class="match-card ${isLive ? 'live' : ''}">
@@ -435,7 +439,7 @@ function renderMatchCard(m) {
           <div class="match-team-name">${esc(homeName)}</div>
           ${homeP ? `<div class="match-team-person">${esc(homeP.name)}</div>` : ''}
         </div>
-        <div class="match-score ${isLive ? 'live-score' : ''}">${scoreDisplay}</div>
+        <div><div class="match-score ${isLive ? 'live-score' : ''}">${scoreDisplay}</div>${penNote}</div>
         <div class="match-team">
           ${awayP ? `<img src="${flagUrl(awayP.code, 160)}" alt="${esc(awayName)} flag">` : `<div style="width:48px;height:32px;background:var(--glass);border-radius:4px;display:flex;align-items:center;justify-content:center">⚽</div>`}
           <div class="match-team-name">${esc(awayName)}</div>
