@@ -18,6 +18,7 @@ const PARTICIPANTS = [
   { name: 'Hayley', team: 'Mexico', code: 'mx' },
   { name: 'Holly', team: 'Algeria', code: 'dz' },
   { name: 'Jack', team: 'Belgium', code: 'be' },
+  { name: 'Jake', team: 'Qatar', code: 'qa' },
   { name: 'James G', team: 'United States', code: 'us' },
   { name: 'Jameson B', team: 'New Zealand', code: 'nz' },
   { name: 'Jonathan B', team: 'Sweden', code: 'se' },
@@ -63,8 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initScrollReveal();
   initNavbar();
+  initShare();
   fetchResults();
 });
+
+// ===== SHARE =====
+function initShare() {
+  const btn = document.getElementById('share-btn');
+  if (!btn) return;
+  btn.addEventListener('click', async () => {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast('🔗 Link copied — paste it to the group!');
+    } catch (e) {
+      showToast(url);
+    }
+  });
+}
 
 function flagUrl(code, w = 80) { return `https://flagcdn.com/w${w}/${code}.png`; }
 
@@ -376,6 +393,8 @@ async function fetchResults() {
     
     renderCards();
     renderLeaderboard();
+    renderAwards(data.awards);
+    renderStats(data.stats);
     if (Array.isArray(data.matches)) {
       renderMatches(data.matches);
     }
@@ -385,10 +404,68 @@ async function fetchResults() {
     if (lastUpdatedEl) lastUpdatedEl.textContent = 'Data will appear here once the tournament begins.';
     const summaryTextEl = document.getElementById('summary-text');
     if (summaryTextEl) summaryTextEl.textContent = 'Waiting for results...';
-    
+
     renderCards();
     renderLeaderboard();
+    renderAwards({});
+    renderStats(null);
   }
+}
+
+// ===== TOURNAMENT PULSE (live headline stats) =====
+function renderStats(stats) {
+  const bar = document.getElementById('pulse-bar');
+  if (!bar) return;
+  if (!stats || !stats.matchesPlayed) { bar.style.display = 'none'; bar.innerHTML = ''; return; }
+  const items = [];
+  items.push({ icon: '⚽', value: safeInt(stats.matchesPlayed) ?? 0, label: 'Matches Played' });
+  items.push({ icon: '🥅', value: safeInt(stats.totalGoals) ?? 0, label: 'Goals Scored' });
+  if (stats.biggestWin && stats.biggestWin.winner) {
+    items.push({ icon: '💥', value: esc(stats.biggestWin.score || ''), label: `Biggest Win · ${esc(stats.biggestWin.winner)}` });
+  }
+  if (stats.goldenBoot && stats.goldenBoot.holder) {
+    items.push({ icon: '👟', value: esc(stats.goldenBoot.holder), label: `Golden Boot · ${esc(stats.goldenBoot.team)} (${safeInt(stats.goldenBoot.goals) ?? 0})` });
+  }
+  bar.style.display = 'flex';
+  bar.innerHTML = items.map(i => `
+    <div class="pulse-item">
+      <div class="pulse-icon">${i.icon}</div>
+      <div class="pulse-value">${i.value}</div>
+      <div class="pulse-label">${i.label}</div>
+    </div>`).join('');
+}
+
+// ===== AWARDS (booby prizes) =====
+const AWARDS = [
+  { key: 'rustySpoon',            emoji: '🥄', title: 'Rusty Spoon',          rule: 'Fewest points & worst goal difference' },
+  { key: 'swissCheese',           emoji: '🧀', title: 'Swiss Cheese Trophy',  rule: 'Most goals conceded in a single game' },
+  { key: 'penaltyPain',           emoji: '😖', title: 'Penalty Pain Trophy',  rule: 'First team eliminated on penalties' },
+  { key: 'blankSheet',            emoji: '⬜', title: 'Blank Sheet Award',    rule: 'Fewest goals scored' },
+  { key: 'biggestDisappointment', emoji: '📉', title: 'Biggest Disappointment', rule: 'Highest-ranked team knocked out earliest' },
+  { key: 'unluckiest',            emoji: '🍀', title: 'Unluckiest Team',      rule: 'Most points without progressing' },
+];
+
+function renderAwards(awards) {
+  const grid = document.getElementById('awards-grid');
+  if (!grid) return;
+  awards = (awards && typeof awards === 'object') ? awards : {};
+  grid.innerHTML = AWARDS.map(a => {
+    const w = awards[a.key];
+    const body = (w && w.holder)
+      ? `<div class="award-holder">
+           <div class="award-name">${esc(w.holder)}</div>
+           <div class="award-team">${esc(w.team || '')}</div>
+           <div class="award-detail">${esc(w.detail || '')}</div>
+         </div>`
+      : `<div class="award-pending">Yet to be decided</div>`;
+    return `
+      <div class="award-card${(w && w.holder) ? '' : ' award-open'}">
+        <div class="award-emoji">${a.emoji}</div>
+        <div class="award-title">${esc(a.title)}</div>
+        <div class="award-rule">${esc(a.rule)}</div>
+        ${body}
+      </div>`;
+  }).join('');
 }
 
 function renderMatches(matches) {

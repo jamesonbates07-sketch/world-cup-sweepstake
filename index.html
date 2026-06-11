@@ -18,6 +18,7 @@
     <div class="nav-logo">🏆 <span>SWEEPSTAKE 2026</span></div>
     <ul class="nav-links">
       <li><a href="#leaderboard-section">Leaderboard</a></li>
+      <li><a href="#awards-section">Prizes</a></li>
       <li><a href="#draw-section">The Draw</a></li>
       <li><a href="#matches-section">Matches</a></li>
     </ul>
@@ -32,6 +33,7 @@
       <h1 class="hero-title">World Cup Sweepstake</h1>
       <p class="hero-subtitle"><span>USA</span> • <span>Mexico</span> • <span>Canada</span></p>
       <div id="countdown-container"></div>
+      <button class="share-btn" id="share-btn">🔗 Copy link to share</button>
     </div>
   </header>
 
@@ -40,12 +42,12 @@
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-icon">👥</div>
-        <div class="stat-value" id="stat-players">47</div>
+        <div class="stat-value" id="stat-players">48</div>
         <div class="stat-label">Players</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">🌍</div>
-        <div class="stat-value" id="stat-teams">47</div>
+        <div class="stat-value" id="stat-teams">48</div>
         <div class="stat-label">Teams</div>
       </div>
       <div class="stat-card">
@@ -55,6 +57,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Tournament Pulse (auto-populates once matches begin) -->
+  <div id="pulse-bar" class="pulse-bar" style="display:none"></div>
 
   <!-- Spotlight -->
   <section class="section" id="spotlight-section">
@@ -87,8 +92,9 @@
       </div>
       <div class="bonus-rules">
         <strong>Knockout Stage Bonuses:</strong> Round of 32 (+3), Last 16 (+5), Quarters (+10), Semis (+15), Final Win (+20)<br>
-        <strong>Entry:</strong> £2 per player to enter — winner takes the glory (and the pot).
+        <strong>Entry:</strong> £2 per player — winner takes the glory (and the £96 pot).
       </div>
+      <div class="sepp-seal">✔️ Drawn under the personal supervision of Sepp Blatter — Seal of Fairness™</div>
     </div>
   </section>
 
@@ -106,11 +112,22 @@
     <div class="leaderboard-list" id="leaderboard-list"></div>
   </section>
 
+  <!-- Booby Prizes / Awards -->
+  <section class="section reveal" id="awards-section">
+    <div class="section-header">
+      <h2 class="section-title">Booby Prizes</h2>
+      <p class="section-subtitle">Consolation glory for the unlucky — Sepp-approved 🏆</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="awards-grid" id="awards-grid"></div>
+    <p class="awards-note">Updated daily alongside the results. Some prizes stay open until the knockouts begin.</p>
+  </section>
+
   <!-- The Draw -->
   <section class="section reveal" id="draw-section">
     <div class="section-header">
       <h2 class="section-title">The Draw</h2>
-      <p class="section-subtitle">47 brave souls and the nations they ride with</p>
+      <p class="section-subtitle">48 brave souls and the nations they ride with</p>
       <div class="section-divider"></div>
     </div>
     <div class="controls">
