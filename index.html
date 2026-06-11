@@ -25,9 +25,9 @@
     <div class="nav-logo">🏆 <span>SWEEPSTAKE 2026</span></div>
     <ul class="nav-links">
       <li><a href="#leaderboard-section">Leaderboard</a></li>
+      <li><a href="#tournament-section">Tournament</a></li>
       <li><a href="#awards-section">Hall of Shame</a></li>
       <li><a href="#draw-section">The Draw</a></li>
-      <li><a href="#tournament-section">Tournament</a></li>
       <li><a href="#matches-section">Matches</a></li>
     </ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
@@ -123,6 +123,21 @@
     <div class="leaderboard-list" id="leaderboard-list"></div>
   </section>
 
+  <!-- Tournament: Groups & Bracket -->
+  <section class="section reveal" id="tournament-section">
+    <div class="section-header">
+      <h2 class="section-title">The Tournament</h2>
+      <p class="section-subtitle">Live group tables now — the bracket unlocks at the knockouts</p>
+      <div class="section-divider"></div>
+    </div>
+    <div id="groups-wrap" class="groups-wrap"></div>
+    <div id="bracket-wrap" class="bracket-wrap"></div>
+    <div class="empty-state" id="tournament-empty">
+      <div class="emoji">🗓️</div>
+      <p>Group tables fill in as the fixtures load and matches kick off.</p>
+    </div>
+  </section>
+
   <!-- Booby Prizes / Awards -->
   <section class="section reveal" id="awards-section">
     <div class="section-header">
@@ -154,21 +169,6 @@
     </div>
     <div class="cards-grid" id="cards-grid"></div>
     <div class="no-results" id="no-results" style="display:none">No matches found 😕</div>
-  </section>
-
-  <!-- Tournament: Groups & Bracket -->
-  <section class="section reveal" id="tournament-section">
-    <div class="section-header">
-      <h2 class="section-title">The Tournament</h2>
-      <p class="section-subtitle">Live group tables now — the bracket unlocks at the knockouts</p>
-      <div class="section-divider"></div>
-    </div>
-    <div id="groups-wrap" class="groups-wrap"></div>
-    <div id="bracket-wrap" class="bracket-wrap"></div>
-    <div class="empty-state" id="tournament-empty">
-      <div class="emoji">🗓️</div>
-      <p>Group tables fill in as the fixtures load and matches kick off.</p>
-    </div>
   </section>
 
   <!-- Matches -->
