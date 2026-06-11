@@ -227,14 +227,11 @@ function getSortedParticipants() {
 function renderCards() {
   const grid = document.getElementById('cards-grid');
   const sorted = getSortedParticipants();
-  const ranked = [...PARTICIPANTS].sort((a, b) => getPoints(b.name) - getPoints(a.name));
   const awaiting = computeAwaitingPlayoff(state.matchResults);
   document.getElementById('no-results').style.display = sorted.length ? 'none' : 'block';
   grid.innerHTML = sorted.map((p, i) => {
-    const rank = ranked.findIndex(r => r.name === p.name) + 1;
     const pts = getPoints(p.name);
     const goals = getGoals(p.name);
-    const rankClass = rank === 1 ? 'top-1' : rank === 2 ? 'top-2' : rank === 3 ? 'top-3' : '';
     const wait = awaiting.has(p.name);
     const isMe = getMe() === p.name;
     return `
@@ -243,7 +240,6 @@ function renderCards() {
         <div class="card-glow"></div>
         <div class="card-sticker-no">#${STICKER_NO[p.name] || '00'}</div>
         ${isMe ? '<div class="card-you">YOU</div>' : ''}
-        <div class="card-rank ${rankClass}">#${rank}</div>
         <img class="card-flag" src="${flagUrl(p.code, 160)}" alt="${esc(p.team)} flag" loading="lazy" onerror="this.style.display='none'">
         <div class="card-person">${esc(p.name)}</div>
         <div class="card-team">${esc(p.team)}</div>
