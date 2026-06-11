@@ -617,12 +617,13 @@ a { color: inherit; text-decoration: none; }
   background: var(--grad-foil); background-size: 250% 250%;
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
-  opacity: 0.5; pointer-events: none; z-index: 0; transition: opacity 0.3s;
+  opacity: 0.5; pointer-events: none; z-index: -1; transition: opacity 0.3s;
   animation: foil-shift 7s linear infinite;
 }
 @keyframes foil-shift { 0% { background-position: 0% 50%; } 100% { background-position: 250% 50%; } }
 .participant-card.sticker:hover .card-foil { opacity: 1; }
-.participant-card.sticker > *:not(.card-foil) { position: relative; z-index: 1; }
+/* foil sits behind via z-index:-1 (card is its own stacking context), so the
+   absolutely-positioned badges keep their corners — do NOT force position on children. */
 .card-sticker-no {
   position: absolute; top: 10px; left: 10px; z-index: 2; font-family: var(--font-heading);
   font-size: 0.7rem; font-weight: 800; letter-spacing: 0.5px; color: var(--text-secondary);

@@ -42,6 +42,21 @@ const TEAM_NAME_MAPPINGS = {
   "IR Iran": "Iran",
 };
 
+// The openfootball feed lists the six play-off slots as generic placeholders
+// ("UEFA Path A winner", "IC Path 1 winner", …). Those play-offs were decided on
+// 31 Mar 2026, so we map each slot to the real qualifier here. The slot→group
+// placement comes from the FIFA final draw (baked into the feed); the winners
+// come from the March 2026 play-offs. Sources: UEFA.com, FIFA.com, NBC Sports.
+// Safe to edit — if the feed is later updated with real names, these just stop matching.
+const SLOT_OVERRIDES = {
+  "UEFA Path A winner": "Bosnia and Herzegovina", // Group B
+  "UEFA Path B winner": "Sweden",                 // Group F
+  "UEFA Path C winner": "Turkey",                 // Group D
+  "UEFA Path D winner": "Czech Republic",         // Group A
+  "IC Path 1 winner": "Congo DR",                 // Group K
+  "IC Path 2 winner": "Iraq",                     // Group I
+};
+
 const PARTICIPANTS = [
   { name: 'Abi', team: 'Austria' },
   { name: 'Adrian', team: "Côte d'Ivoire" },
@@ -95,7 +110,8 @@ const PARTICIPANTS = [
 
 function canonicalTeam(name) {
   if (!name) return '';
-  return TEAM_NAME_MAPPINGS[name] || name;
+  const resolved = SLOT_OVERRIDES[name] || name; // resolve play-off placeholders first
+  return TEAM_NAME_MAPPINGS[resolved] || resolved;
 }
 
 function findParticipant(teamName) {

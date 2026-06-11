@@ -124,7 +124,7 @@ function esc(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 // Coerce a value to a safe integer for display (defends against bad score data).
-function safeInt(v) { const n = Number(v); return Number.isFinite(n) ? Math.trunc(n) : null; }
+function safeInt(v) { if (v === null || v === undefined || v === '') return null; const n = Number(v); return Number.isFinite(n) ? Math.trunc(n) : null; }
 
 function getPoints(name) { return state.points[name] || 0; }
 function getGoals(name) { return state.goals[name] || 0; }
@@ -484,6 +484,7 @@ async function fetchResults() {
     renderStats(null);
     renderChampion(null);
     renderTournament([]);
+    renderMatches([]);
     renderToday([]);
     renderRace([]);
     renderYouBar();
@@ -507,7 +508,8 @@ function renderTournament(matches) {
     const table = {};
     const ensure = (name) => { if (!table[name]) table[name] = { team: name, P: 0, GF: 0, GA: 0, Pts: 0 }; return table[name]; };
     gm.forEach(m => {
-      const h = ensure(m.homeTeam.name), a = ensure(m.awayTeam.name);
+      const hn = (m.homeTeam && m.homeTeam.name) || 'TBD', an = (m.awayTeam && m.awayTeam.name) || 'TBD';
+      const h = ensure(hn), a = ensure(an);
       const hs = m.score && m.score.fullTime ? m.score.fullTime.home : null;
       const as = m.score && m.score.fullTime ? m.score.fullTime.away : null;
       if (m.status === 'FINISHED' && hs != null && as != null) {
@@ -548,7 +550,8 @@ function renderTournament(matches) {
     const cols = presentRounds.map(([code, label]) => {
       const ms = ko.filter(m => m.stage === code).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
       const boxes = ms.map(m => {
-        const hp = findParticipant(m.homeTeam.name), ap = findParticipant(m.awayTeam.name);
+        const hn = (m.homeTeam && m.homeTeam.name) || 'TBD', an = (m.awayTeam && m.awayTeam.name) || 'TBD';
+        const hp = findParticipant(hn), ap = findParticipant(an);
         const hs = m.score && m.score.fullTime ? m.score.fullTime.home : null;
         const as = m.score && m.score.fullTime ? m.score.fullTime.away : null;
         const fin = m.status === 'FINISHED' && hs != null && as != null;
@@ -562,8 +565,8 @@ function renderTournament(matches) {
           <span class="bk-score">${score != null ? score : ''}</span>
         </div>`;
         return `<div class="bk-match">
-          ${slot(m.homeTeam.name, hp, fin ? hs : null, homeWin)}
-          ${slot(m.awayTeam.name, ap, fin ? as : null, awayWin)}
+          ${slot(hn, hp, fin ? hs : null, homeWin)}
+          ${slot(an, ap, fin ? as : null, awayWin)}
           ${pens ? `<div class="bk-pens">pens ${safeInt(pens[0])}–${safeInt(pens[1])}</div>` : ''}
         </div>`;
       }).join('');
@@ -661,8 +664,8 @@ function renderMatchCard(m) {
   const awayName = m.awayTeam?.name || 'TBD';
   const homeP = findParticipant(m.homeTeam?.name);
   const awayP = findParticipant(m.awayTeam?.name);
-  const hs = safeInt(m.score?.fullTime?.home ?? m.score?.halfTime?.home);
-  const as = safeInt(m.score?.fullTime?.away ?? m.score?.halfTime?.away);
+  const hs = safeInt(m.score?.fullTime?.home ?? (isLive ? m.score?.halfTime?.home : null));
+  const as = safeInt(m.score?.fullTime?.away ?? (isLive ? m.score?.halfTime?.away : null));
   const scoreDisplay = (hs !== null && as !== null) ? `${hs} – ${as}` : 'vs';
   const pens = Array.isArray(m.penalties) ? m.penalties : null;
   const penNote = (pens && safeInt(pens[0]) !== null && safeInt(pens[1]) !== null)
@@ -787,7 +790,7 @@ function renderMomentum(history) {
   const wrap = document.getElementById('momentum-wrap');
   if (!wrap) return;
   history = Array.isArray(history) ? history.slice().sort((a, b) => String(a.date).localeCompare(String(b.date))) : [];
-  const anyPoints = history.some(s => Object.values(s.points).some(v => Number(v) > 0));
+  const anyPoints = history.some(s => Object.values(s.points || {}).some(v => Number(v) > 0));
   if (!history.length || !anyPoints) { wrap.style.display = 'none'; return; }
   wrap.style.display = 'block';
 
@@ -831,6 +834,9 @@ function renderMomentum(history) {
     borderColor: palette[i % palette.length], backgroundColor: 'transparent',
     borderWidth: 2.5, tension: 0.3, pointRadius: history.length === 1 ? 4 : 2, pointHoverRadius: 5,
   }));
+  const sig = JSON.stringify({ labels, d: datasets.map(ds => ds.data) });
+  if (window.__momentumSig === sig && trendChart) return; // data unchanged — skip the costly rebuild/animation
+  window.__momentumSig = sig;
   if (trendChart) { trendChart.destroy(); trendChart = null; }
   trendChart = new Chart(canvas.getContext('2d'), {
     type: 'line',
@@ -931,7 +937,7 @@ function renderRace(matches) {
       : r.status === 'playoff' ? '<span class="rc-chip rc-playoff">🎟️ Playoff</span>'
       : '<span class="rc-chip rc-out">❌ Out</span>';
     const ceilingPct = r.bestCase != null ? Math.round((r.bestCase / maxCeiling) * 100) : 0;
-    const nowPct = r.bestCase ? Math.round((r.cur / maxCeiling) * 100) : 0;
+    const nowPct = maxCeiling ? Math.round((r.cur / maxCeiling) * 100) : 0;
     const nextTxt = r.next ? `${esc(shortTeam(r.next.homeTeam && r.next.homeTeam.name))} v ${esc(shortTeam(r.next.awayTeam && r.next.awayTeam.name))} · ${new Date(r.next.utcDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}` : (r.status === 'playoff' ? 'Playoff pending' : '—');
     const isMe = getMe() === r.p.name;
     return `<div class="rc-row rc-${r.status}${isMe ? ' is-me' : ''}" data-name="${esc(r.p.name)}" role="button" tabindex="0">
@@ -1066,6 +1072,7 @@ function getMe() {
 function setMe(name) {
   try { localStorage.setItem('sweepstake_me', name); } catch (e) {}
   window.__me = name;
+  window.__youBarHidden = false;
   updateMeButton(); renderCards(); renderLeaderboard(); renderRace(state.matchResults); renderYouBar();
 }
 function clearMe() {
@@ -1230,6 +1237,7 @@ function renderYouBar() {
   const me = getMe();
   const p = me ? PARTICIPANTS.find(x => x.name === me) : null;
   if (!p) { bar.style.display = 'none'; bar.innerHTML = ''; return; }
+  if (window.__youBarHidden) { bar.style.display = 'none'; return; } // user dismissed it this session
   const ranked = [...PARTICIPANTS].sort((a, b) => getPoints(b.name) - getPoints(a.name) || getGoals(b.name) - getGoals(a.name));
   const rank = ranked.findIndex(r => r.name === me) + 1;
   const raceRow = computeRace(state.matchResults || []).find(r => r.p.name === me);
@@ -1247,7 +1255,7 @@ function renderYouBar() {
     <button class="yb-view" id="yb-view">View</button>
     <button class="yb-x" id="yb-x" aria-label="Hide your status bar">✕</button>`;
   const v = document.getElementById('yb-view'); if (v) v.addEventListener('click', () => openProfile(me));
-  const x = document.getElementById('yb-x'); if (x) x.addEventListener('click', () => { bar.style.display = 'none'; });
+  const x = document.getElementById('yb-x'); if (x) x.addEventListener('click', () => { bar.style.display = 'none'; window.__youBarHidden = true; });
 }
 
 // ----- Back to top -----
