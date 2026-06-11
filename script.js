@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMe();
   initModal();
   initToTop();
+  initStandingsShare();
   fetchResults();
   startAutoRefresh();
 });
@@ -543,6 +544,35 @@ function renderTournament(matches) {
   let bracketHtml = '';
   const presentRounds = order.filter(([code]) => ko.some(m => m.stage === code));
   if (presentRounds.length) {
+    // Turn cryptic feed codes ("2A", "W73", "3A/B/C/D/F") into readable labels.
+    const prettySlot = (name) => {
+      const s = String(name || '');
+      let m;
+      if ((m = s.match(/^([12])([A-L])$/))) return { main: m[1] === '1' ? 'Winner' : 'Runner-up', sub: 'Group ' + m[2] };
+      if ((m = s.match(/^3([A-L/]+)$/))) return { main: '3rd place', sub: 'Grp ' + m[1] };
+      if ((m = s.match(/^W(\d+)$/))) return { main: 'Winner', sub: 'Match ' + m[1] };
+      if ((m = s.match(/^L(\d+)$/))) return { main: 'Loser', sub: 'Match ' + m[1] };
+      return null;
+    };
+    const slot = (name, p, score, win) => {
+      const pretty = p ? null : prettySlot(name);
+      const body = p
+        ? `<img class="bk-flag" src="${flagUrl(p.code)}" alt="" onerror="this.style.display='none'"><span class="bk-team">${esc(name)}</span><span class="bk-owner">${esc(p.name)}</span>`
+        : pretty
+          ? `<span class="bk-flag-blank"></span><span class="bk-tbd"><span class="bk-tbd-main">${esc(pretty.main)}</span><span class="bk-tbd-sub">${esc(pretty.sub)}</span></span>`
+          : `<span class="bk-flag-blank"></span><span class="bk-team">${esc(name)}</span>`;
+      return `<div class="bk-slot${win ? ' bk-win' : ''}">${body}<span class="bk-score">${score != null ? score : ''}</span></div>`;
+    };
+    const winnerOf = (m) => {
+      const hs = m.score && m.score.fullTime ? m.score.fullTime.home : null;
+      const as = m.score && m.score.fullTime ? m.score.fullTime.away : null;
+      if (!(m.status === 'FINISHED' && hs != null && as != null)) return null;
+      const pens = Array.isArray(m.penalties) ? m.penalties : null;
+      const hn = (m.homeTeam && m.homeTeam.name) || 'TBD', an = (m.awayTeam && m.awayTeam.name) || 'TBD';
+      if (hs > as || (pens && pens[0] > pens[1])) return hn;
+      if (as > hs || (pens && pens[1] > pens[0])) return an;
+      return null;
+    };
     const cols = presentRounds.map(([code, label]) => {
       const ms = ko.filter(m => m.stage === code).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
       const boxes = ms.map(m => {
@@ -554,21 +584,29 @@ function renderTournament(matches) {
         const pens = Array.isArray(m.penalties) ? m.penalties : null;
         const homeWin = fin && (hs > as || (pens && pens[0] > pens[1]));
         const awayWin = fin && (as > hs || (pens && pens[1] > pens[0]));
-        const slot = (name, p, score, win) => `<div class="bk-slot${win ? ' bk-win' : ''}">
-          ${p ? `<img class="bk-flag" src="${flagUrl(p.code)}" alt="" onerror="this.style.display='none'">` : '<span class="bk-flag"></span>'}
-          <span class="bk-team">${esc(name)}</span>
-          ${p ? `<span class="bk-owner">${esc(p.name)}</span>` : ''}
-          <span class="bk-score">${score != null ? score : ''}</span>
-        </div>`;
-        return `<div class="bk-match">
+        return `<div class="bk-match${fin ? ' bk-done' : ''}">
           ${slot(hn, hp, fin ? hs : null, homeWin)}
           ${slot(an, ap, fin ? as : null, awayWin)}
           ${pens ? `<div class="bk-pens">pens ${safeInt(pens[0])}–${safeInt(pens[1])}</div>` : ''}
         </div>`;
       }).join('');
-      return `<div class="bk-col"><div class="bk-round">${esc(label)}</div>${boxes}</div>`;
+      return `<div class="bk-col"><div class="bk-round">${esc(label)}</div><div class="bk-col-body">${boxes}</div></div>`;
     }).join('');
-    bracketHtml = `<h3 class="bracket-heading">🏆 Knockout Bracket</h3><div class="bracket-scroll"><div class="bracket">${cols}</div></div>`;
+    // Champion node at the end of the bracket.
+    let champHtml = '';
+    const finalM = ko.find(m => m.stage === 'FINAL' && winnerOf(m)) || ko.find(m => m.stage === 'FINAL');
+    if (finalM) {
+      const champName = winnerOf(finalM);
+      const cp = champName ? findParticipant(champName) : null;
+      champHtml = `<div class="bk-col bk-col-champ"><div class="bk-round">Champion</div>
+        <div class="bk-col-body"><div class="bk-champ${champName ? ' decided' : ''}">
+          <div class="bk-champ-trophy">🏆</div>
+          ${cp ? `<img class="bk-champ-flag" src="${flagUrl(cp.code, 80)}" alt="" onerror="this.style.display='none'">` : ''}
+          <div class="bk-champ-name">${champName ? esc(cp ? cp.team : champName) : 'TBD'}</div>
+          <div class="bk-champ-owner">${cp ? esc(cp.name) : 'To be decided'}</div>
+        </div></div></div>`;
+    }
+    bracketHtml = `<h3 class="bracket-heading">🏆 Knockout Bracket</h3><div class="bracket-scroll"><div class="bracket">${cols}${champHtml}</div></div>`;
   }
 
   groupsWrap.innerHTML = groupsHtml;
@@ -1270,4 +1308,68 @@ function startAutoRefresh() {
     if (modalOpen || document.hidden) return;
     fetchResults();
   }, 60000);
+}
+
+// ----- Shareable standings image (whole-table PNG for the group chat) -----
+function initStandingsShare() {
+  const btn = document.getElementById('share-table');
+  if (btn) btn.addEventListener('click', shareStandings);
+}
+async function shareStandings() {
+  showToast('🎨 Building the table…');
+  const sorted = [...PARTICIPANTS].sort((a, b) => getPoints(b.name) - getPoints(a.name) || getGoals(b.name) - getGoals(a.name) || a.name.localeCompare(b.name));
+  const me = getMe();
+  const TOP = 12;
+  const rows = sorted.slice(0, TOP);
+  let meRow = null;
+  if (me) { const idx = sorted.findIndex(p => p.name === me); if (idx >= TOP) meRow = { p: sorted[idx], rank: idx + 1 }; }
+  const W = 620, rowH = 46, headH = 116, footH = 50;
+  const H = headH + rows.length * rowH + (meRow ? rowH + 12 : 0) + footH;
+  const scale = 2;
+  const canvas = document.createElement('canvas');
+  canvas.width = W * scale; canvas.height = H * scale;
+  const ctx = canvas.getContext('2d'); ctx.scale(scale, scale);
+  const bg = ctx.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, '#140c26'); bg.addColorStop(1, '#0a0a14');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#ff8ac4'; ctx.font = '600 15px Outfit, Arial, sans-serif'; ctx.fillText('WORLD CUP 2026 · SWEEPSTAKE', 28, 42);
+  ctx.fillStyle = '#fff'; ctx.font = '800 34px Outfit, Arial, sans-serif'; ctx.fillText('Leaderboard', 28, 80);
+  ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '400 14px Inter, Arial, sans-serif'; ctx.textAlign = 'right';
+  ctx.fillText(new Date().toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }), W - 28, 80);
+  ctx.textAlign = 'left';
+  const drawRow = async (p, y, rank, highlight) => {
+    if (highlight) { ctx.fillStyle = 'rgba(255,45,120,0.14)'; roundRect(ctx, 14, y, W - 28, rowH - 6, 9); ctx.fill(); }
+    const medal = rank === 1 ? '#f5c451' : rank === 2 ? '#cbd5e1' : rank === 3 ? '#d8884a' : 'rgba(255,255,255,0.45)';
+    ctx.fillStyle = medal; ctx.font = '800 19px Outfit, Arial, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText(String(rank), 30, y + 27);
+    try { const img = await loadImg(flagUrl(p.code, 80)); ctx.save(); roundRect(ctx, 62, y + 8, 34, 23, 3); ctx.clip(); ctx.drawImage(img, 62, y + 8, 34, 23); ctx.restore(); } catch (e) {}
+    ctx.fillStyle = '#fff'; ctx.font = '700 17px Outfit, Arial, sans-serif';
+    ctx.fillText(p.name + (highlight ? '  ·  you' : ''), 110, y + 21);
+    ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '400 12px Inter, Arial, sans-serif';
+    ctx.fillText(p.team, 110, y + 36);
+    ctx.fillStyle = '#ff2d78'; ctx.font = '800 22px Outfit, Arial, sans-serif'; ctx.textAlign = 'right';
+    ctx.fillText(String(getPoints(p.name)), W - 30, y + 27);
+    ctx.textAlign = 'left';
+  };
+  let y = headH;
+  for (let i = 0; i < rows.length; i++) { await drawRow(rows[i], y, i + 1, me === rows[i].name); y += rowH; }
+  if (meRow) {
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.beginPath(); ctx.moveTo(28, y + 6); ctx.lineTo(W - 28, y + 6); ctx.stroke();
+    y += 12; await drawRow(meRow.p, y, meRow.rank, true); y += rowH;
+  }
+  ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '400 12px Inter, Arial, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('jamesonbates07-sketch.github.io/world-cup-sweepstake', W / 2, H - 18);
+
+  let blob; try { blob = await new Promise((res) => canvas.toBlob(res, 'image/png')); } catch (e) { blob = null; }
+  if (!blob) { shareFallback(); return; }
+  const file = new File([blob], 'sweepstake-leaderboard.png', { type: 'image/png' });
+  try {
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title: 'World Cup 2026 Sweepstake', text: 'The latest sweepstake standings 🏆' });
+      return;
+    }
+  } catch (e) { /* fall through to download */ }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file.name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  showToast('📸 Table saved — drop it in the group!');
 }
