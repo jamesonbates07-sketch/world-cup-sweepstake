@@ -9,6 +9,10 @@ on:
 jobs:
   update-results:
     runs-on: ubuntu-latest
+    # Stop a manual run and the daily cron from pushing at the same time.
+    concurrency:
+      group: update-sweepstake
+      cancel-in-progress: false
 
     permissions:
       contents: write
@@ -32,4 +36,5 @@ jobs:
           git add results.json
           [ -f history.json ] && git add history.json || true
           git commit -m "Automated match results update [skip ci]" || echo "No changes to commit"
+          git pull --rebase --autostash || true
           git push
