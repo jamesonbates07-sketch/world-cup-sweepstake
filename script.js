@@ -74,6 +74,13 @@ function initShare() {
   if (!btn) return;
   btn.addEventListener('click', async () => {
     const url = window.location.href;
+    // On mobile, open the native share sheet (WhatsApp etc.); otherwise copy the link.
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'World Cup 2026 Sweepstake', text: 'Join the sweepstake leaderboard 🏆', url });
+        return;
+      } catch (e) { /* user cancelled — fall through to copy */ }
+    }
     try {
       await navigator.clipboard.writeText(url);
       showToast('🔗 Link copied — paste it to the group!');
@@ -81,6 +88,25 @@ function initShare() {
       showToast(url);
     }
   });
+}
+
+// ===== CHAMPION BANNER =====
+function renderChampion(champion) {
+  const el = document.getElementById('champion-banner');
+  if (!el) return;
+  if (!champion || !champion.holder) { el.style.display = 'none'; el.innerHTML = ''; return; }
+  el.style.display = 'block';
+  el.innerHTML = `
+    <div class="champ-inner">
+      <div class="champ-crown">👑</div>
+      <div class="champ-label">World Cup 2026 Champion</div>
+      <div class="champ-name">${esc(champion.holder)}</div>
+      <div class="champ-team">${esc(champion.team)} — take a bow 🏆</div>
+    </div>`;
+  if (typeof confetti === 'function' && !el.dataset.celebrated) {
+    el.dataset.celebrated = '1';
+    confetti({ particleCount: 160, spread: 100, origin: { y: 0.35 } });
+  }
 }
 
 function flagUrl(code, w = 80) { return `https://flagcdn.com/w${w}/${code}.png`; }
@@ -395,6 +421,8 @@ async function fetchResults() {
     renderLeaderboard();
     renderAwards(data.awards);
     renderStats(data.stats);
+    renderChampion(data.stats && data.stats.champion);
+    renderTournament(Array.isArray(data.matches) ? data.matches : []);
     if (Array.isArray(data.matches)) {
       renderMatches(data.matches);
     }
@@ -409,7 +437,95 @@ async function fetchResults() {
     renderLeaderboard();
     renderAwards({});
     renderStats(null);
+    renderChampion(null);
+    renderTournament([]);
   }
+}
+
+// ===== TOURNAMENT (group tables + knockout bracket) =====
+function renderTournament(matches) {
+  if (!Array.isArray(matches)) matches = [];
+  const groupsWrap = document.getElementById('groups-wrap');
+  const bracketWrap = document.getElementById('bracket-wrap');
+  const emptyEl = document.getElementById('tournament-empty');
+  if (!groupsWrap || !bracketWrap) return;
+
+  // ---- GROUP STAGE TABLES ----
+  const groupMatches = matches.filter(m => m && m.stage === 'GROUP_STAGE' && m.group);
+  const groupNames = [...new Set(groupMatches.map(m => m.group))].sort();
+  const groupsHtml = groupNames.map(g => {
+    const gm = groupMatches.filter(m => m.group === g);
+    const table = {};
+    const ensure = (name) => { if (!table[name]) table[name] = { team: name, P: 0, GF: 0, GA: 0, Pts: 0 }; return table[name]; };
+    gm.forEach(m => {
+      const h = ensure(m.homeTeam.name), a = ensure(m.awayTeam.name);
+      const hs = m.score && m.score.fullTime ? m.score.fullTime.home : null;
+      const as = m.score && m.score.fullTime ? m.score.fullTime.away : null;
+      if (m.status === 'FINISHED' && hs != null && as != null) {
+        h.P++; a.P++; h.GF += hs; h.GA += as; a.GF += as; a.GA += hs;
+        if (hs > as) { h.Pts += 3; } else if (hs < as) { a.Pts += 3; } else { h.Pts++; a.Pts++; }
+      }
+    });
+    const rows = Object.values(table).sort((x, y) =>
+      y.Pts - x.Pts || (y.GF - y.GA) - (x.GF - x.GA) || y.GF - x.GF || x.team.localeCompare(y.team));
+    const rowsHtml = rows.map((r, i) => {
+      const p = findParticipant(r.team);
+      const gd = r.GF - r.GA;
+      return `<tr class="grp-row${i < 2 ? ' qual' : ''}">
+        <td class="grp-pos">${i + 1}</td>
+        <td class="grp-team">
+          ${p ? `<img class="grp-flag" src="${flagUrl(p.code)}" alt="" loading="lazy" onerror="this.style.display='none'">` : '<span class="grp-flag"></span>'}
+          <span class="grp-tname">${esc(r.team)}</span>
+          ${p ? `<span class="grp-owner">${esc(p.name)}</span>` : ''}
+        </td>
+        <td>${r.P}</td><td class="grp-gd">${gd >= 0 ? '+' : ''}${gd}</td><td class="grp-pts">${r.Pts}</td>
+      </tr>`;
+    }).join('');
+    return `<div class="grp-card">
+      <div class="grp-title">${esc(g)}</div>
+      <table class="grp-table">
+        <thead><tr><th></th><th>Team</th><th>P</th><th>GD</th><th>Pts</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>`;
+  }).join('');
+
+  // ---- KNOCKOUT BRACKET ----
+  const ko = matches.filter(m => m && m.stage && m.stage !== 'GROUP_STAGE' && m.stage !== 'THIRD_PLACE');
+  const order = [['ROUND_OF_32', 'Round of 32'], ['LAST_16', 'Last 16'], ['QUARTER_FINALS', 'Quarter-finals'], ['SEMI_FINALS', 'Semi-finals'], ['FINAL', 'Final']];
+  let bracketHtml = '';
+  const presentRounds = order.filter(([code]) => ko.some(m => m.stage === code));
+  if (presentRounds.length) {
+    const cols = presentRounds.map(([code, label]) => {
+      const ms = ko.filter(m => m.stage === code).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+      const boxes = ms.map(m => {
+        const hp = findParticipant(m.homeTeam.name), ap = findParticipant(m.awayTeam.name);
+        const hs = m.score && m.score.fullTime ? m.score.fullTime.home : null;
+        const as = m.score && m.score.fullTime ? m.score.fullTime.away : null;
+        const fin = m.status === 'FINISHED' && hs != null && as != null;
+        const pens = Array.isArray(m.penalties) ? m.penalties : null;
+        const homeWin = fin && (hs > as || (pens && pens[0] > pens[1]));
+        const awayWin = fin && (as > hs || (pens && pens[1] > pens[0]));
+        const slot = (name, p, score, win) => `<div class="bk-slot${win ? ' bk-win' : ''}">
+          ${p ? `<img class="bk-flag" src="${flagUrl(p.code)}" alt="" onerror="this.style.display='none'">` : '<span class="bk-flag"></span>'}
+          <span class="bk-team">${esc(name)}</span>
+          ${p ? `<span class="bk-owner">${esc(p.name)}</span>` : ''}
+          <span class="bk-score">${score != null ? score : ''}</span>
+        </div>`;
+        return `<div class="bk-match">
+          ${slot(m.homeTeam.name, hp, fin ? hs : null, homeWin)}
+          ${slot(m.awayTeam.name, ap, fin ? as : null, awayWin)}
+          ${pens ? `<div class="bk-pens">pens ${safeInt(pens[0])}–${safeInt(pens[1])}</div>` : ''}
+        </div>`;
+      }).join('');
+      return `<div class="bk-col"><div class="bk-round">${esc(label)}</div>${boxes}</div>`;
+    }).join('');
+    bracketHtml = `<h3 class="bracket-heading">🏆 Knockout Bracket</h3><div class="bracket-scroll"><div class="bracket">${cols}</div></div>`;
+  }
+
+  groupsWrap.innerHTML = groupsHtml;
+  bracketWrap.innerHTML = bracketHtml;
+  if (emptyEl) emptyEl.style.display = (groupsHtml || bracketHtml) ? 'none' : 'block';
 }
 
 // ===== TOURNAMENT PULSE (live headline stats) =====

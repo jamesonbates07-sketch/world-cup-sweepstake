@@ -366,6 +366,7 @@ function computeResults(rawMatches) {
       utcDate: parseUtcDate(m.date, m.time),
       status: played ? 'FINISHED' : 'SCHEDULED',
       stage: roundToStage(m.round),
+      group: m.group || null,
       homeTeam: { name: homeP ? homeP.team : (m.team1 || 'TBD') },
       awayTeam: { name: awayP ? awayP.team : (m.team2 || 'TBD') },
       penalties: pens,
@@ -417,7 +418,12 @@ function computeResults(rawMatches) {
   PARTICIPANTS.forEach(p => { if (!goldenBoot || (goals[p.name] || 0) > goldenBoot.goals) goldenBoot = { holder: p.name, team: p.team, goals: goals[p.name] || 0 }; });
   if (!goldenBoot || goldenBoot.goals === 0) goldenBoot = null;
 
-  const stats = { matchesPlayed: playedRaw.length, totalGoals, biggestWin, goldenBoot };
+  // Champion — the winner of the Final (null until the Final is played). The big payoff.
+  let champion = null;
+  const finalMatch = playedRaw.find(m => roundToStage(m.round) === 'FINAL');
+  if (finalMatch) { const w = findParticipant(knockoutWinner(finalMatch)); if (w) champion = { holder: w.name, team: w.team }; }
+
+  const stats = { matchesPlayed: playedRaw.length, totalGoals, biggestWin, goldenBoot, champion };
 
   return { lastUpdated: new Date().toISOString(), points, goals, matches, summaryText, awards, stats };
 }

@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Cup 2026 Sweepstake 🏆</title>
-  <meta name="description" content="The ultimate World Cup 2026 sweepstake tracker – live scores, leaderboard, and bragging rights!">
+  <meta name="description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
+  <meta name="theme-color" content="#d4af37">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+  <!-- Social share preview (WhatsApp / Slack / iMessage / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="World Cup 2026 Sweepstake 🏆">
+  <meta property="og:description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
+  <meta property="og:url" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,8 +25,9 @@
     <div class="nav-logo">🏆 <span>SWEEPSTAKE 2026</span></div>
     <ul class="nav-links">
       <li><a href="#leaderboard-section">Leaderboard</a></li>
-      <li><a href="#awards-section">Prizes</a></li>
+      <li><a href="#awards-section">Hall of Shame</a></li>
       <li><a href="#draw-section">The Draw</a></li>
+      <li><a href="#tournament-section">Tournament</a></li>
       <li><a href="#matches-section">Matches</a></li>
     </ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
@@ -36,6 +44,9 @@
       <button class="share-btn" id="share-btn">🔗 Copy link to share</button>
     </div>
   </header>
+
+  <!-- Champion banner (appears when the Final is decided) -->
+  <div id="champion-banner" class="champion-banner" style="display:none"></div>
 
   <!-- Stats Bar -->
   <div id="stats-bar">
@@ -115,8 +126,8 @@
   <!-- Booby Prizes / Awards -->
   <section class="section reveal" id="awards-section">
     <div class="section-header">
-      <h2 class="section-title">Booby Prizes</h2>
-      <p class="section-subtitle">Consolation glory for the unlucky — Sepp-approved 🏆</p>
+      <h2 class="section-title">Hall of Shame</h2>
+      <p class="section-subtitle">Glory for the gloriously unlucky — personally curated by Sepp 🏆</p>
       <div class="section-divider"></div>
     </div>
     <div class="awards-grid" id="awards-grid"></div>
@@ -143,6 +154,21 @@
     </div>
     <div class="cards-grid" id="cards-grid"></div>
     <div class="no-results" id="no-results" style="display:none">No matches found 😕</div>
+  </section>
+
+  <!-- Tournament: Groups & Bracket -->
+  <section class="section reveal" id="tournament-section">
+    <div class="section-header">
+      <h2 class="section-title">The Tournament</h2>
+      <p class="section-subtitle">Live group tables now — the bracket unlocks at the knockouts</p>
+      <div class="section-divider"></div>
+    </div>
+    <div id="groups-wrap" class="groups-wrap"></div>
+    <div id="bracket-wrap" class="bracket-wrap"></div>
+    <div class="empty-state" id="tournament-empty">
+      <div class="emoji">🗓️</div>
+      <p>Group tables fill in as the fixtures load and matches kick off.</p>
+    </div>
   </section>
 
   <!-- Matches -->
