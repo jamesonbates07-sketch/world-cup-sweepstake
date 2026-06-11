@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Cup 2026 Sweepstake 🏆</title>
   <meta name="description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
-  <meta name="theme-color" content="#d4af37">
+  <meta name="theme-color" content="#ff2d78">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
   <!-- Social share preview (WhatsApp / Slack / iMessage / Twitter) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="World Cup 2026 Sweepstake 🏆">
   <meta property="og:description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
   <meta property="og:url" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,6 +32,7 @@
     <ul class="nav-links">
       <li><a href="#leaderboard-section">Leaderboard</a></li>
       <li><a href="#tournament-section">Tournament</a></li>
+      <li><a href="#race-section">Run to Glory</a></li>
       <li><a href="#awards-section">Hall of Shame</a></li>
       <li><a href="#draw-section">The Draw</a></li>
       <li><a href="#matches-section">Matches</a></li>
@@ -41,7 +48,10 @@
       <h1 class="hero-title">World Cup Sweepstake</h1>
       <p class="hero-subtitle"><span>USA</span> • <span>Mexico</span> • <span>Canada</span></p>
       <div id="countdown-container"></div>
-      <button class="share-btn" id="share-btn">🔗 Copy link to share</button>
+      <div class="hero-actions">
+        <button class="me-btn" id="me-btn">⭐ This is me</button>
+        <button class="share-btn" id="share-btn">🔗 Copy link to share</button>
+      </div>
     </div>
   </header>
 
@@ -68,6 +78,9 @@
       </div>
     </div>
   </div>
+
+  <!-- On Today (today's fixtures, our players highlighted) -->
+  <div id="today-bar" class="today-bar" style="display:none"></div>
 
   <!-- Tournament Pulse (auto-populates once matches begin) -->
   <div id="pulse-bar" class="pulse-bar" style="display:none"></div>
@@ -121,6 +134,19 @@
       <span>#</span><span></span><span>Player</span><span>Pts</span>
     </div>
     <div class="leaderboard-list" id="leaderboard-list"></div>
+
+    <!-- Momentum: biggest climber + points-over-time trend -->
+    <div id="momentum-wrap" class="momentum-wrap" style="display:none">
+      <div id="climber-callout" class="climber-callout" style="display:none"></div>
+      <div class="momentum-chart-card">
+        <div class="momentum-head">
+          <h3>📈 The Race Over Time</h3>
+          <span class="momentum-sub" id="momentum-sub"></span>
+        </div>
+        <div class="momentum-canvas-box"><canvas id="trend-chart"></canvas></div>
+        <div class="momentum-legend" id="momentum-legend"></div>
+      </div>
+    </div>
   </section>
 
   <!-- Tournament: Groups & Bracket -->
@@ -136,6 +162,23 @@
       <div class="emoji">🗓️</div>
       <p>Group tables fill in as the fixtures load and matches kick off.</p>
     </div>
+  </section>
+
+  <!-- Run to Glory: survival + best-case ceiling -->
+  <section class="section reveal" id="race-section">
+    <div class="section-header">
+      <h2 class="section-title">Run to Glory</h2>
+      <p class="section-subtitle">Who's still standing — and the most points each player could still grab</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="race-controls" id="race-filters">
+      <button class="race-filter active" data-filter="all">All</button>
+      <button class="race-filter" data-filter="alive">✅ Still in</button>
+      <button class="race-filter" data-filter="out">❌ Out</button>
+      <button class="race-filter" data-filter="playoff">🎟️ Playoff</button>
+    </div>
+    <div class="race-list" id="race-list"></div>
+    <p class="race-note">“Ceiling” is the theoretical max if that team wins every remaining match — group wins (3 pts) plus all knockout bonuses. Locks in once a team is out.</p>
   </section>
 
   <!-- Booby Prizes / Awards -->
@@ -214,7 +257,20 @@
   <!-- Toast -->
   <div class="toast" id="toast"></div>
 
+  <!-- Your personal status bar -->
+  <div id="you-bar" class="you-bar" style="display:none"></div>
+
+  <!-- Back to top -->
+  <button id="to-top" class="to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- Modal (player profiles + player picker) -->
+  <div id="modal-root" class="modal-root" style="display:none" role="dialog" aria-modal="true" aria-label="Details">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card" id="modal-card" tabindex="-1"></div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

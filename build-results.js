@@ -86,3 +86,13 @@ try {
 
 const played = output.matches.filter(m => m.status === 'FINISHED').length;
 console.log(`build-results: OK — ${output.matches.length} matches, ${played} played. results.json updated.`);
+
+// 7) Optional: record a daily snapshot for the website's trend chart.
+//    Wrapped so it can NEVER affect the core build above (results.json is
+//    already written and confirmed at this point).
+try {
+  const n = require('./history-util').appendDailySnapshot(DIR, output);
+  if (n) console.log(`build-results: history snapshot saved (${n} day${n === 1 ? '' : 's'} tracked).`);
+} catch (e) {
+  console.warn('build-results: history snapshot skipped (' + e.message + ').');
+}

@@ -438,6 +438,10 @@ async function run() {
   const output = computeResults(rawMatches);
   fs.writeFileSync('results.json', JSON.stringify(output, null, 2));
 
+  // Optional daily snapshot for the website's trend chart. Never fatal.
+  try { require('./history-util').appendDailySnapshot(__dirname, output); }
+  catch (e) { console.warn('history snapshot skipped:', e.message); }
+
   const played = output.matches.filter(m => m.status === 'FINISHED').length;
   console.log(`Done. Processed ${output.matches.length} matches; ${played} played. results.json updated.`);
 }

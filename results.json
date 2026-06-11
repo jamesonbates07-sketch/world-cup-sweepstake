@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T13:23:39.953Z",
+  "lastUpdated": "2026-06-11T14:08:27.133Z",
   "points": {
     "Abi": 0,
     "Adrian": 0,
@@ -133,7 +133,7 @@
         "name": "Korea Republic"
       },
       "awayTeam": {
-        "name": "Czech Republic"
+        "name": "UEFA Path D winner"
       },
       "penalties": null,
       "score": {
@@ -153,7 +153,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
-        "name": "Czech Republic"
+        "name": "UEFA Path D winner"
       },
       "awayTeam": {
         "name": "South Africa"
@@ -199,7 +199,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
-        "name": "Czech Republic"
+        "name": "UEFA Path D winner"
       },
       "awayTeam": {
         "name": "Mexico"
@@ -248,7 +248,7 @@
         "name": "Canada"
       },
       "awayTeam": {
-        "name": "Bosnia and Herzegovina"
+        "name": "UEFA Path A winner"
       },
       "penalties": null,
       "score": {
@@ -294,7 +294,7 @@
         "name": "Switzerland"
       },
       "awayTeam": {
-        "name": "Bosnia and Herzegovina"
+        "name": "UEFA Path A winner"
       },
       "penalties": null,
       "score": {
@@ -360,7 +360,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
-        "name": "Bosnia and Herzegovina"
+        "name": "UEFA Path A winner"
       },
       "awayTeam": {
         "name": "Qatar"
@@ -447,7 +447,7 @@
       }
     },
     {
-      "utcDate": "2026-06-19T20:30:00-04:00",
+      "utcDate": "2026-06-19T21:00:00-04:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group C",
@@ -547,7 +547,7 @@
         "name": "Australia"
       },
       "awayTeam": {
-        "name": "Turkey"
+        "name": "UEFA Path C winner"
       },
       "penalties": null,
       "score": {
@@ -585,12 +585,12 @@
       }
     },
     {
-      "utcDate": "2026-06-19T20:00:00-07:00",
+      "utcDate": "2026-06-19T21:00:00-07:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group D",
       "homeTeam": {
-        "name": "Turkey"
+        "name": "UEFA Path C winner"
       },
       "awayTeam": {
         "name": "Paraguay"
@@ -613,7 +613,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group D",
       "homeTeam": {
-        "name": "Turkey"
+        "name": "UEFA Path C winner"
       },
       "awayTeam": {
         "name": "United States"
@@ -820,7 +820,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group F",
       "homeTeam": {
-        "name": "Sweden"
+        "name": "UEFA Path B winner"
       },
       "awayTeam": {
         "name": "Tunisia"
@@ -846,7 +846,7 @@
         "name": "Netherlands"
       },
       "awayTeam": {
-        "name": "Sweden"
+        "name": "UEFA Path B winner"
       },
       "penalties": null,
       "score": {
@@ -892,7 +892,7 @@
         "name": "Japan"
       },
       "awayTeam": {
-        "name": "Sweden"
+        "name": "UEFA Path B winner"
       },
       "penalties": null,
       "score": {
@@ -1234,7 +1234,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group I",
       "homeTeam": {
-        "name": "Iraq"
+        "name": "IC Path 2 winner"
       },
       "awayTeam": {
         "name": "Norway"
@@ -1260,7 +1260,7 @@
         "name": "France"
       },
       "awayTeam": {
-        "name": "Iraq"
+        "name": "IC Path 2 winner"
       },
       "penalties": null,
       "score": {
@@ -1329,7 +1329,7 @@
         "name": "Senegal"
       },
       "awayTeam": {
-        "name": "Iraq"
+        "name": "IC Path 2 winner"
       },
       "penalties": null,
       "score": {
@@ -1490,7 +1490,7 @@
         "name": "Portugal"
       },
       "awayTeam": {
-        "name": "Congo DR"
+        "name": "IC Path 1 winner"
       },
       "penalties": null,
       "score": {
@@ -1559,7 +1559,7 @@
         "name": "Colombia"
       },
       "awayTeam": {
-        "name": "Congo DR"
+        "name": "IC Path 1 winner"
       },
       "penalties": null,
       "score": {
@@ -1602,7 +1602,7 @@
       "stage": "GROUP_STAGE",
       "group": "Group K",
       "homeTeam": {
-        "name": "Congo DR"
+        "name": "IC Path 1 winner"
       },
       "awayTeam": {
         "name": "Uzbekistan"
