@@ -50,9 +50,18 @@ if (!raw || !Array.isArray(raw.matches)) {
 }
 
 // 3) Compute the scoreboard.
+//    First overlay any manually-verified scores for matches the openfootball
+//    feed hasn't published yet (no-op if manual-scores.json is absent; the live
+//    feed always wins). This must never break the build, hence the guard.
+let matches = raw.matches;
+try {
+  matches = require('./manual-scores-util').applyManualScores(raw.matches, DIR);
+} catch (e) {
+  matches = raw.matches;
+}
 let output;
 try {
-  output = computeResults(raw.matches);
+  output = computeResults(matches);
 } catch (e) {
   fail('scoring computation threw (' + e.message + ').');
 }

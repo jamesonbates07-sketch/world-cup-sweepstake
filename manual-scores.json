@@ -1,0 +1,21 @@
+{
+  "_comment": "Manually-verified scores for matches the openfootball feed hasn't published yet. The build always PREFERS the live feed and only uses these to fill gaps, so each entry becomes a harmless no-op once the feed catches up (and can be deleted any time). Match keys (date + team1 + team2) must match the openfootball feed exactly — including play-off placeholder names like 'UEFA Path D winner'. Sources: ESPN, FIFA.com, Sky Sports, CBS Sports, NBC News.",
+  "matches": [
+    {
+      "round": "Matchday 1",
+      "date": "2026-06-11",
+      "team1": "Mexico",
+      "team2": "South Africa",
+      "score": { "ft": [2, 0] },
+      "source": "Mexico 2-0 South Africa — ESPN/FIFA/CNN/CBS/NBC"
+    },
+    {
+      "round": "Matchday 1",
+      "date": "2026-06-11",
+      "team1": "South Korea",
+      "team2": "UEFA Path D winner",
+      "score": { "ft": [2, 1], "ht": [0, 0] },
+      "source": "South Korea 2-1 Czech Republic — ESPN/FOX/Sky Sports"
+    }
+  ]
+}

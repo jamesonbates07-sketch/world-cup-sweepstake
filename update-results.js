@@ -451,7 +451,13 @@ async function run() {
   const data = await res.json();
   const rawMatches = data.matches || [];
 
-  const output = computeResults(rawMatches);
+  // Overlay manually-verified scores for matches the feed hasn't published yet
+  // (no-op if manual-scores.json is absent; the live feed always wins).
+  let matches = rawMatches;
+  try { matches = require('./manual-scores-util').applyManualScores(rawMatches, __dirname); }
+  catch (e) { matches = rawMatches; }
+
+  const output = computeResults(matches);
   fs.writeFileSync('results.json', JSON.stringify(output, null, 2));
 
   // Optional daily snapshot for the website's trend chart. Never fatal.
