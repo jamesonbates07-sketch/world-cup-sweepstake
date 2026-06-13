@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T16:33:42.480Z",
+  "lastUpdated": "2026-06-13T09:04:00.549Z",
   "points": {
     "Abi": 0,
     "Adrian": 0,
@@ -20,7 +20,7 @@
     "Holly": 0,
     "Jack": 0,
     "Jake": 0,
-    "James G": 0,
+    "James G": 3,
     "Jameson B": 0,
     "Jonathan B": 0,
     "Karl D": 0,
@@ -37,7 +37,7 @@
     "Micky P": 0,
     "Natasha B": 0,
     "Nathan G": 0,
-    "Nic B": 0,
+    "Nic B": 1,
     "Patrick Lindon": 0,
     "Rebecca V": 0,
     "Richie C": 0,
@@ -48,7 +48,7 @@
     "Tina": 0,
     "Ugne": 0,
     "Wendy": 0,
-    "Augustin": 0
+    "Augustin": 1
   },
   "goals": {
     "Abi": 0,
@@ -61,7 +61,7 @@
     "Darryl": 0,
     "Dermot": 0,
     "Derran": 0,
-    "Ed": 0,
+    "Ed": 1,
     "Ellie": 0,
     "Enrico": 0,
     "Fergus": 0,
@@ -70,7 +70,7 @@
     "Holly": 0,
     "Jack": 0,
     "Jake": 0,
-    "James G": 0,
+    "James G": 4,
     "Jameson B": 0,
     "Jonathan B": 0,
     "Karl D": 0,
@@ -87,7 +87,7 @@
     "Micky P": 1,
     "Natasha B": 0,
     "Nathan G": 0,
-    "Nic B": 0,
+    "Nic B": 1,
     "Patrick Lindon": 0,
     "Rebecca V": 0,
     "Richie C": 0,
@@ -98,7 +98,7 @@
     "Tina": 0,
     "Ugne": 0,
     "Wendy": 0,
-    "Augustin": 0
+    "Augustin": 1
   },
   "matches": [
     {
@@ -241,7 +241,7 @@
     },
     {
       "utcDate": "2026-06-12T15:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
@@ -253,12 +253,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
@@ -517,7 +517,7 @@
     },
     {
       "utcDate": "2026-06-12T18:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group D",
       "homeTeam": {
@@ -529,12 +529,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         }
       }
     },
@@ -2494,17 +2494,17 @@
       }
     }
   ],
-  "summaryText": "Recent action: Korea Republic 2-1 Czech Republic | Mexico 2-0 South Africa. Leaderboard updated!",
+  "summaryText": "Recent action: United States 4-1 Paraguay | Canada 1-1 Bosnia and Herzegovina | Korea Republic 2-1 Czech Republic | Mexico 2-0 South Africa. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
-      "holder": "Fergus",
-      "team": "South Africa",
-      "detail": "0 pts · GD -2"
+      "holder": "Ed",
+      "team": "Paraguay",
+      "detail": "0 pts · GD -3"
     },
     "swissCheese": {
-      "holder": "Fergus",
-      "team": "South Africa",
-      "detail": "Let in 2 vs Mexico"
+      "holder": "Ed",
+      "team": "Paraguay",
+      "detail": "Let in 4 vs United States"
     },
     "penaltyPain": null,
     "blankSheet": {
@@ -2518,24 +2518,24 @@
       "detail": "FIFA #14 — out at group stage"
     },
     "unluckiest": {
-      "holder": "Hayley",
-      "team": "Mexico",
+      "holder": "James G",
+      "team": "United States",
       "detail": "3 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 2,
-    "totalGoals": 5,
+    "matchesPlayed": 4,
+    "totalGoals": 12,
     "biggestWin": {
-      "margin": 2,
-      "score": "2–0",
-      "winner": "Mexico",
-      "loser": "South Africa"
+      "margin": 3,
+      "score": "4–1",
+      "winner": "United States",
+      "loser": "Paraguay"
     },
     "goldenBoot": {
-      "holder": "Hayley",
-      "team": "Mexico",
-      "goals": 2
+      "holder": "James G",
+      "team": "United States",
+      "goals": 4
     },
     "champion": null
   }
