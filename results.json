@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T09:10:18.596Z",
+  "lastUpdated": "2026-06-13T09:21:58.540Z",
   "points": {
     "Abi": 0,
     "Adrian": 0,
@@ -119,8 +119,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -257,8 +257,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
@@ -447,7 +447,7 @@
       }
     },
     {
-      "utcDate": "2026-06-19T21:00:00-04:00",
+      "utcDate": "2026-06-19T20:30:00-04:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group C",
@@ -533,8 +533,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         }
       }
     },
@@ -585,7 +585,7 @@
       }
     },
     {
-      "utcDate": "2026-06-19T21:00:00-07:00",
+      "utcDate": "2026-06-19T20:00:00-07:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group D",
