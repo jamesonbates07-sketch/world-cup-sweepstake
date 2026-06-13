@@ -1,5 +1,5 @@
 {
-  "_comment": "Manually-verified scores for matches the openfootball feed hasn't published yet. The build always PREFERS the live feed and only uses these to fill gaps, so each entry becomes a harmless no-op once the feed catches up (and can be deleted any time). Match keys (date + team1 + team2) must match the openfootball feed exactly — including play-off placeholder names like 'UEFA Path D winner'. Sources: ESPN, FIFA.com, Sky Sports, CBS Sports, NBC News.",
+  "_comment": "Verified scores for matches the openfootball feed hasn't published yet. Maintained automatically by the daily scheduled task, which web-searches reputable sources (ESPN, FIFA.com, Olympics.com, Yahoo Sports, NBC, CBS, Sky Sports) and cross-checks each scoreline before writing it here. The build ALWAYS prefers the live feed, so each entry becomes a harmless no-op once the feed catches up (and can be deleted any time). Match keys (date + team1 + team2) must match the openfootball feed exactly — including play-off placeholder names like 'UEFA Path A winner'.",
   "matches": [
     {
       "round": "Matchday 1",
@@ -15,7 +15,23 @@
       "team1": "South Korea",
       "team2": "UEFA Path D winner",
       "score": { "ft": [2, 1], "ht": [0, 0] },
-      "source": "South Korea 2-1 Czech Republic — ESPN/FOX/Sky Sports"
+      "source": "South Korea 2-1 Czechia (Czech Republic = UEFA Path D winner) — ESPN/FOX/Sky Sports"
+    },
+    {
+      "round": "Matchday 2",
+      "date": "2026-06-12",
+      "team1": "USA",
+      "team2": "Paraguay",
+      "score": { "ft": [4, 1] },
+      "source": "USA 4-1 Paraguay (Balogun brace, Pulisic) — FIFA/NBC/Yahoo/Olympics.com"
+    },
+    {
+      "round": "Matchday 2",
+      "date": "2026-06-12",
+      "team1": "Canada",
+      "team2": "UEFA Path A winner",
+      "score": { "ft": [1, 1] },
+      "source": "Canada 1-1 Bosnia & Herzegovina (= UEFA Path A winner; Lukic for BIH, Larin 78' for Canada) — Yahoo/Olympics.com"
     }
   ]
 }

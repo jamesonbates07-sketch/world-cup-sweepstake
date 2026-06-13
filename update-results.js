@@ -451,11 +451,21 @@ async function run() {
   const data = await res.json();
   const rawMatches = data.matches || [];
 
-  // Overlay manually-verified scores for matches the feed hasn't published yet
-  // (no-op if manual-scores.json is absent; the live feed always wins).
+  // Score overlays, applied in order of precedence (each only fills matches that
+  // still have no full-time score, so earlier layers always win):
+  //   1) openfootball feed score (if it ever publishes one)
+  //   2) manual-scores.json   — human-verified overrides / escape hatch
+  //   3) ESPN live scores     — real final scores, key-free, fills everything else
   let matches = rawMatches;
-  try { matches = require('./manual-scores-util').applyManualScores(rawMatches, __dirname); }
-  catch (e) { matches = rawMatches; }
+
+  // 2) Manually-verified overrides (no-op if the file is absent).
+  try { matches = require('./manual-scores-util').applyManualScores(matches, __dirname); }
+  catch (e) { console.warn('manual overlay skipped:', e.message); }
+
+  // 3) Real final scores from ESPN's free public API (no key). Never fatal — on any
+  //    failure the matches pass through unchanged so the build can't break.
+  try { matches = await require('./live-scores-util').mergeLiveScores(matches, { canonicalTeam, fetchImpl: fetch }); }
+  catch (e) { console.warn('live-scores merge skipped:', e.message); }
 
   const output = computeResults(matches);
   fs.writeFileSync('results.json', JSON.stringify(output, null, 2));
@@ -473,4 +483,4 @@ if (require.main === module) {
   run().catch(err => { console.error('Error updating results:', err); process.exit(1); });
 }
 
-module.exports = { computeResults, computeAwards, computeEliminations, findParticipant, roundToStage, knockoutWinner, parseUtcDate, PARTICIPANTS };
+module.exports = { computeResults, computeAwards, computeEliminations, findParticipant, canonicalTeam, roundToStage, knockoutWinner, parseUtcDate, PARTICIPANTS };
