@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-06-15T09:10:37.359Z",
+  "lastUpdated": "2026-06-15T19:59:19.999Z",
   "points": {
     "Abi": 0,
     "Adrian": 3,
     "Alex": 3,
-    "Andrea": 0,
+    "Andrea": 1,
     "Bella": 0,
     "Charlotte": 3,
     "Dan": 0,
@@ -33,7 +33,7 @@
     "Matthew Collison": 1,
     "Matthew Garvey": 0,
     "Matty Z": 0,
-    "Michael H": 0,
+    "Michael H": 1,
     "Micky P": 0,
     "Natasha B": 0,
     "Nathan G": 0,
@@ -1069,7 +1069,7 @@
     },
     {
       "utcDate": "2026-06-15T12:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group H",
       "homeTeam": {
@@ -1081,12 +1081,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Sweden 5-1 Tunisia | Côte d'Ivoire 1-0 Ecuador | Netherlands 2-2 Japan | Germany 7-1 Curaçao | Australia 2-0 Turkey. Leaderboard updated!",
+  "summaryText": "Recent action: Spain 0-0 Cape Verde Islands | Sweden 5-1 Tunisia | Côte d'Ivoire 1-0 Ecuador | Netherlands 2-2 Japan | Germany 7-1 Curaçao. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Marta",
@@ -2508,14 +2508,14 @@
     },
     "penaltyPain": null,
     "blankSheet": {
-      "holder": "Darryl",
-      "team": "Ecuador",
+      "holder": "Andrea",
+      "team": "Spain",
       "detail": "0 goals in 1 game"
     },
     "biggestDisappointment": {
-      "holder": "Ugne",
-      "team": "Brazil",
-      "detail": "FIFA #5 — out at group stage"
+      "holder": "Andrea",
+      "team": "Spain",
+      "detail": "FIFA #2 — out at group stage"
     },
     "unluckiest": {
       "holder": "Louise",
@@ -2524,7 +2524,7 @@
     }
   },
   "stats": {
-    "matchesPlayed": 12,
+    "matchesPlayed": 13,
     "totalGoals": 38,
     "biggestWin": {
       "margin": 6,
