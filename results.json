@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T19:59:19.999Z",
+  "lastUpdated": "2026-06-16T09:34:16.745Z",
   "points": {
     "Abi": 0,
     "Adrian": 3,
@@ -18,29 +18,29 @@
     "George": 0,
     "Hayley": 3,
     "Holly": 0,
-    "Jack": 0,
+    "Jack": 1,
     "Jake": 1,
     "James G": 3,
-    "Jameson B": 0,
+    "Jameson B": 1,
     "Jonathan B": 3,
     "Karl D": 0,
     "Katie O'Hara": 0,
     "Leena": 0,
-    "Liliana": 0,
+    "Liliana": 1,
     "Louise": 3,
     "Mark G": 0,
     "Marta": 0,
     "Matthew Collison": 1,
-    "Matthew Garvey": 0,
+    "Matthew Garvey": 1,
     "Matty Z": 0,
     "Michael H": 1,
     "Micky P": 0,
-    "Natasha B": 0,
+    "Natasha B": 1,
     "Nathan G": 0,
     "Nic B": 1,
     "Patrick Lindon": 0,
     "Rebecca V": 1,
-    "Richie C": 0,
+    "Richie C": 1,
     "Robin": 0,
     "Sam M": 0,
     "Sammi Hughes": 3,
@@ -68,29 +68,29 @@
     "George": 0,
     "Hayley": 2,
     "Holly": 0,
-    "Jack": 0,
+    "Jack": 1,
     "Jake": 1,
     "James G": 4,
-    "Jameson B": 0,
+    "Jameson B": 2,
     "Jonathan B": 5,
     "Karl D": 0,
     "Katie O'Hara": 0,
     "Leena": 0,
-    "Liliana": 0,
+    "Liliana": 1,
     "Louise": 7,
     "Mark G": 0,
     "Marta": 1,
     "Matthew Collison": 2,
-    "Matthew Garvey": 0,
+    "Matthew Garvey": 1,
     "Matty Z": 0,
     "Michael H": 0,
     "Micky P": 1,
-    "Natasha B": 0,
+    "Natasha B": 2,
     "Nathan G": 0,
     "Nic B": 1,
     "Patrick Lindon": 1,
     "Rebecca V": 1,
-    "Richie C": 0,
+    "Richie C": 1,
     "Robin": 0,
     "Sam M": 0,
     "Sammi Hughes": 2,
@@ -931,7 +931,7 @@
     },
     {
       "utcDate": "2026-06-15T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group G",
       "homeTeam": {
@@ -943,18 +943,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-06-15T18:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group G",
       "homeTeam": {
@@ -966,12 +966,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       }
     },
@@ -1092,7 +1092,7 @@
     },
     {
       "utcDate": "2026-06-15T18:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group H",
       "homeTeam": {
@@ -1104,12 +1104,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Spain 0-0 Cape Verde Islands | Sweden 5-1 Tunisia | Côte d'Ivoire 1-0 Ecuador | Netherlands 2-2 Japan | Germany 7-1 Curaçao. Leaderboard updated!",
+  "summaryText": "Recent action: Iran 2-2 New Zealand | Saudi Arabia 1-1 Uruguay | Belgium 1-1 Egypt | Spain 0-0 Cape Verde Islands | Sweden 5-1 Tunisia. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Marta",
@@ -2524,8 +2524,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 13,
-    "totalGoals": 38,
+    "matchesPlayed": 16,
+    "totalGoals": 46,
     "biggestWin": {
       "margin": 6,
       "score": "7–1",
