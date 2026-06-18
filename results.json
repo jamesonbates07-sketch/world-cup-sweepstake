@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T17:32:52.503Z",
+  "lastUpdated": "2026-06-18T08:12:13.516Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
@@ -9,13 +9,13 @@
     "Charlotte": 3,
     "Dan": 3,
     "Darryl": 0,
-    "Dermot": 0,
+    "Dermot": 1,
     "Derran": 0,
     "Ed": 0,
     "Ellie": 0,
     "Enrico": 1,
     "Fergus": 0,
-    "George": 0,
+    "George": 3,
     "Hayley": 3,
     "Holly": 0,
     "Jack": 1,
@@ -42,10 +42,10 @@
     "Rebecca V": 1,
     "Richie C": 1,
     "Robin": 0,
-    "Sam M": 0,
+    "Sam M": 3,
     "Sammi Hughes": 3,
-    "Stuart Staves": 0,
-    "Tina": 0,
+    "Stuart Staves": 1,
+    "Tina": 3,
     "Ugne": 1,
     "Wendy": 1,
     "Augustin": 1
@@ -59,13 +59,13 @@
     "Charlotte": 2,
     "Dan": 3,
     "Darryl": 0,
-    "Dermot": 0,
+    "Dermot": 1,
     "Derran": 0,
     "Ed": 1,
     "Ellie": 0,
     "Enrico": 2,
     "Fergus": 0,
-    "George": 0,
+    "George": 1,
     "Hayley": 2,
     "Holly": 0,
     "Jack": 1,
@@ -73,8 +73,8 @@
     "James G": 4,
     "Jameson B": 2,
     "Jonathan B": 5,
-    "Karl D": 0,
-    "Katie O'Hara": 0,
+    "Karl D": 1,
+    "Katie O'Hara": 2,
     "Leena": 4,
     "Liliana": 1,
     "Louise": 7,
@@ -92,10 +92,10 @@
     "Rebecca V": 1,
     "Richie C": 1,
     "Robin": 1,
-    "Sam M": 0,
+    "Sam M": 3,
     "Sammi Hughes": 2,
-    "Stuart Staves": 0,
-    "Tina": 0,
+    "Stuart Staves": 1,
+    "Tina": 4,
     "Ugne": 1,
     "Wendy": 1,
     "Augustin": 1
@@ -1483,7 +1483,7 @@
     },
     {
       "utcDate": "2026-06-17T12:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group K",
       "homeTeam": {
@@ -1495,18 +1495,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-06-17T20:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group K",
       "homeTeam": {
@@ -1518,12 +1518,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
@@ -1621,7 +1621,7 @@
     },
     {
       "utcDate": "2026-06-17T15:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group L",
       "homeTeam": {
@@ -1633,18 +1633,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         }
       }
     },
     {
       "utcDate": "2026-06-17T19:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group L",
       "homeTeam": {
@@ -1656,12 +1656,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Austria 3-1 Jordan | Argentina 3-0 Algeria | Iraq 1-4 Norway | France 3-1 Senegal | Iran 2-2 New Zealand. Leaderboard updated!",
+  "summaryText": "Recent action: Uzbekistan 1-3 Colombia | Ghana 1-0 Panama | England 4-2 Croatia | Portugal 1-1 Congo DR | Austria 3-1 Jordan. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Marta",
@@ -2524,8 +2524,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 20,
-    "totalGoals": 62,
+    "matchesPlayed": 24,
+    "totalGoals": 75,
     "biggestWin": {
       "margin": 6,
       "score": "7–1",
