@@ -1,5 +1,5 @@
 {
-  "_comment": "Verified scores for matches the openfootball feed hasn't published yet. Maintained automatically by the daily scheduled task, which web-searches reputable sources (ESPN, FIFA.com, Olympics.com, Yahoo Sports, NBC, CBS, Sky Sports) and cross-checks each scoreline before writing it here. The build ALWAYS prefers the live feed, so each entry becomes a harmless no-op once the feed catches up (and can be deleted any time). Match keys (date + team1 + team2) must match the openfootball feed exactly — including play-off placeholder names like 'UEFA Path A winner'.",
+  "_comment": "Verified scores for matches the openfootball feed hasn't published yet. Maintained automatically by the daily scheduled task, which web-searches reputable sources (ESPN, FIFA.com, Olympics.com, Yahoo Sports, NBC, CBS, Sky Sports, Washington Post) and cross-checks each scoreline against >=2 independent outlets before writing it here. The build ALWAYS prefers the live feed, so each entry becomes a harmless no-op once the feed catches up (and can be deleted any time). Match keys (date + team1 + team2) must match the openfootball feed exactly — including play-off placeholder names like 'UEFA Path A winner'.",
   "matches": [
     {
       "round": "Matchday 1",
@@ -23,7 +23,7 @@
       "team1": "USA",
       "team2": "Paraguay",
       "score": { "ft": [4, 1] },
-      "source": "USA 4-1 Paraguay (Balogun brace, Pulisic) — FIFA/NBC/Yahoo/Olympics.com"
+      "source": "USA 4-1 Paraguay (Balogun brace, Pulisic, Reyna) — FIFA/NBC/Yahoo/Olympics.com/SBS"
     },
     {
       "round": "Matchday 2",
@@ -31,7 +31,167 @@
       "team1": "Canada",
       "team2": "UEFA Path A winner",
       "score": { "ft": [1, 1] },
-      "source": "Canada 1-1 Bosnia & Herzegovina (= UEFA Path A winner; Lukic for BIH, Larin 78' for Canada) — Yahoo/Olympics.com"
+      "source": "Canada 1-1 Bosnia & Herzegovina (= UEFA Path A winner; Lukic for BIH 21', Larin 78' for Canada) — Yahoo/Olympics.com/SBS"
+    },
+    {
+      "round": "Matchday 3",
+      "date": "2026-06-13",
+      "team1": "Qatar",
+      "team2": "Switzerland",
+      "score": { "ft": [1, 1] },
+      "source": "Qatar 1-1 Switzerland (Embolo 17' pen for SUI, Khoukhi 90+4' for QAT — Qatar's first-ever WC point) — ESPN/Goal.com/101GreatGoals"
+    },
+    {
+      "round": "Matchday 3",
+      "date": "2026-06-13",
+      "team1": "Brazil",
+      "team2": "Morocco",
+      "score": { "ft": [1, 1] },
+      "source": "Brazil 1-1 Morocco (Saibari for MAR, Vinicius Jr equaliser for BRA) — Yahoo/ESPN"
+    },
+    {
+      "round": "Matchday 3",
+      "date": "2026-06-13",
+      "team1": "Haiti",
+      "team2": "Scotland",
+      "score": { "ft": [0, 1] },
+      "source": "Haiti 0-1 Scotland (John McGinn 28' — Scotland's first WC win since 1990) — ESPN/FOX Sports/FIFA.com/VAVEL"
+    },
+    {
+      "round": "Matchday 3",
+      "date": "2026-06-13",
+      "team1": "Australia",
+      "team2": "UEFA Path C winner",
+      "score": { "ft": [2, 0] },
+      "source": "Australia 2-0 Türkiye (= UEFA Path C winner; Irankunda 27', Metcalfe 75') — Washington Post/ESPN/FIFA.com/Yahoo"
+    },
+    {
+      "round": "Matchday 4",
+      "date": "2026-06-14",
+      "team1": "Germany",
+      "team2": "Curaçao",
+      "score": { "ft": [7, 1] },
+      "source": "Germany 7-1 Curaçao (Havertz brace; Comenencia 21' for Curaçao's first-ever WC goal) — ESPN/Sky Sports/Opta Analyst/FIFA.com"
+    },
+    {
+      "round": "Matchday 4",
+      "date": "2026-06-14",
+      "team1": "Ivory Coast",
+      "team2": "Ecuador",
+      "score": { "ft": [1, 0] },
+      "source": "Ivory Coast 1-0 Ecuador (Amad Diallo 90') — NBC News/Sky Sports/ESPN/FIFA.com/Sports Mole"
+    },
+    {
+      "round": "Matchday 4",
+      "date": "2026-06-14",
+      "team1": "Netherlands",
+      "team2": "Japan",
+      "score": { "ft": [2, 2] },
+      "source": "Netherlands 2-2 Japan (Van Dijk & Summerville for NED; Nakamura & Kamada 89' for JPN) — NBC Sports/ESPN/Bolavip"
+    },
+    {
+      "round": "Matchday 4",
+      "date": "2026-06-14",
+      "team1": "UEFA Path B winner",
+      "team2": "Tunisia",
+      "score": { "ft": [5, 1] },
+      "source": "Sweden 5-1 Tunisia (= UEFA Path B winner; Ayari brace) — ESPN/Yahoo/RotoWire/NBC"
+    },
+    {
+      "round": "Matchday 5",
+      "date": "2026-06-15",
+      "team1": "Belgium",
+      "team2": "Egypt",
+      "score": { "ft": [1, 1] },
+      "source": "Belgium 1-1 Egypt (Ashour 19' for EGY; Hany own goal 66' forced by sub Lukaku) — ESPN/FOX Sports/Sky Sports/FIFA.com"
+    },
+    {
+      "round": "Matchday 5",
+      "date": "2026-06-15",
+      "team1": "Iran",
+      "team2": "New Zealand",
+      "score": { "ft": [2, 2] },
+      "source": "Iran 2-2 New Zealand (Elijah Just brace for NZ; Mohebbi & Rezaeian for IRN) — ESPN/FOX Sports/FIFA.com/World Soccer Talk"
+    },
+    {
+      "round": "Matchday 5",
+      "date": "2026-06-15",
+      "team1": "Spain",
+      "team2": "Cape Verde",
+      "score": { "ft": [0, 0] },
+      "source": "Spain 0-0 Cape Verde (Vozinha heroics; Spain 27 shots, hit crossbar — shock goalless draw in Atlanta) — ESPN/FOX Sports/FIFA.com"
+    },
+    {
+      "round": "Matchday 5",
+      "date": "2026-06-15",
+      "team1": "Saudi Arabia",
+      "team2": "Uruguay",
+      "score": { "ft": [1, 1] },
+      "source": "Saudi Arabia 1-1 Uruguay (Al-Amri for KSA; Maxi Araújo equaliser for URU, Miami) — ESPN/FOX Sports/Bolavip/Flashscore/FIFA.com"
+    },
+    {
+      "round": "Matchday 6",
+      "date": "2026-06-16",
+      "team1": "France",
+      "team2": "Senegal",
+      "score": { "ft": [3, 1] },
+      "source": "France 3-1 Senegal (Mbappé brace to become France's record scorer; Olise inspired second half) — FourFourTwo/The Scotsman/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 6",
+      "date": "2026-06-16",
+      "team1": "IC Path 2 winner",
+      "team2": "Norway",
+      "score": { "ft": [1, 4] },
+      "source": "Iraq 1-4 Norway (Iraq = IC Path 2 winner; Haaland brace) — FourFourTwo/The Scotsman/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 6",
+      "date": "2026-06-16",
+      "team1": "Argentina",
+      "team2": "Algeria",
+      "score": { "ft": [3, 0] },
+      "source": "Argentina 3-0 Algeria (Messi first World Cup hat-trick, ties all-time WC goals record) — FourFourTwo/The Scotsman/NBC News/Al Jazeera"
+    },
+    {
+      "round": "Matchday 6",
+      "date": "2026-06-16",
+      "team1": "Austria",
+      "team2": "Jordan",
+      "score": { "ft": [3, 1] },
+      "source": "Austria 3-1 Jordan (Group J, Santa Clara) — FourFourTwo/The Scotsman/ESPN"
+    },
+    {
+      "round": "Matchday 7",
+      "date": "2026-06-17",
+      "team1": "Portugal",
+      "team2": "IC Path 1 winner",
+      "score": { "ft": [1, 1] },
+      "source": "Portugal 1-1 DR Congo (DR Congo = IC Path 1 winner; Ronaldo's side frustrated in Houston) — ESPN/NBC News/FOX Sports"
+    },
+    {
+      "round": "Matchday 7",
+      "date": "2026-06-17",
+      "team1": "Uzbekistan",
+      "team2": "Colombia",
+      "score": { "ft": [1, 3] },
+      "source": "Uzbekistan 1-3 Colombia (Colombia beat World Cup debutants) — ESPN/NBC News/FOX Sports"
+    },
+    {
+      "round": "Matchday 7",
+      "date": "2026-06-17",
+      "team1": "England",
+      "team2": "Croatia",
+      "score": { "ft": [4, 2] },
+      "source": "England 4-2 Croatia (Kane brace incl. 2 pens, Bellingham, Rashford) — CBS Sports/ESPN/Sky Sports/England FA"
+    },
+    {
+      "round": "Matchday 7",
+      "date": "2026-06-17",
+      "team1": "Ghana",
+      "team2": "Panama",
+      "score": { "ft": [1, 0] },
+      "source": "Ghana 1-0 Panama (late winner, Toronto) — NBC News/ESPN/FOX Sports"
     }
   ]
 }

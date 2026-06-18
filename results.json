@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T08:12:13.516Z",
+  "lastUpdated": "2026-06-18T13:01:55.325Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
@@ -38,7 +38,7 @@
     "Natasha B": 1,
     "Nathan G": 0,
     "Nic B": 1,
-    "Patrick Lindon": 0,
+    "Nirusha": 0,
     "Rebecca V": 1,
     "Richie C": 1,
     "Robin": 0,
@@ -88,7 +88,7 @@
     "Natasha B": 2,
     "Nathan G": 0,
     "Nic B": 1,
-    "Patrick Lindon": 1,
+    "Nirusha": 1,
     "Rebecca V": 1,
     "Richie C": 1,
     "Robin": 1,
@@ -119,8 +119,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -257,8 +257,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -280,8 +280,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -395,8 +395,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -418,8 +418,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -447,7 +447,7 @@
       }
     },
     {
-      "utcDate": "2026-06-19T20:30:00-04:00",
+      "utcDate": "2026-06-19T21:00:00-04:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group C",
@@ -533,8 +533,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 3,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -556,8 +556,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -585,7 +585,7 @@
       }
     },
     {
-      "utcDate": "2026-06-19T20:00:00-07:00",
+      "utcDate": "2026-06-19T21:00:00-07:00",
       "status": "SCHEDULED",
       "stage": "GROUP_STAGE",
       "group": "Group D",
@@ -671,8 +671,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 3,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -694,8 +694,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -809,8 +809,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -832,8 +832,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 2,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -947,8 +947,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -970,8 +970,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1085,8 +1085,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1108,8 +1108,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1223,8 +1223,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1246,8 +1246,8 @@
           "away": 4
         },
         "halfTime": {
-          "home": 1,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1361,8 +1361,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1384,8 +1384,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1499,8 +1499,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1522,8 +1522,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1637,8 +1637,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 2,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1660,8 +1660,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },

@@ -37,7 +37,7 @@ const PARTICIPANTS = [
   { name: 'Natasha B', team: 'Iran', code: 'ir' },
   { name: 'Nathan G', team: 'Turkey', code: 'tr' },
   { name: 'Nic B', team: 'Bosnia and Herzegovina', code: 'ba' },
-  { name: 'Patrick Lindon', team: 'Tunisia', code: 'tn' },
+  { name: 'Nirusha', team: 'Tunisia', code: 'tn' },
   { name: 'Rebecca V', team: 'Morocco', code: 'ma' },
   { name: 'Richie C', team: 'Saudi Arabia', code: 'sa' },
   { name: 'Robin', team: 'Senegal', code: 'sn' },
