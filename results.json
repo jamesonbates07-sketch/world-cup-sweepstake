@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T17:48:58.964Z",
+  "lastUpdated": "2026-06-19T16:18:56.121Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
@@ -14,9 +14,9 @@
     "Ed": 0,
     "Ellie": 0,
     "Enrico": 1,
-    "Fergus": 0,
+    "Fergus": 1,
     "George": 3,
-    "Hayley": 3,
+    "Hayley": 6,
     "Holly": 0,
     "Jack": 1,
     "Jake": 1,
@@ -34,7 +34,7 @@
     "Matthew Garvey": 1,
     "Matty Z": 0,
     "Michael H": 1,
-    "Micky P": 0,
+    "Micky P": 1,
     "Natasha B": 1,
     "Nathan G": 0,
     "Nic B": 1,
@@ -47,8 +47,8 @@
     "Stuart Staves": 1,
     "Tina": 3,
     "Ugne": 1,
-    "Wendy": 1,
-    "Augustin": 1
+    "Wendy": 4,
+    "Augustin": 4
   },
   "goals": {
     "Abi": 3,
@@ -64,9 +64,9 @@
     "Ed": 1,
     "Ellie": 0,
     "Enrico": 2,
-    "Fergus": 0,
+    "Fergus": 1,
     "George": 1,
-    "Hayley": 2,
+    "Hayley": 3,
     "Holly": 0,
     "Jack": 1,
     "Jake": 1,
@@ -84,10 +84,10 @@
     "Matthew Garvey": 1,
     "Matty Z": 1,
     "Michael H": 0,
-    "Micky P": 1,
+    "Micky P": 2,
     "Natasha B": 2,
     "Nathan G": 0,
-    "Nic B": 1,
+    "Nic B": 2,
     "Nirusha": 1,
     "Rebecca V": 1,
     "Richie C": 1,
@@ -97,8 +97,8 @@
     "Stuart Staves": 1,
     "Tina": 4,
     "Ugne": 1,
-    "Wendy": 1,
-    "Augustin": 1
+    "Wendy": 5,
+    "Augustin": 7
   },
   "matches": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "utcDate": "2026-06-18T12:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
@@ -161,18 +161,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-18T19:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
@@ -184,12 +184,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -287,7 +287,7 @@
     },
     {
       "utcDate": "2026-06-18T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
@@ -299,18 +299,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-18T15:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
@@ -322,12 +322,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 6,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Uzbekistan 1-3 Colombia | Ghana 1-0 Panama | England 4-2 Croatia | Portugal 1-1 Congo DR | Austria 3-1 Jordan. Leaderboard updated!",
+  "summaryText": "Recent action: Mexico 1-0 Korea Republic | Canada 6-0 Qatar | Switzerland 4-1 Bosnia and Herzegovina | Czech Republic 1-1 South Africa | Uzbekistan 1-3 Colombia. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Marta",
@@ -2518,19 +2518,19 @@
       "detail": "FIFA #1 — out at group stage"
     },
     "unluckiest": {
-      "holder": "Louise",
-      "team": "Germany",
-      "detail": "3 pts but didn't progress"
+      "holder": "Hayley",
+      "team": "Mexico",
+      "detail": "6 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 24,
-    "totalGoals": 75,
+    "matchesPlayed": 28,
+    "totalGoals": 89,
     "biggestWin": {
       "margin": 6,
-      "score": "7–1",
-      "winner": "Germany",
-      "loser": "Curaçao"
+      "score": "6–0",
+      "winner": "Canada",
+      "loser": "Qatar"
     },
     "goldenBoot": {
       "holder": "Louise",
