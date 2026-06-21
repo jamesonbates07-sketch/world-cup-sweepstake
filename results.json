@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T12:15:34.906Z",
+  "lastUpdated": "2026-06-21T12:30:52.180Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
@@ -8,12 +8,12 @@
     "Bella": 3,
     "Charlotte": 3,
     "Dan": 3,
-    "Darryl": 0,
+    "Darryl": 1,
     "Dermot": 1,
     "Derran": 0,
     "Ed": 3,
     "Ellie": 0,
-    "Enrico": 1,
+    "Enrico": 4,
     "Fergus": 1,
     "George": 3,
     "Hayley": 6,
@@ -27,10 +27,10 @@
     "Katie O'Hara": 0,
     "Leena": 3,
     "Liliana": 1,
-    "Louise": 3,
+    "Louise": 6,
     "Mark G": 0,
-    "Marta": 0,
-    "Matthew Collison": 1,
+    "Marta": 1,
+    "Matthew Collison": 4,
     "Matthew Garvey": 1,
     "Matty Z": 0,
     "Michael H": 1,
@@ -52,7 +52,7 @@
   },
   "goals": {
     "Abi": 3,
-    "Adrian": 1,
+    "Adrian": 2,
     "Alex": 1,
     "Andrea": 0,
     "Bella": 3,
@@ -63,7 +63,7 @@
     "Derran": 0,
     "Ed": 2,
     "Ellie": 0,
-    "Enrico": 2,
+    "Enrico": 7,
     "Fergus": 1,
     "George": 1,
     "Hayley": 3,
@@ -72,15 +72,15 @@
     "Jake": 1,
     "James G": 6,
     "Jameson B": 2,
-    "Jonathan B": 5,
+    "Jonathan B": 6,
     "Karl D": 1,
     "Katie O'Hara": 2,
     "Leena": 4,
     "Liliana": 1,
-    "Louise": 7,
+    "Louise": 9,
     "Mark G": 1,
     "Marta": 1,
-    "Matthew Collison": 2,
+    "Matthew Collison": 6,
     "Matthew Garvey": 1,
     "Matty Z": 1,
     "Michael H": 0,
@@ -701,7 +701,7 @@
     },
     {
       "utcDate": "2026-06-20T16:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group E",
       "homeTeam": {
@@ -713,18 +713,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-06-20T19:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group E",
       "homeTeam": {
@@ -736,12 +736,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -839,7 +839,7 @@
     },
     {
       "utcDate": "2026-06-20T12:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group F",
       "homeTeam": {
@@ -851,18 +851,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-20T22:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group F",
       "homeTeam": {
@@ -874,12 +874,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         }
       }
     },
@@ -2494,12 +2494,12 @@
       }
     }
   ],
-  "summaryText": "Recent action: Turkey 0-1 Paraguay | Brazil 3-0 Haiti | Scotland 0-1 Morocco | United States 2-0 Australia | Mexico 1-0 Korea Republic. Leaderboard updated!",
+  "summaryText": "Recent action: Tunisia 0-4 Japan | Ecuador 0-0 Curaçao | Germany 2-1 Côte d'Ivoire | Netherlands 5-1 Sweden | Turkey 0-1 Paraguay. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
-      "holder": "Marta",
-      "team": "Curaçao",
-      "detail": "0 pts · GD -6"
+      "holder": "Nirusha",
+      "team": "Tunisia",
+      "detail": "0 pts · GD -8"
     },
     "swissCheese": {
       "holder": "Marta",
@@ -2508,8 +2508,8 @@
     },
     "penaltyPain": null,
     "blankSheet": {
-      "holder": "Derran",
-      "team": "Haiti",
+      "holder": "Darryl",
+      "team": "Ecuador",
       "detail": "0 goals in 2 games"
     },
     "biggestDisappointment": {
@@ -2518,14 +2518,14 @@
       "detail": "FIFA #1 — out at group stage"
     },
     "unluckiest": {
-      "holder": "James G",
-      "team": "United States",
+      "holder": "Louise",
+      "team": "Germany",
       "detail": "6 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 32,
-    "totalGoals": 96,
+    "matchesPlayed": 36,
+    "totalGoals": 109,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2535,7 +2535,7 @@
     "goldenBoot": {
       "holder": "Louise",
       "team": "Germany",
-      "goals": 7
+      "goals": 9
     },
     "champion": null
   }
