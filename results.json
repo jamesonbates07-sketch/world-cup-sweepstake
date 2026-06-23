@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-06-22T18:57:50.831Z",
+  "lastUpdated": "2026-06-23T16:11:27.835Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
     "Alex": 3,
     "Andrea": 4,
-    "Bella": 3,
+    "Bella": 6,
     "Charlotte": 3,
-    "Dan": 3,
+    "Dan": 6,
     "Darryl": 1,
     "Dermot": 1,
     "Derran": 0,
@@ -17,7 +17,7 @@
     "Fergus": 1,
     "George": 3,
     "Hayley": 6,
-    "Holly": 0,
+    "Holly": 3,
     "Jack": 2,
     "Jake": 1,
     "James G": 6,
@@ -25,7 +25,7 @@
     "Jonathan B": 3,
     "Karl D": 0,
     "Katie O'Hara": 0,
-    "Leena": 3,
+    "Leena": 6,
     "Liliana": 2,
     "Louise": 6,
     "Mark G": 0,
@@ -55,9 +55,9 @@
     "Adrian": 2,
     "Alex": 1,
     "Andrea": 4,
-    "Bella": 3,
+    "Bella": 5,
     "Charlotte": 2,
-    "Dan": 3,
+    "Dan": 6,
     "Darryl": 0,
     "Dermot": 1,
     "Derran": 0,
@@ -67,7 +67,7 @@
     "Fergus": 1,
     "George": 1,
     "Hayley": 3,
-    "Holly": 0,
+    "Holly": 2,
     "Jack": 1,
     "Jake": 1,
     "James G": 6,
@@ -75,14 +75,14 @@
     "Jonathan B": 6,
     "Karl D": 1,
     "Katie O'Hara": 2,
-    "Leena": 4,
+    "Leena": 7,
     "Liliana": 3,
     "Louise": 9,
     "Mark G": 1,
     "Marta": 1,
     "Matthew Collison": 6,
     "Matthew Garvey": 4,
-    "Matty Z": 1,
+    "Matty Z": 2,
     "Michael H": 2,
     "Micky P": 2,
     "Natasha B": 2,
@@ -91,7 +91,7 @@
     "Nirusha": 1,
     "Rebecca V": 2,
     "Richie C": 1,
-    "Robin": 1,
+    "Robin": 3,
     "Sam M": 3,
     "Sammi Hughes": 2,
     "Stuart Staves": 1,
@@ -1253,7 +1253,7 @@
     },
     {
       "utcDate": "2026-06-22T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group I",
       "homeTeam": {
@@ -1265,18 +1265,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-22T20:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group I",
       "homeTeam": {
@@ -1288,12 +1288,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -1391,7 +1391,7 @@
     },
     {
       "utcDate": "2026-06-22T12:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group J",
       "homeTeam": {
@@ -1403,18 +1403,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-22T20:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group J",
       "homeTeam": {
@@ -1426,12 +1426,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: New Zealand 1-3 Egypt | Uruguay 2-2 Cape Verde Islands | Belgium 0-0 Iran | Spain 4-0 Saudi Arabia | Tunisia 0-4 Japan. Leaderboard updated!",
+  "summaryText": "Recent action: Jordan 1-2 Algeria | Norway 3-2 Senegal | France 3-0 Iraq | Argentina 2-0 Austria | New Zealand 1-3 Egypt. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Nirusha",
@@ -2518,14 +2518,14 @@
       "detail": "FIFA #1 — out at group stage"
     },
     "unluckiest": {
-      "holder": "Augustin",
-      "team": "Canada",
-      "detail": "4 pts but didn't progress"
+      "holder": "Bella",
+      "team": "Argentina",
+      "detail": "6 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 40,
-    "totalGoals": 121,
+    "matchesPlayed": 44,
+    "totalGoals": 134,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
