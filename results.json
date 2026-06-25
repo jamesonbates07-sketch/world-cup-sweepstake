@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T13:55:04.768Z",
+  "lastUpdated": "2026-06-25T13:38:00.235Z",
   "points": {
     "Abi": 3,
     "Adrian": 3,
@@ -14,9 +14,9 @@
     "Ed": 3,
     "Ellie": 0,
     "Enrico": 4,
-    "Fergus": 1,
+    "Fergus": 4,
     "George": 4,
-    "Hayley": 6,
+    "Hayley": 9,
     "Holly": 3,
     "Jack": 2,
     "Jake": 1,
@@ -37,17 +37,17 @@
     "Micky P": 1,
     "Natasha B": 2,
     "Nathan G": 0,
-    "Nic B": 1,
+    "Nic B": 4,
     "Nirusha": 0,
-    "Rebecca V": 4,
+    "Rebecca V": 7,
     "Richie C": 1,
     "Robin": 0,
     "Sam M": 6,
     "Sammi Hughes": 3,
     "Stuart Staves": 4,
     "Tina": 4,
-    "Ugne": 4,
-    "Wendy": 4,
+    "Ugne": 7,
+    "Wendy": 7,
     "Augustin": 4
   },
   "goals": {
@@ -60,16 +60,16 @@
     "Dan": 6,
     "Darryl": 0,
     "Dermot": 1,
-    "Derran": 0,
+    "Derran": 2,
     "Ed": 2,
     "Ellie": 0,
     "Enrico": 7,
-    "Fergus": 1,
+    "Fergus": 2,
     "George": 1,
-    "Hayley": 3,
+    "Hayley": 6,
     "Holly": 2,
     "Jack": 1,
-    "Jake": 1,
+    "Jake": 2,
     "James G": 6,
     "Jameson B": 3,
     "Jonathan B": 6,
@@ -87,18 +87,18 @@
     "Micky P": 2,
     "Natasha B": 2,
     "Nathan G": 0,
-    "Nic B": 2,
+    "Nic B": 5,
     "Nirusha": 1,
-    "Rebecca V": 2,
+    "Rebecca V": 6,
     "Richie C": 1,
     "Robin": 3,
     "Sam M": 4,
     "Sammi Hughes": 2,
     "Stuart Staves": 6,
     "Tina": 4,
-    "Ugne": 4,
-    "Wendy": 5,
-    "Augustin": 7
+    "Ugne": 7,
+    "Wendy": 7,
+    "Augustin": 8
   },
   "matches": [
     {
@@ -195,7 +195,7 @@
     },
     {
       "utcDate": "2026-06-24T19:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
@@ -207,18 +207,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-24T19:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group A",
       "homeTeam": {
@@ -230,12 +230,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -333,7 +333,7 @@
     },
     {
       "utcDate": "2026-06-24T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
@@ -345,18 +345,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-24T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group B",
       "homeTeam": {
@@ -368,12 +368,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         }
       }
     },
@@ -471,7 +471,7 @@
     },
     {
       "utcDate": "2026-06-24T18:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group C",
       "homeTeam": {
@@ -483,18 +483,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         }
       }
     },
     {
       "utcDate": "2026-06-24T18:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group C",
       "homeTeam": {
@@ -506,12 +506,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Colombia 1-0 Congo DR | Panama 0-1 Croatia | England 0-0 Ghana | Portugal 5-0 Uzbekistan | Jordan 1-2 Algeria. Leaderboard updated!",
+  "summaryText": "Recent action: Czech Republic 0-3 Mexico | South Africa 1-0 Korea Republic | Scotland 0-3 Brazil | Morocco 4-2 Haiti | Switzerland 2-1 Canada. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Nirusha",
@@ -2518,14 +2518,14 @@
       "detail": "FIFA #1 — out at group stage"
     },
     "unluckiest": {
-      "holder": "Bella",
-      "team": "Argentina",
-      "detail": "6 pts but didn't progress"
+      "holder": "Ugne",
+      "team": "Brazil",
+      "detail": "7 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 48,
-    "totalGoals": 141,
+    "matchesPlayed": 54,
+    "totalGoals": 161,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
