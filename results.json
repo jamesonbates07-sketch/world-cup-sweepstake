@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-06-27T11:15:45.324Z",
+  "lastUpdated": "2026-06-28T11:59:51.451Z",
   "points": {
-    "Abi": 3,
+    "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
     "Andrea": 7,
-    "Bella": 6,
+    "Bella": 9,
     "Charlotte": 4,
     "Dan": 9,
     "Darryl": 4,
-    "Dermot": 1,
+    "Dermot": 4,
     "Derran": 0,
     "Ed": 4,
     "Ellie": 0,
@@ -17,14 +17,14 @@
     "Fergus": 4,
     "George": 4,
     "Hayley": 9,
-    "Holly": 3,
+    "Holly": 4,
     "Jack": 5,
     "Jake": 1,
     "James G": 6,
     "Jameson B": 1,
     "Jonathan B": 4,
     "Karl D": 0,
-    "Katie O'Hara": 3,
+    "Katie O'Hara": 6,
     "Leena": 6,
     "Liliana": 2,
     "Louise": 6,
@@ -42,39 +42,39 @@
     "Rebecca V": 7,
     "Richie C": 2,
     "Robin": 3,
-    "Sam M": 6,
+    "Sam M": 7,
     "Sammi Hughes": 3,
-    "Stuart Staves": 4,
-    "Tina": 4,
+    "Stuart Staves": 5,
+    "Tina": 7,
     "Ugne": 7,
     "Wendy": 7,
     "Augustin": 4
   },
   "goals": {
-    "Abi": 3,
+    "Abi": 6,
     "Adrian": 4,
     "Alex": 1,
     "Andrea": 5,
-    "Bella": 5,
+    "Bella": 8,
     "Charlotte": 2,
     "Dan": 10,
     "Darryl": 2,
-    "Dermot": 1,
+    "Dermot": 4,
     "Derran": 2,
     "Ed": 2,
     "Ellie": 0,
     "Enrico": 10,
     "Fergus": 2,
-    "George": 1,
+    "George": 2,
     "Hayley": 6,
-    "Holly": 2,
+    "Holly": 5,
     "Jack": 6,
     "Jake": 2,
     "James G": 8,
     "Jameson B": 4,
     "Jonathan B": 7,
-    "Karl D": 1,
-    "Katie O'Hara": 3,
+    "Karl D": 2,
+    "Katie O'Hara": 5,
     "Leena": 8,
     "Liliana": 3,
     "Louise": 10,
@@ -82,7 +82,7 @@
     "Marta": 1,
     "Matthew Collison": 7,
     "Matthew Garvey": 5,
-    "Matty Z": 2,
+    "Matty Z": 3,
     "Michael H": 2,
     "Micky P": 2,
     "Natasha B": 3,
@@ -95,7 +95,7 @@
     "Sam M": 4,
     "Sammi Hughes": 2,
     "Stuart Staves": 6,
-    "Tina": 4,
+    "Tina": 6,
     "Ugne": 7,
     "Wendy": 7,
     "Augustin": 8
@@ -1437,7 +1437,7 @@
     },
     {
       "utcDate": "2026-06-27T21:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group J",
       "homeTeam": {
@@ -1449,18 +1449,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-06-27T21:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group J",
       "homeTeam": {
@@ -1472,12 +1472,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         }
       }
     },
@@ -1575,7 +1575,7 @@
     },
     {
       "utcDate": "2026-06-27T19:30:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group K",
       "homeTeam": {
@@ -1587,18 +1587,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-27T19:30:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group K",
       "homeTeam": {
@@ -1610,12 +1610,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
@@ -1713,7 +1713,7 @@
     },
     {
       "utcDate": "2026-06-27T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group L",
       "homeTeam": {
@@ -1725,18 +1725,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-27T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "Group L",
       "homeTeam": {
@@ -1748,12 +1748,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -1789,7 +1789,7 @@
         "name": "Germany"
       },
       "awayTeam": {
-        "name": "3A/B/C/D/F"
+        "name": "Paraguay"
       },
       "penalties": null,
       "score": {
@@ -1855,10 +1855,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1I"
+        "name": "France"
       },
       "awayTeam": {
-        "name": "3C/D/F/G/H"
+        "name": "Sweden"
       },
       "penalties": null,
       "score": {
@@ -1881,7 +1881,7 @@
         "name": "Côte d'Ivoire"
       },
       "awayTeam": {
-        "name": "2I"
+        "name": "Norway"
       },
       "penalties": null,
       "score": {
@@ -1904,7 +1904,7 @@
         "name": "Mexico"
       },
       "awayTeam": {
-        "name": "3C/E/F/H/I"
+        "name": "Ecuador"
       },
       "penalties": null,
       "score": {
@@ -1924,10 +1924,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1L"
+        "name": "England"
       },
       "awayTeam": {
-        "name": "3E/H/I/J/K"
+        "name": "Congo DR"
       },
       "penalties": null,
       "score": {
@@ -1950,7 +1950,7 @@
         "name": "United States"
       },
       "awayTeam": {
-        "name": "3B/E/F/I/J"
+        "name": "Bosnia and Herzegovina"
       },
       "penalties": null,
       "score": {
@@ -1970,10 +1970,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1G"
+        "name": "Belgium"
       },
       "awayTeam": {
-        "name": "3A/E/H/I/J"
+        "name": "Senegal"
       },
       "penalties": null,
       "score": {
@@ -1993,10 +1993,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "2K"
+        "name": "Portugal"
       },
       "awayTeam": {
-        "name": "2L"
+        "name": "Croatia"
       },
       "penalties": null,
       "score": {
@@ -2016,10 +2016,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1H"
+        "name": "Spain"
       },
       "awayTeam": {
-        "name": "2J"
+        "name": "Austria"
       },
       "penalties": null,
       "score": {
@@ -2042,7 +2042,7 @@
         "name": "Switzerland"
       },
       "awayTeam": {
-        "name": "3E/F/G/I/J"
+        "name": "Algeria"
       },
       "penalties": null,
       "score": {
@@ -2062,10 +2062,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1J"
+        "name": "Argentina"
       },
       "awayTeam": {
-        "name": "2H"
+        "name": "Cape Verde Islands"
       },
       "penalties": null,
       "score": {
@@ -2085,10 +2085,10 @@
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
-        "name": "1K"
+        "name": "Colombia"
       },
       "awayTeam": {
-        "name": "3D/E/I/J/L"
+        "name": "Ghana"
       },
       "penalties": null,
       "score": {
@@ -2111,7 +2111,7 @@
         "name": "Australia"
       },
       "awayTeam": {
-        "name": "2G"
+        "name": "Egypt"
       },
       "penalties": null,
       "score": {
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Egypt 1-1 Iran | New Zealand 1-5 Belgium | Cape Verde Islands 0-0 Saudi Arabia | Uruguay 0-1 Spain | Norway 1-4 France. Leaderboard updated!",
+  "summaryText": "Recent action: Algeria 3-3 Austria | Jordan 1-3 Argentina | Colombia 0-0 Portugal | Congo DR 3-1 Uzbekistan | Panama 0-2 England. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2510,22 +2510,22 @@
     "blankSheet": {
       "holder": "Ellie",
       "team": "Panama",
-      "detail": "0 goals in 2 games"
+      "detail": "0 goals in 3 games"
     },
     "biggestDisappointment": {
-      "holder": "Bella",
-      "team": "Argentina",
-      "detail": "FIFA #1 — out at group stage"
+      "holder": "Liliana",
+      "team": "Uruguay",
+      "detail": "FIFA #11 — out at group stage"
     },
     "unluckiest": {
-      "holder": "Dan",
-      "team": "France",
-      "detail": "9 pts but didn't progress"
+      "holder": "Natasha B",
+      "team": "Iran",
+      "detail": "3 pts but didn't progress"
     }
   },
   "stats": {
-    "matchesPlayed": 66,
-    "totalGoals": 196,
+    "matchesPlayed": 72,
+    "totalGoals": 215,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
