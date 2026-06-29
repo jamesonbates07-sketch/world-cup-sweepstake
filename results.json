@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T11:59:51.451Z",
+  "lastUpdated": "2026-06-29T08:33:50.232Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -48,7 +48,7 @@
     "Tina": 7,
     "Ugne": 7,
     "Wendy": 7,
-    "Augustin": 4
+    "Augustin": 10
   },
   "goals": {
     "Abi": 6,
@@ -98,7 +98,7 @@
     "Tina": 6,
     "Ugne": 7,
     "Wendy": 7,
-    "Augustin": 8
+    "Augustin": 9
   },
   "matches": [
     {
@@ -1759,7 +1759,7 @@
     },
     {
       "utcDate": "2026-06-28T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -1771,12 +1771,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2494,7 +2494,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Algeria 3-3 Austria | Jordan 1-3 Argentina | Colombia 0-0 Portugal | Congo DR 3-1 Uzbekistan | Panama 0-2 England. Leaderboard updated!",
+  "summaryText": "Recent action: South Africa 0-1 Canada | Algeria 3-3 Austria | Jordan 1-3 Argentina | Colombia 0-0 Portugal | Congo DR 3-1 Uzbekistan. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2524,8 +2524,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 72,
-    "totalGoals": 215,
+    "matchesPlayed": 73,
+    "totalGoals": 216,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
