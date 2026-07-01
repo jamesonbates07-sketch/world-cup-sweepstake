@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T12:32:11.202Z",
+  "lastUpdated": "2026-07-01T13:57:03.161Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -7,7 +7,7 @@
     "Andrea": 7,
     "Bella": 9,
     "Charlotte": 4,
-    "Dan": 9,
+    "Dan": 15,
     "Darryl": 4,
     "Dermot": 4,
     "Derran": 0,
@@ -16,7 +16,7 @@
     "Enrico": 8,
     "Fergus": 4,
     "George": 4,
-    "Hayley": 9,
+    "Hayley": 15,
     "Holly": 4,
     "Jack": 5,
     "Jake": 1,
@@ -25,7 +25,7 @@
     "Jonathan B": 4,
     "Karl D": 0,
     "Katie O'Hara": 6,
-    "Leena": 6,
+    "Leena": 12,
     "Liliana": 2,
     "Louise": 7,
     "Mark G": 0,
@@ -52,12 +52,12 @@
   },
   "goals": {
     "Abi": 6,
-    "Adrian": 4,
+    "Adrian": 5,
     "Alex": 1,
     "Andrea": 5,
     "Bella": 8,
     "Charlotte": 2,
-    "Dan": 10,
+    "Dan": 13,
     "Darryl": 2,
     "Dermot": 4,
     "Derran": 2,
@@ -66,7 +66,7 @@
     "Enrico": 11,
     "Fergus": 2,
     "George": 2,
-    "Hayley": 6,
+    "Hayley": 8,
     "Holly": 5,
     "Jack": 6,
     "Jake": 2,
@@ -75,7 +75,7 @@
     "Jonathan B": 7,
     "Karl D": 2,
     "Katie O'Hara": 5,
-    "Leena": 8,
+    "Leena": 10,
     "Liliana": 3,
     "Louise": 11,
     "Mark G": 1,
@@ -1857,7 +1857,7 @@
     },
     {
       "utcDate": "2026-06-30T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -1869,18 +1869,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-06-30T12:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -1892,18 +1892,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-06-30T19:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -1915,12 +1915,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -2137,10 +2137,10 @@
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
-        "name": "W74"
+        "name": "Paraguay"
       },
       "awayTeam": {
-        "name": "W77"
+        "name": "France"
       },
       "penalties": null,
       "score": {
@@ -2163,7 +2163,7 @@
         "name": "Canada"
       },
       "awayTeam": {
-        "name": "W75"
+        "name": "Morocco"
       },
       "penalties": null,
       "score": {
@@ -2183,10 +2183,10 @@
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
-        "name": "W76"
+        "name": "Brazil"
       },
       "awayTeam": {
-        "name": "W78"
+        "name": "Norway"
       },
       "penalties": null,
       "score": {
@@ -2206,7 +2206,7 @@
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
-        "name": "W79"
+        "name": "Mexico"
       },
       "awayTeam": {
         "name": "W80"
@@ -2500,7 +2500,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Netherlands 1-1 Morocco | Germany 1-1 Paraguay | Brazil 2-1 Japan | South Africa 0-1 Canada | Algeria 3-3 Austria. Leaderboard updated!",
+  "summaryText": "Recent action: Mexico 2-0 Ecuador | France 3-0 Sweden | Côte d'Ivoire 1-2 Norway | Netherlands 1-1 Morocco | Germany 1-1 Paraguay. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2534,8 +2534,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 76,
-    "totalGoals": 223,
+    "matchesPlayed": 79,
+    "totalGoals": 231,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2543,9 +2543,9 @@
       "loser": "Qatar"
     },
     "goldenBoot": {
-      "holder": "Enrico",
-      "team": "Netherlands",
-      "goals": 11
+      "holder": "Dan",
+      "team": "France",
+      "goals": 13
     },
     "champion": null
   }
