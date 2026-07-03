@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-02T12:32:15.285Z",
+  "lastUpdated": "2026-07-03T08:53:06.774Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
-    "Andrea": 7,
+    "Andrea": 13,
     "Bella": 9,
     "Charlotte": 4,
     "Dan": 15,
@@ -44,17 +44,17 @@
     "Robin": 3,
     "Sam M": 7,
     "Sammi Hughes": 3,
-    "Stuart Staves": 5,
+    "Stuart Staves": 11,
     "Tina": 13,
     "Ugne": 13,
-    "Wendy": 7,
+    "Wendy": 13,
     "Augustin": 10
   },
   "goals": {
     "Abi": 6,
     "Adrian": 5,
     "Alex": 1,
-    "Andrea": 5,
+    "Andrea": 8,
     "Bella": 8,
     "Charlotte": 2,
     "Dan": 13,
@@ -74,7 +74,7 @@
     "Jameson B": 4,
     "Jonathan B": 7,
     "Karl D": 2,
-    "Katie O'Hara": 5,
+    "Katie O'Hara": 6,
     "Leena": 10,
     "Liliana": 3,
     "Louise": 11,
@@ -94,10 +94,10 @@
     "Robin": 10,
     "Sam M": 4,
     "Sammi Hughes": 2,
-    "Stuart Staves": 6,
+    "Stuart Staves": 8,
     "Tina": 8,
     "Ugne": 9,
-    "Wendy": 7,
+    "Wendy": 9,
     "Augustin": 9
   },
   "matches": [
@@ -1995,7 +1995,7 @@
     },
     {
       "utcDate": "2026-07-02T19:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -2007,18 +2007,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-07-02T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -2030,18 +2030,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-07-02T20:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "ROUND_OF_32",
       "group": null,
       "homeTeam": {
@@ -2053,12 +2053,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -2500,7 +2500,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: United States 2-0 Bosnia and Herzegovina | Belgium 3-2 Senegal | England 2-1 Congo DR | Mexico 2-0 Ecuador | France 3-0 Sweden. Leaderboard updated!",
+  "summaryText": "Recent action: Switzerland 2-0 Algeria | Portugal 2-1 Croatia | Spain 3-0 Austria | United States 2-0 Bosnia and Herzegovina | Belgium 3-2 Senegal. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2534,8 +2534,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 82,
-    "totalGoals": 241,
+    "matchesPlayed": 85,
+    "totalGoals": 249,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
