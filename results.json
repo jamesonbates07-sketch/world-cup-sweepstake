@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T08:27:50.783Z",
+  "lastUpdated": "2026-07-05T08:44:12.882Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -7,7 +7,7 @@
     "Andrea": 13,
     "Bella": 15,
     "Charlotte": 5,
-    "Dan": 15,
+    "Dan": 23,
     "Darryl": 4,
     "Dermot": 4,
     "Derran": 0,
@@ -39,7 +39,7 @@
     "Nathan G": 3,
     "Nic B": 4,
     "Nirusha": 0,
-    "Rebecca V": 11,
+    "Rebecca V": 19,
     "Richie C": 2,
     "Robin": 3,
     "Sam M": 13,
@@ -57,7 +57,7 @@
     "Andrea": 8,
     "Bella": 11,
     "Charlotte": 3,
-    "Dan": 13,
+    "Dan": 14,
     "Darryl": 2,
     "Dermot": 5,
     "Derran": 2,
@@ -89,7 +89,7 @@
     "Nathan G": 3,
     "Nic B": 5,
     "Nirusha": 2,
-    "Rebecca V": 7,
+    "Rebecca V": 10,
     "Richie C": 1,
     "Robin": 10,
     "Sam M": 5,
@@ -2136,7 +2136,7 @@
     },
     {
       "utcDate": "2026-07-04T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2148,18 +2148,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-07-04T12:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2171,12 +2171,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2278,10 +2278,10 @@
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
-        "name": "W86"
+        "name": "Argentina"
       },
       "awayTeam": {
-        "name": "W88"
+        "name": "Egypt"
       },
       "penalties": null,
       "score": {
@@ -2304,7 +2304,7 @@
         "name": "Switzerland"
       },
       "awayTeam": {
-        "name": "W87"
+        "name": "Colombia"
       },
       "penalties": null,
       "score": {
@@ -2503,7 +2503,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Colombia 1-0 Ghana | Argentina 3-2 Cape Verde Islands | Australia 1-1 Egypt | Switzerland 2-0 Algeria | Portugal 2-1 Croatia. Leaderboard updated!",
+  "summaryText": "Recent action: Paraguay 0-1 France | Canada 0-3 Morocco | Colombia 1-0 Ghana | Argentina 3-2 Cape Verde Islands | Australia 1-1 Egypt. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2537,8 +2537,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 88,
-    "totalGoals": 257,
+    "matchesPlayed": 90,
+    "totalGoals": 261,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2548,7 +2548,7 @@
     "goldenBoot": {
       "holder": "Dan",
       "team": "France",
-      "goals": 13
+      "goals": 14
     },
     "champion": null
   }
