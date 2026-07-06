@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T08:44:12.882Z",
+  "lastUpdated": "2026-07-06T10:02:36.236Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -25,7 +25,7 @@
     "Jonathan B": 4,
     "Karl D": 0,
     "Katie O'Hara": 6,
-    "Leena": 12,
+    "Leena": 20,
     "Liliana": 2,
     "Louise": 7,
     "Mark G": 0,
@@ -45,7 +45,7 @@
     "Sam M": 13,
     "Sammi Hughes": 3,
     "Stuart Staves": 11,
-    "Tina": 13,
+    "Tina": 21,
     "Ugne": 13,
     "Wendy": 13,
     "Augustin": 10
@@ -66,7 +66,7 @@
     "Enrico": 11,
     "Fergus": 2,
     "George": 2,
-    "Hayley": 8,
+    "Hayley": 10,
     "Holly": 5,
     "Jack": 9,
     "Jake": 2,
@@ -75,7 +75,7 @@
     "Jonathan B": 7,
     "Karl D": 2,
     "Katie O'Hara": 6,
-    "Leena": 10,
+    "Leena": 12,
     "Liliana": 3,
     "Louise": 11,
     "Mark G": 1,
@@ -95,8 +95,8 @@
     "Sam M": 5,
     "Sammi Hughes": 2,
     "Stuart Staves": 8,
-    "Tina": 8,
-    "Ugne": 9,
+    "Tina": 11,
+    "Ugne": 10,
     "Wendy": 9,
     "Augustin": 9
   },
@@ -2182,7 +2182,7 @@
     },
     {
       "utcDate": "2026-07-05T16:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2194,18 +2194,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-07-05T18:00:00-06:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2217,12 +2217,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         }
       }
     },
@@ -2324,10 +2324,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "W89"
+        "name": "France"
       },
       "awayTeam": {
-        "name": "W90"
+        "name": "Morocco"
       },
       "penalties": null,
       "score": {
@@ -2503,7 +2503,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Paraguay 0-1 France | Canada 0-3 Morocco | Colombia 1-0 Ghana | Argentina 3-2 Cape Verde Islands | Australia 1-1 Egypt. Leaderboard updated!",
+  "summaryText": "Recent action: Mexico 2-3 England | Brazil 1-2 Norway | Paraguay 0-1 France | Canada 0-3 Morocco | Colombia 1-0 Ghana. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2537,8 +2537,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 90,
-    "totalGoals": 261,
+    "matchesPlayed": 92,
+    "totalGoals": 269,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
