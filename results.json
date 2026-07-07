@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-06T10:02:36.236Z",
+  "lastUpdated": "2026-07-07T09:29:34.596Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
-    "Andrea": 13,
+    "Andrea": 21,
     "Bella": 15,
     "Charlotte": 5,
     "Dan": 23,
@@ -18,7 +18,7 @@
     "George": 4,
     "Hayley": 15,
     "Holly": 4,
-    "Jack": 11,
+    "Jack": 19,
     "Jake": 1,
     "James G": 12,
     "Jameson B": 1,
@@ -54,7 +54,7 @@
     "Abi": 6,
     "Adrian": 5,
     "Alex": 1,
-    "Andrea": 8,
+    "Andrea": 9,
     "Bella": 11,
     "Charlotte": 3,
     "Dan": 14,
@@ -68,9 +68,9 @@
     "George": 2,
     "Hayley": 10,
     "Holly": 5,
-    "Jack": 9,
+    "Jack": 13,
     "Jake": 2,
-    "James G": 10,
+    "James G": 11,
     "Jameson B": 4,
     "Jonathan B": 7,
     "Karl D": 2,
@@ -2228,7 +2228,7 @@
     },
     {
       "utcDate": "2026-07-06T14:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2240,18 +2240,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
     {
       "utcDate": "2026-07-06T17:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "homeTeam": {
@@ -2263,12 +2263,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 4
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         }
       }
     },
@@ -2370,10 +2370,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "W91"
+        "name": "Norway"
       },
       "awayTeam": {
-        "name": "W92"
+        "name": "England"
       },
       "penalties": null,
       "score": {
@@ -2503,7 +2503,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Mexico 2-3 England | Brazil 1-2 Norway | Paraguay 0-1 France | Canada 0-3 Morocco | Colombia 1-0 Ghana. Leaderboard updated!",
+  "summaryText": "Recent action: United States 1-4 Belgium | Portugal 0-1 Spain | Mexico 2-3 England | Brazil 1-2 Norway | Paraguay 0-1 France. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2537,8 +2537,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 92,
-    "totalGoals": 269,
+    "matchesPlayed": 94,
+    "totalGoals": 275,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
