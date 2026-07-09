@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Cup 2026 Sweepstake 🏆</title>
-  <meta name="description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
-  <meta name="theme-color" content="#ff2d78">
+  <title>World Cup 2026 Sweepstake · The Knockouts 🏆</title>
+  <meta name="description" content="The knockout stage is here. Live bracket, predict-the-rest what-if, projected leaderboard and who's still standing — 48 players, one champion.">
+  <meta name="theme-color" content="#f5c518">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
-  <!-- Social share preview (WhatsApp / Slack / iMessage / Twitter) -->
+  <!-- Social share preview -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="World Cup 2026 Sweepstake 🏆">
-  <meta property="og:description" content="48 players, 48 nations, one champion. Live leaderboard, group tables, knockout bracket and the Hall of Shame — updated daily.">
+  <meta property="og:title" content="World Cup 2026 Sweepstake · The Knockouts 🏆">
+  <meta property="og:description" content="Live bracket, predict-the-rest what-if and the projected leaderboard. Who takes the £96 pot?">
   <meta property="og:url" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/">
   <meta property="og:image" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -19,259 +19,269 @@
   <meta name="twitter:image" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ===== NAV ===== -->
   <nav id="navbar">
-    <div class="nav-logo">🏆 <span>SWEEPSTAKE 2026</span></div>
-    <ul class="nav-links">
+    <div class="nav-logo">🏆 <span>KNOCKOUTS <b>’26</b></span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#bracket-section">Bracket</a></li>
+      <li><a href="#predict-section">Predict</a></li>
       <li><a href="#leaderboard-section">Leaderboard</a></li>
-      <li><a href="#tournament-section">Tournament</a></li>
-      <li><a href="#race-section">Run to Glory</a></li>
-      <li><a href="#awards-section">Hall of Shame</a></li>
-      <li><a href="#draw-section">The Draw</a></li>
-      <li><a href="#matches-section">Matches</a></li>
+      <li><a href="#titlerace-section">Race</a></li>
+      <li><a href="#alive-section">Who's Alive</a></li>
+      <li><a href="#more-section">More</a></li>
     </ul>
+    <div class="nav-actions">
+      <button class="nav-btn" id="me-btn">⭐ This is me</button>
+      <button class="nav-btn ghost" id="share-btn">🔗 Share</button>
+    </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
   </nav>
 
-  <!-- Hero -->
+  <!-- ===== HERO ===== -->
   <header id="hero">
-    <canvas id="particles-canvas"></canvas>
+    <div class="hero-lights" aria-hidden="true">
+      <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span><span class="beam b4"></span>
+    </div>
+    <div class="hero-noise" aria-hidden="true"></div>
     <div class="hero-content">
-      <div class="hero-badge"><span class="dot"></span> FIFA World Cup 2026</div>
-      <h1 class="hero-title">World Cup Sweepstake</h1>
-      <p class="hero-subtitle"><span>USA</span> • <span>Mexico</span> • <span>Canada</span></p>
-      <div id="countdown-container"></div>
-      <div class="hero-actions">
-        <button class="me-btn" id="me-btn">⭐ This is me</button>
-        <button class="share-btn" id="share-btn">🔗 Copy link to share</button>
+      <div class="hero-badge"><span class="dot"></span> <span id="hero-stage-badge">FIFA World Cup 2026 · Knockouts</span></div>
+      <h1 class="hero-title">THE<br><span>KNOCKOUTS</span></h1>
+      <p class="hero-tag">48 players. One trophy. Win or go home.</p>
+      <div class="hero-meta" id="hero-meta"></div>
+      <div id="countdown" class="countdown"></div>
+      <div class="hero-cta">
+        <a href="#bracket-section" class="cta primary">📊 View the bracket</a>
+        <a href="#predict-section" class="cta ghost">🔮 Predict the rest</a>
       </div>
     </div>
+    <div class="scroll-hint" aria-hidden="true">▾</div>
   </header>
 
   <!-- Champion banner (appears when the Final is decided) -->
   <div id="champion-banner" class="champion-banner" style="display:none"></div>
 
-  <!-- Stats Bar -->
-  <div id="stats-bar">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-icon">👥</div>
-        <div class="stat-value" id="stat-players">48</div>
-        <div class="stat-label">Players</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">🌍</div>
-        <div class="stat-value" id="stat-teams">48</div>
-        <div class="stat-label">Teams</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">🏆</div>
-        <div class="stat-value" id="stat-prize">£2</div>
-        <div class="stat-label">To Enter</div>
-      </div>
+  <!-- ===== LIVE / TODAY STRIP ===== -->
+  <section class="strip-section" id="today-strip-wrap">
+    <div class="strip-head">
+      <h3 id="today-title">⚡ On Today</h3>
+      <span class="strip-updated" id="last-updated">Loading…</span>
     </div>
-  </div>
-
-  <!-- On Today (today's fixtures, our players highlighted) -->
-  <div id="today-bar" class="today-bar" style="display:none"></div>
-
-  <!-- Tournament Pulse (auto-populates once matches begin) -->
-  <div id="pulse-bar" class="pulse-bar" style="display:none"></div>
-
-  <!-- Spotlight -->
-  <section class="section" id="spotlight-section">
-    <div class="spotlight-bar">
-      <h3>🎯 Random Spotlight</h3>
-      <div class="spotlight-result" id="spotlight-result">
-        <span style="color:var(--text-secondary)">Click below to spotlight a random player!</span>
-      </div>
-      <button class="spotlight-btn" id="spotlight-btn">🎲 Spin the Wheel!</button>
-    </div>
+    <div class="today-strip" id="today-strip"></div>
   </section>
 
-  <!-- Rules -->
-  <section class="section reveal" id="rules-section">
-    <div class="rules-container">
-      <h3>📜 The Rules of Glory</h3>
-      <div class="rules-grid">
-        <div class="rule-card">
-          <div class="rule-points">3 pts</div>
-          <div class="rule-desc">For every win (90 mins / Extra Time)</div>
-        </div>
-        <div class="rule-card">
-          <div class="rule-points">1 pt</div>
-          <div class="rule-desc">For every draw (group stage) or penalty shootout loss</div>
-        </div>
-        <div class="rule-card">
-          <div class="rule-points">Tiebreaker</div>
-          <div class="rule-desc">Total goals scored across the tournament</div>
-        </div>
-      </div>
-      <div class="bonus-rules">
-        <strong>Knockout Stage Bonuses:</strong> Round of 32 (+3), Last 16 (+5), Quarters (+10), Semis (+15), Final Win (+20)<br>
-        <strong>Entry:</strong> £2 per player — winner takes the glory (and the £96 pot).
-      </div>
-      <div class="sepp-seal">✔️ Drawn under the personal supervision of Sepp Blatter — Seal of Fairness™</div>
-    </div>
-  </section>
-
-  <!-- Leaderboard -->
-  <section class="section reveal" id="leaderboard-section">
+  <!-- ===== INTERACTIVE BRACKET ===== -->
+  <section class="section" id="bracket-section">
     <div class="section-header">
+      <div class="kicker">Live · updated daily</div>
+      <h2 class="section-title">The Road to the Final</h2>
+      <p class="section-subtitle">Every knockout tie, every owner. Tap a match for detail — or flip on Predict mode to call the rest.</p>
+    </div>
+
+    <div class="bracket-toolbar">
+      <div class="seg" id="round-seg" role="tablist" aria-label="Jump to round"></div>
+      <div class="bracket-tools">
+        <button class="tool-btn" id="predict-toggle" aria-pressed="false">🔮 Predict mode: <b>Off</b></button>
+      </div>
+    </div>
+
+    <div class="predict-hint" id="predict-hint" style="display:none">
+      Tap the team you think goes through in any undecided tie. Winners flow to the next round and the
+      <a href="#predict-section">projected leaderboard</a> updates live. <button class="linklike" id="reset-predictions">Reset</button>
+    </div>
+
+    <div class="bracket-scroll" id="bracket-scroll">
+      <div class="bracket" id="bracket"></div>
+    </div>
+    <div class="bracket-empty" id="bracket-empty" style="display:none">
+      <div class="emoji">🗓️</div><p>The bracket unlocks when the knockout fixtures load.</p>
+    </div>
+  </section>
+
+  <!-- ===== PREDICT / PROJECTED LEADERBOARD ===== -->
+  <section class="section" id="predict-section">
+    <div class="section-header">
+      <div class="kicker">Predict-the-rest</div>
+      <h2 class="section-title">What-if Leaderboard</h2>
+      <p class="section-subtitle">Your bracket picks, scored by the real sweepstake rules. See who <em>would</em> take the pot.</p>
+    </div>
+
+    <div class="predict-panel">
+      <div class="predict-status" id="predict-status"></div>
+      <div class="predict-actions">
+        <button class="tool-btn" id="predict-toggle-2" aria-pressed="false">🔮 Turn on Predict mode</button>
+        <button class="tool-btn ghost" id="autofill-btn" title="Pick every remaining favourite by FIFA seed">🎲 Auto-fill by seed</button>
+        <button class="tool-btn ghost" id="reset-predictions-2">↺ Reset picks</button>
+      </div>
+    </div>
+
+    <div class="proj-champ" id="proj-champ" style="display:none"></div>
+
+    <div class="proj-board" id="proj-board"></div>
+    <p class="proj-note">Projection = current points + a win (3) and the round bonus (R16 +5, QF +10, SF +15, Final +20) for every team you send through. Ties broken by goals scored so far.</p>
+  </section>
+
+  <!-- ===== LEADERBOARD ===== -->
+  <section class="section" id="leaderboard-section">
+    <div class="section-header">
+      <div class="kicker">48 players</div>
       <h2 class="section-title">Leaderboard</h2>
-      <p class="section-subtitle">Who's taking home the glory?</p>
-      <div class="section-divider"></div>
+      <p class="section-subtitle">Where the pot stands right now.</p>
     </div>
-    <div class="lb-actions"><button id="share-table" class="lb-share-btn">📸 Share the table</button></div>
-    <div id="leader-spotlight" class="leader-spotlight" style="display:none"></div>
-    <div class="lb-header">
-      <span>#</span><span></span><span>Player</span><span>Pts</span>
-    </div>
-    <div class="leaderboard-list" id="leaderboard-list"></div>
-
-    <!-- Momentum: biggest climber + points-over-time trend -->
-    <div id="momentum-wrap" class="momentum-wrap" style="display:none">
-      <div id="climber-callout" class="climber-callout" style="display:none"></div>
-      <div class="momentum-chart-card">
-        <div class="momentum-head">
-          <h3>📈 The Race Over Time</h3>
-          <span class="momentum-sub" id="momentum-sub"></span>
-        </div>
-        <div class="momentum-canvas-box"><canvas id="trend-chart"></canvas></div>
-        <div class="momentum-legend" id="momentum-legend"></div>
+    <div class="lb-actions">
+      <div class="seg small" id="lb-mode-seg">
+        <button class="seg-btn active" data-mode="current">Current</button>
+        <button class="seg-btn" data-mode="projected">Projected</button>
       </div>
+      <button id="share-table" class="tool-btn ghost">📸 Share the table</button>
+    </div>
+    <div id="leader-spotlight" class="leader-spotlight" style="display:none"></div>
+    <div class="lb-head"><span>#</span><span></span><span>Player</span><span id="lb-col-right">Pts</span></div>
+    <div class="leaderboard-list" id="leaderboard-list"></div>
+  </section>
+
+  <!-- ===== TITLE RACE (points over time) ===== -->
+  <section class="section" id="titlerace-section">
+    <div class="section-header">
+      <div class="kicker">Since kickoff</div>
+      <h2 class="section-title">The Title Race</h2>
+      <p class="section-subtitle">How the top of the table has climbed, day by day. Hover (or drag) across the chart to scrub the standings; tap a name to isolate a line.</p>
+    </div>
+    <div class="race-chart-wrap">
+      <div class="race-legend" id="race-legend"></div>
+      <div class="race-svg-wrap" id="race-svg-wrap"></div>
+    </div>
+    <div class="bracket-empty" id="titlerace-empty" style="display:none">
+      <div class="emoji">📈</div><p>The race chart appears once a few days of results are in.</p>
     </div>
   </section>
 
-  <!-- Tournament: Groups & Bracket -->
-  <section class="section reveal" id="tournament-section">
+  <!-- ===== WHO'S ALIVE ===== -->
+  <section class="section" id="alive-section">
     <div class="section-header">
-      <h2 class="section-title">The Tournament</h2>
-      <p class="section-subtitle">Live group tables now — the bracket unlocks at the knockouts</p>
-      <div class="section-divider"></div>
-    </div>
-    <div id="groups-wrap" class="groups-wrap"></div>
-    <div id="bracket-wrap" class="bracket-wrap"></div>
-    <div class="empty-state" id="tournament-empty">
-      <div class="emoji">🗓️</div>
-      <p>Group tables fill in as the fixtures load and matches kick off.</p>
-    </div>
-  </section>
-
-  <!-- Run to Glory: survival + best-case ceiling -->
-  <section class="section reveal" id="race-section">
-    <div class="section-header">
-      <h2 class="section-title">Run to Glory</h2>
-      <p class="section-subtitle">Who's still standing — and the most points each player could still grab</p>
-      <div class="section-divider"></div>
+      <div class="kicker">Survival</div>
+      <h2 class="section-title">Who's Still Standing</h2>
+      <p class="section-subtitle">Teams still in it, their next test, and the most points each owner could still bank.</p>
     </div>
     <div class="race-controls" id="race-filters">
-      <button class="race-filter active" data-filter="all">All</button>
-      <button class="race-filter" data-filter="alive">✅ Still in</button>
+      <button class="race-filter active" data-filter="alive">✅ Still in</button>
+      <button class="race-filter" data-filter="all">All</button>
       <button class="race-filter" data-filter="out">❌ Out</button>
-      <button class="race-filter" data-filter="playoff">🎟️ Playoff</button>
     </div>
     <div class="race-list" id="race-list"></div>
-    <p class="race-note">“Ceiling” is the theoretical max if that team wins every remaining match — group wins (3 pts) plus all knockout bonuses. Locks in once a team is out.</p>
   </section>
 
-  <!-- Booby Prizes / Awards -->
-  <section class="section reveal" id="awards-section">
+  <!-- ===== MORE (collapsible extras) ===== -->
+  <section class="section" id="more-section">
     <div class="section-header">
-      <h2 class="section-title">Hall of Shame</h2>
-      <p class="section-subtitle">Glory for the gloriously unlucky — personally curated by Sepp 🏆</p>
-      <div class="section-divider"></div>
+      <div class="kicker">The archive</div>
+      <h2 class="section-title">Everything Else</h2>
+      <p class="section-subtitle">Group tables, the Hall of Shame, the full draw and every result.</p>
     </div>
-    <div class="awards-grid" id="awards-grid"></div>
-    <p class="awards-note">Updated daily alongside the results. Some prizes stay open until the knockouts begin.</p>
+
+    <div class="accordion" id="accordion">
+      <!-- Groups -->
+      <details class="acc-item" id="acc-groups">
+        <summary><span class="acc-t">🗂️ Group stage — final tables</span><span class="acc-x">＋</span></summary>
+        <div class="acc-body"><div id="groups-wrap" class="groups-wrap"></div></div>
+      </details>
+
+      <!-- Awards -->
+      <details class="acc-item" id="acc-awards">
+        <summary><span class="acc-t">🃏 Hall of Shame — Sepp's booby prizes</span><span class="acc-x">＋</span></summary>
+        <div class="acc-body"><div class="awards-grid" id="awards-grid"></div></div>
+      </details>
+
+      <!-- The Draw -->
+      <details class="acc-item" id="acc-draw">
+        <summary><span class="acc-t">🎟️ The Draw — all 48 players &amp; nations</span><span class="acc-x">＋</span></summary>
+        <div class="acc-body">
+          <div class="controls">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="search" id="search-input" placeholder="Search player or team…">
+            </div>
+            <div class="sort-btns">
+              <button class="sort-btn active" data-sort="points">Points</button>
+              <button class="sort-btn" data-sort="name">A–Z</button>
+              <button class="sort-btn" data-sort="team">Team</button>
+            </div>
+          </div>
+          <div class="cards-grid" id="cards-grid"></div>
+          <div class="no-results" id="no-results" style="display:none">No matches found 😕</div>
+        </div>
+      </details>
+
+      <!-- Rules -->
+      <details class="acc-item" id="acc-rules">
+        <summary><span class="acc-t">📜 The rules &amp; the pot</span><span class="acc-x">＋</span></summary>
+        <div class="acc-body">
+          <div class="rules-grid">
+            <div class="rule-card"><div class="rule-points">3 pts</div><div class="rule-desc">Every win (90 mins / extra time)</div></div>
+            <div class="rule-card"><div class="rule-points">1 pt</div><div class="rule-desc">Group draw, or a penalty-shootout loss</div></div>
+            <div class="rule-card"><div class="rule-points">Tiebreak</div><div class="rule-desc">Total goals scored across the tournament</div></div>
+          </div>
+          <div class="bonus-rules">
+            <strong>Knockout bonuses (to the team that goes through):</strong> Round of 32 +3 · Last 16 +5 · Quarters +10 · Semis +15 · Final win +20.<br>
+            <strong>Entry:</strong> £2 per player — winner takes the glory and the £96 pot.
+          </div>
+          <div class="sepp-seal">✔️ Drawn under the personal supervision of Sepp Blatter — Seal of Fairness™</div>
+        </div>
+      </details>
+
+      <!-- All matches -->
+      <details class="acc-item" id="acc-matches">
+        <summary><span class="acc-t">⚽ Every match — results &amp; fixtures</span><span class="acc-x">＋</span></summary>
+        <div class="acc-body">
+          <div class="match-summary" id="match-summary">
+            <h4>Latest match-day summary</h4>
+            <p id="summary-text">Waiting for data…</p>
+          </div>
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="live">🔴 Results</button>
+            <button class="tab-btn" data-tab="upcoming">📅 Upcoming</button>
+          </div>
+          <div class="tab-content active" id="tab-live">
+            <div class="matches-grid" id="live-matches"></div>
+            <div class="empty-state" id="live-empty" style="display:none"><div class="emoji">⚽</div><p>No results yet.</p></div>
+          </div>
+          <div class="tab-content" id="tab-upcoming">
+            <div class="matches-grid" id="upcoming-matches"></div>
+            <div class="empty-state" id="upcoming-empty" style="display:none"><div class="emoji">📅</div><p>No upcoming fixtures.</p></div>
+          </div>
+        </div>
+      </details>
+    </div>
   </section>
 
-  <!-- The Draw -->
-  <section class="section reveal" id="draw-section">
-    <div class="section-header">
-      <h2 class="section-title">The Draw</h2>
-      <p class="section-subtitle">48 brave souls and the nations they ride with</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="controls">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="search" id="search-input" placeholder="Search player or team...">
-      </div>
-      <div class="sort-btns">
-        <button class="sort-btn active" data-sort="name">A–Z</button>
-        <button class="sort-btn" data-sort="team">Team</button>
-        <button class="sort-btn" data-sort="points">Points</button>
-      </div>
-    </div>
-    <div class="cards-grid" id="cards-grid"></div>
-    <div class="no-results" id="no-results" style="display:none">No matches found 😕</div>
-  </section>
-
-  <!-- Matches -->
-  <section class="section reveal" id="matches-section">
-    <div class="section-header">
-      <h2 class="section-title">Matches</h2>
-      <p class="section-subtitle">Live scores & upcoming fixtures</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="update-banner" id="update-banner">
-      <div class="last-updated" id="last-updated">Last updated: Fetching...</div>
-      <div class="match-summary" id="match-summary">
-        <h4>Latest Match Day Summary</h4>
-        <p id="summary-text">Waiting for data...</p>
-      </div>
-    </div>
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="live">🔴 Live & Recent</button>
-      <button class="tab-btn" data-tab="upcoming">📅 Upcoming</button>
-    </div>
-    <div class="tab-content active" id="tab-live">
-      <div class="matches-grid" id="live-matches"></div>
-      <div class="empty-state" id="live-empty">
-        <div class="emoji">⚽</div>
-        <p>No recent matches yet. Results appear here automatically once the tournament kicks off!</p>
-      </div>
-    </div>
-    <div class="tab-content" id="tab-upcoming">
-      <div class="matches-grid" id="upcoming-matches"></div>
-      <div class="empty-state" id="upcoming-empty">
-        <div class="emoji">📅</div>
-        <p>Fixtures will appear here once the tournament data is loaded.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer id="footer">
-    <p>⚽ World Cup 2026 Sweepstake • Built with ❤️ and competitive spirit</p>
-    <p style="margin-top:4px">Data from <a href="https://github.com/openfootball/worldcup.json" target="_blank">openfootball</a> (public domain) • Updated daily</p>
+    <p>🏆 World Cup 2026 Sweepstake · The Knockouts</p>
+    <p class="foot-sub">Scores from <a href="https://github.com/openfootball/worldcup.json" target="_blank" rel="noopener">openfootball</a> (public domain), verified against major outlets · updated daily.</p>
   </footer>
 
   <!-- Toast -->
   <div class="toast" id="toast"></div>
 
-  <!-- Your personal status bar -->
+  <!-- Personal status bar -->
   <div id="you-bar" class="you-bar" style="display:none"></div>
 
   <!-- Back to top -->
   <button id="to-top" class="to-top" aria-label="Back to top" title="Back to top">↑</button>
 
-  <!-- Modal (player profiles + player picker) -->
+  <!-- Modal (match detail + player profile + player picker) -->
   <div id="modal-root" class="modal-root" style="display:none" role="dialog" aria-modal="true" aria-label="Details">
     <div class="modal-backdrop" id="modal-backdrop"></div>
     <div class="modal-card" id="modal-card" tabindex="-1"></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

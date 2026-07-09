@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T09:26:13.815Z",
+  "lastUpdated": "2026-07-09T10:34:07.327Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -211,8 +211,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -234,8 +234,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -349,8 +349,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -372,8 +372,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 2,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -464,8 +464,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 3,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -487,8 +487,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -510,8 +510,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 2,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -602,8 +602,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -625,8 +625,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 2,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -648,8 +648,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -717,8 +717,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -740,8 +740,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -763,8 +763,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -786,8 +786,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -855,8 +855,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 2,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -878,8 +878,8 @@
           "away": 4
         },
         "halfTime": {
-          "home": 0,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -901,8 +901,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -924,8 +924,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -993,8 +993,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1016,8 +1016,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1039,8 +1039,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1062,8 +1062,8 @@
           "away": 5
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1131,8 +1131,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 3,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1154,8 +1154,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 2,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1177,8 +1177,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1200,8 +1200,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1269,8 +1269,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1292,8 +1292,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1315,8 +1315,8 @@
           "away": 4
         },
         "halfTime": {
-          "home": 1,
-          "away": 3
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1338,8 +1338,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1407,8 +1407,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1430,8 +1430,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1453,8 +1453,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1476,8 +1476,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1545,8 +1545,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 3,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1568,8 +1568,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1591,8 +1591,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1614,8 +1614,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1683,8 +1683,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1706,8 +1706,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1729,8 +1729,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1752,8 +1752,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1775,8 +1775,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1801,8 +1801,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1827,8 +1827,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1850,8 +1850,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1873,8 +1873,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1896,8 +1896,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1919,8 +1919,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1942,8 +1942,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1965,8 +1965,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -1988,8 +1988,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2011,8 +2011,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2034,8 +2034,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2057,8 +2057,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2080,8 +2080,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2103,8 +2103,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 1,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2129,8 +2129,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2152,8 +2152,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2175,8 +2175,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2198,8 +2198,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2221,8 +2221,8 @@
           "away": 3
         },
         "halfTime": {
-          "home": 1,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2244,8 +2244,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2267,8 +2267,8 @@
           "away": 4
         },
         "halfTime": {
-          "home": 1,
-          "away": 2
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2290,8 +2290,8 @@
           "away": 2
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2316,8 +2316,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         }
       }
     },
@@ -2327,10 +2327,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "France"
+        "name": "W89"
       },
       "awayTeam": {
-        "name": "Morocco"
+        "name": "W90"
       },
       "penalties": null,
       "score": {
@@ -2350,10 +2350,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "Spain"
+        "name": "W93"
       },
       "awayTeam": {
-        "name": "Belgium"
+        "name": "W94"
       },
       "penalties": null,
       "score": {
@@ -2373,10 +2373,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "Norway"
+        "name": "W91"
       },
       "awayTeam": {
-        "name": "England"
+        "name": "W92"
       },
       "penalties": null,
       "score": {
@@ -2396,10 +2396,10 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "Argentina"
+        "name": "W95"
       },
       "awayTeam": {
-        "name": "Switzerland"
+        "name": "W96"
       },
       "penalties": null,
       "score": {

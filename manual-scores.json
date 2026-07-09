@@ -6,7 +6,12 @@
       "date": "2026-06-11",
       "team1": "Mexico",
       "team2": "South Africa",
-      "score": { "ft": [2, 0] },
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
       "source": "Mexico 2-0 South Africa — ESPN/FIFA/CNN/CBS/NBC"
     },
     {
@@ -14,7 +19,16 @@
       "date": "2026-06-11",
       "team1": "South Korea",
       "team2": "UEFA Path D winner",
-      "score": { "ft": [2, 1], "ht": [0, 0] },
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
       "source": "South Korea 2-1 Czechia (Czech Republic = UEFA Path D winner) — ESPN/FOX/Sky Sports"
     },
     {
@@ -22,7 +36,12 @@
       "date": "2026-06-12",
       "team1": "USA",
       "team2": "Paraguay",
-      "score": { "ft": [4, 1] },
+      "score": {
+        "ft": [
+          4,
+          1
+        ]
+      },
       "source": "USA 4-1 Paraguay (Balogun brace, Pulisic, Reyna) — FIFA/NBC/Yahoo/Olympics.com/SBS"
     },
     {
@@ -30,7 +49,12 @@
       "date": "2026-06-12",
       "team1": "Canada",
       "team2": "UEFA Path A winner",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Canada 1-1 Bosnia & Herzegovina (= UEFA Path A winner; Lukic for BIH 21', Larin 78' for Canada) — Yahoo/Olympics.com/SBS"
     },
     {
@@ -38,7 +62,12 @@
       "date": "2026-06-13",
       "team1": "Qatar",
       "team2": "Switzerland",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Qatar 1-1 Switzerland (Embolo 17' pen for SUI, Khoukhi 90+4' for QAT — Qatar's first-ever WC point) — ESPN/Goal.com/101GreatGoals"
     },
     {
@@ -46,7 +75,12 @@
       "date": "2026-06-13",
       "team1": "Brazil",
       "team2": "Morocco",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Brazil 1-1 Morocco (Saibari for MAR, Vinicius Jr equaliser for BRA) — Yahoo/ESPN"
     },
     {
@@ -54,7 +88,12 @@
       "date": "2026-06-13",
       "team1": "Haiti",
       "team2": "Scotland",
-      "score": { "ft": [0, 1] },
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
       "source": "Haiti 0-1 Scotland (John McGinn 28' — Scotland's first WC win since 1990) — ESPN/FOX Sports/FIFA.com/VAVEL"
     },
     {
@@ -62,7 +101,12 @@
       "date": "2026-06-13",
       "team1": "Australia",
       "team2": "UEFA Path C winner",
-      "score": { "ft": [2, 0] },
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
       "source": "Australia 2-0 Türkiye (= UEFA Path C winner; Irankunda 27', Metcalfe 75') — Washington Post/ESPN/FIFA.com/Yahoo"
     },
     {
@@ -70,7 +114,12 @@
       "date": "2026-06-14",
       "team1": "Germany",
       "team2": "Curaçao",
-      "score": { "ft": [7, 1] },
+      "score": {
+        "ft": [
+          7,
+          1
+        ]
+      },
       "source": "Germany 7-1 Curaçao (Havertz brace; Comenencia 21' for Curaçao's first-ever WC goal) — ESPN/Sky Sports/Opta Analyst/FIFA.com"
     },
     {
@@ -78,7 +127,12 @@
       "date": "2026-06-14",
       "team1": "Ivory Coast",
       "team2": "Ecuador",
-      "score": { "ft": [1, 0] },
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
       "source": "Ivory Coast 1-0 Ecuador (Amad Diallo 90') — NBC News/Sky Sports/ESPN/FIFA.com/Sports Mole"
     },
     {
@@ -86,7 +140,12 @@
       "date": "2026-06-14",
       "team1": "Netherlands",
       "team2": "Japan",
-      "score": { "ft": [2, 2] },
+      "score": {
+        "ft": [
+          2,
+          2
+        ]
+      },
       "source": "Netherlands 2-2 Japan (Van Dijk & Summerville for NED; Nakamura & Kamada 89' for JPN) — NBC Sports/ESPN/Bolavip"
     },
     {
@@ -94,7 +153,12 @@
       "date": "2026-06-14",
       "team1": "UEFA Path B winner",
       "team2": "Tunisia",
-      "score": { "ft": [5, 1] },
+      "score": {
+        "ft": [
+          5,
+          1
+        ]
+      },
       "source": "Sweden 5-1 Tunisia (= UEFA Path B winner; Ayari brace) — ESPN/Yahoo/RotoWire/NBC"
     },
     {
@@ -102,7 +166,12 @@
       "date": "2026-06-15",
       "team1": "Belgium",
       "team2": "Egypt",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Belgium 1-1 Egypt (Ashour 19' for EGY; Hany own goal 66' forced by sub Lukaku) — ESPN/FOX Sports/Sky Sports/FIFA.com"
     },
     {
@@ -110,7 +179,12 @@
       "date": "2026-06-15",
       "team1": "Iran",
       "team2": "New Zealand",
-      "score": { "ft": [2, 2] },
+      "score": {
+        "ft": [
+          2,
+          2
+        ]
+      },
       "source": "Iran 2-2 New Zealand (Elijah Just brace for NZ; Mohebbi & Rezaeian for IRN) — ESPN/FOX Sports/FIFA.com/World Soccer Talk"
     },
     {
@@ -118,7 +192,12 @@
       "date": "2026-06-15",
       "team1": "Spain",
       "team2": "Cape Verde",
-      "score": { "ft": [0, 0] },
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
       "source": "Spain 0-0 Cape Verde (Vozinha heroics; Spain 27 shots, hit crossbar — shock goalless draw in Atlanta) — ESPN/FOX Sports/FIFA.com"
     },
     {
@@ -126,7 +205,12 @@
       "date": "2026-06-15",
       "team1": "Saudi Arabia",
       "team2": "Uruguay",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Saudi Arabia 1-1 Uruguay (Al-Amri for KSA; Maxi Araújo equaliser for URU, Miami) — ESPN/FOX Sports/Bolavip/Flashscore/FIFA.com"
     },
     {
@@ -134,7 +218,12 @@
       "date": "2026-06-16",
       "team1": "France",
       "team2": "Senegal",
-      "score": { "ft": [3, 1] },
+      "score": {
+        "ft": [
+          3,
+          1
+        ]
+      },
       "source": "France 3-1 Senegal (Mbappé brace to become France's record scorer; Olise inspired second half) — FourFourTwo/The Scotsman/NBC News/ESPN"
     },
     {
@@ -142,7 +231,12 @@
       "date": "2026-06-16",
       "team1": "IC Path 2 winner",
       "team2": "Norway",
-      "score": { "ft": [1, 4] },
+      "score": {
+        "ft": [
+          1,
+          4
+        ]
+      },
       "source": "Iraq 1-4 Norway (Iraq = IC Path 2 winner; Haaland brace) — FourFourTwo/The Scotsman/NBC News/ESPN"
     },
     {
@@ -150,7 +244,12 @@
       "date": "2026-06-16",
       "team1": "Argentina",
       "team2": "Algeria",
-      "score": { "ft": [3, 0] },
+      "score": {
+        "ft": [
+          3,
+          0
+        ]
+      },
       "source": "Argentina 3-0 Algeria (Messi first World Cup hat-trick, ties all-time WC goals record) — FourFourTwo/The Scotsman/NBC News/Al Jazeera"
     },
     {
@@ -158,7 +257,12 @@
       "date": "2026-06-16",
       "team1": "Austria",
       "team2": "Jordan",
-      "score": { "ft": [3, 1] },
+      "score": {
+        "ft": [
+          3,
+          1
+        ]
+      },
       "source": "Austria 3-1 Jordan (Group J, Santa Clara) — FourFourTwo/The Scotsman/ESPN"
     },
     {
@@ -166,7 +270,12 @@
       "date": "2026-06-17",
       "team1": "Portugal",
       "team2": "IC Path 1 winner",
-      "score": { "ft": [1, 1] },
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
       "source": "Portugal 1-1 DR Congo (DR Congo = IC Path 1 winner; Ronaldo's side frustrated in Houston) — ESPN/NBC News/FOX Sports"
     },
     {
@@ -174,7 +283,12 @@
       "date": "2026-06-17",
       "team1": "Uzbekistan",
       "team2": "Colombia",
-      "score": { "ft": [1, 3] },
+      "score": {
+        "ft": [
+          1,
+          3
+        ]
+      },
       "source": "Uzbekistan 1-3 Colombia (Colombia beat World Cup debutants) — ESPN/NBC News/FOX Sports"
     },
     {
@@ -182,7 +296,12 @@
       "date": "2026-06-17",
       "team1": "England",
       "team2": "Croatia",
-      "score": { "ft": [4, 2] },
+      "score": {
+        "ft": [
+          4,
+          2
+        ]
+      },
       "source": "England 4-2 Croatia (Kane brace incl. 2 pens, Bellingham, Rashford) — CBS Sports/ESPN/Sky Sports/England FA"
     },
     {
@@ -190,8 +309,939 @@
       "date": "2026-06-17",
       "team1": "Ghana",
       "team2": "Panama",
-      "score": { "ft": [1, 0] },
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
       "source": "Ghana 1-0 Panama (late winner, Toronto) — NBC News/ESPN/FOX Sports"
+    },
+    {
+      "round": "Matchday 8",
+      "date": "2026-06-18",
+      "team1": "UEFA Path D winner",
+      "team2": "South Africa",
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
+      "source": "Czechia 1-1 South Africa (Czechia = UEFA Path D winner; Sadilek 6' for CZE, Mokoena 83' pen for RSA, Atlanta) — ESPN/FOX Sports/Al Jazeera/FIFA.com"
+    },
+    {
+      "round": "Matchday 8",
+      "date": "2026-06-18",
+      "team1": "Mexico",
+      "team2": "South Korea",
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
+      "source": "Mexico 1-0 South Korea (Luis Romo 50' after GK error; Mexico win Group A and reach knockouts first, Guadalajara) — ESPN/NBC/CBS Sports/VAVEL"
+    },
+    {
+      "round": "Matchday 8",
+      "date": "2026-06-18",
+      "team1": "Switzerland",
+      "team2": "UEFA Path A winner",
+      "score": {
+        "ft": [
+          4,
+          1
+        ]
+      },
+      "source": "Switzerland 4-1 Bosnia & Herzegovina (= UEFA Path A winner; Manzambi brace, Vargas, Xhaka pen, Los Angeles) — ESPN/FOX Sports/Sky Sports/VAVEL"
+    },
+    {
+      "round": "Matchday 8",
+      "date": "2026-06-18",
+      "team1": "Canada",
+      "team2": "Qatar",
+      "score": {
+        "ft": [
+          6,
+          0
+        ]
+      },
+      "source": "Canada 6-0 Qatar (Jonathan David hat-trick, Larin, Saliba, own goal; Qatar reduced to 9 men; Canada's first-ever men's WC win, Vancouver) — ESPN/FIFA.com/Yahoo/CBC/FOX Sports"
+    },
+    {
+      "round": "Matchday 9",
+      "date": "2026-06-19",
+      "team1": "Brazil",
+      "team2": "Haiti",
+      "score": {
+        "ft": [
+          3,
+          0
+        ]
+      },
+      "source": "Brazil 3-0 Haiti (Cunha 22', 36', Vinícius Jr 45+3'; Haiti first side eliminated) — ESPN MD9 recap/GMA News/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 9",
+      "date": "2026-06-19",
+      "team1": "Turkey",
+      "team2": "Paraguay",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "Paraguay 1-0 Türkiye (Matías Galarza 2nd-minute winner; feed team1=Turkey, team2=Paraguay) — ESPN MD9 recap/GMA News/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 10",
+      "date": "2026-06-20",
+      "team1": "Germany",
+      "team2": "Ivory Coast",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Germany 2-1 Ivory Coast (Undav 68', 90+4'; Kessié 30'; Germany reach knockouts) — ESPN MD10 recap/GMA News"
+    },
+    {
+      "round": "Matchday 10",
+      "date": "2026-06-20",
+      "team1": "Ecuador",
+      "team2": "Curaçao",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "Ecuador 0-0 Curaçao (Eloy Room 15 saves, Curaçao earn first-ever WC point) — ESPN MD10 recap/GMA News"
+    },
+    {
+      "round": "Matchday 10",
+      "date": "2026-06-20",
+      "team1": "Netherlands",
+      "team2": "Sweden",
+      "score": {
+        "ft": [
+          5,
+          1
+        ]
+      },
+      "source": "Netherlands 5-1 Sweden (Brobbey 5', 17', Gakpo 47', 54', Summerville 89'; Elanga 59') — ESPN MD10 recap/GMA News"
+    },
+    {
+      "round": "Matchday 10",
+      "date": "2026-06-20",
+      "team1": "Tunisia",
+      "team2": "Japan",
+      "score": {
+        "ft": [
+          0,
+          4
+        ]
+      },
+      "source": "Japan 4-0 Tunisia (Ueda stars in World Cup's 1,000th match; feed team1=Tunisia, team2=Japan) — GMA News/ESPN MD10 recap"
+    },
+    {
+      "round": "Matchday 11",
+      "date": "2026-06-21",
+      "team1": "Belgium",
+      "team2": "Iran",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "Belgium 0-0 Iran (10-man Belgium after early-2nd-half red card; Iran stay alive) — GMA News/ESPN MD11 recap/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 11",
+      "date": "2026-06-21",
+      "team1": "New Zealand",
+      "team2": "Egypt",
+      "score": {
+        "ft": [
+          1,
+          3
+        ]
+      },
+      "source": "Egypt 3-1 New Zealand (Mo Salah inspires Egypt's first-ever WC win; feed team1=New Zealand, team2=Egypt) — GMA News/ESPN MD11 recap/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 11",
+      "date": "2026-06-21",
+      "team1": "Spain",
+      "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          4,
+          0
+        ]
+      },
+      "source": "Spain 4-0 Saudi Arabia (Lamine Yamal 10', Oyarzabal first-half brace) — GMA News/ESPN MD11 recap/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 11",
+      "date": "2026-06-21",
+      "team1": "Uruguay",
+      "team2": "Cape Verde",
+      "score": {
+        "ft": [
+          2,
+          2
+        ]
+      },
+      "source": "Uruguay 2-2 Cape Verde (Cape Verde continue captivating debut WC run) — GMA News/ESPN MD11 recap/Yahoo Sports"
+    },
+    {
+      "round": "Matchday 12",
+      "date": "2026-06-22",
+      "team1": "Argentina",
+      "team2": "Austria",
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "source": "Argentina 2-0 Austria (Messi brace, 38' & 90+5', a World Cup-record 17th & 18th goals; Argentina top Group J, Dallas/Arlington) — ESPN/NBC News/Goal.com/FOX Sports/Al Jazeera/FIFA.com"
+    },
+    {
+      "round": "Matchday 12",
+      "date": "2026-06-22",
+      "team1": "France",
+      "team2": "Iraq",
+      "score": {
+        "ft": [
+          3,
+          0
+        ]
+      },
+      "source": "France 3-0 Iraq (Mbappé brace 14' & 2nd half, Dembélé; 2hr+ weather delay; France reach knockouts, Philadelphia) — ESPN/Al Jazeera/NBC News/FOX Sports/CBS Sports"
+    },
+    {
+      "round": "Matchday 12",
+      "date": "2026-06-22",
+      "team1": "Norway",
+      "team2": "Senegal",
+      "score": {
+        "ft": [
+          3,
+          2
+        ]
+      },
+      "source": "Norway 3-2 Senegal (Pedersen 43', Haaland 48' & 58'; Sarr brace for Senegal; Norway through to last 32, New York/New Jersey) — ESPN/Sky Sports/Opta Analyst/Outlook India"
+    },
+    {
+      "round": "Matchday 12",
+      "date": "2026-06-22",
+      "team1": "Jordan",
+      "team2": "Algeria",
+      "score": {
+        "ft": [
+          1,
+          2
+        ]
+      },
+      "source": "Jordan 1-2 Algeria (Al-Rashdan for JOR; Benbouali 68' & Gouiri 82' from Mahrez corners; Jordan eliminated, San Francisco Bay Area/Santa Clara) — ESPN/Bleacher Report/Opta Analyst/Outlook India"
+    },
+    {
+      "round": "Matchday 13",
+      "date": "2026-06-23",
+      "team1": "Portugal",
+      "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          5,
+          0
+        ]
+      },
+      "source": "Portugal 5-0 Uzbekistan (Ronaldo brace sets record, Leão late 5th; Portugal still reach knockouts) — ESPN/CBS Sports/Yahoo/DraftKings"
+    },
+    {
+      "round": "Matchday 13",
+      "date": "2026-06-23",
+      "team1": "Colombia",
+      "team2": "DR Congo",
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
+      "source": "Colombia 1-0 DR Congo (Daniel Muñoz 76'; Colombia win Group K, DR Congo also advance) — ESPN/CBS Sports/Yahoo"
+    },
+    {
+      "round": "Matchday 13",
+      "date": "2026-06-23",
+      "team1": "England",
+      "team2": "Ghana",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "England 0-0 Ghana (chippy goalless draw) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 13",
+      "date": "2026-06-23",
+      "team1": "Panama",
+      "team2": "Croatia",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "Panama 0-1 Croatia (Budimir 54'; CBS lists 'Croatia 1, Panama 0'; feed team1=Panama) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "Czech Republic",
+      "team2": "Mexico",
+      "score": {
+        "ft": [
+          0,
+          3
+        ]
+      },
+      "source": "Czechia 0-3 Mexico (Mexico win Group A; feed team1=Czech Republic) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "South Africa",
+      "team2": "South Korea",
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
+      "source": "South Africa 1-0 South Korea (Thapelo Maseko; South Africa finish 2nd in Group A) — CBS Sports/Yahoo/Olympics.com"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "Switzerland",
+      "team2": "Canada",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Switzerland 2-1 Canada (Switzerland win Group B, Canada 2nd) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "Bosnia & Herzegovina",
+      "team2": "Qatar",
+      "score": {
+        "ft": [
+          3,
+          1
+        ]
+      },
+      "source": "Bosnia & Herzegovina 3-1 Qatar — CBS Sports/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "Scotland",
+      "team2": "Brazil",
+      "score": {
+        "ft": [
+          0,
+          3
+        ]
+      },
+      "source": "Scotland 0-3 Brazil (Brazil win Group C) — CBS Sports/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 14",
+      "date": "2026-06-24",
+      "team1": "Morocco",
+      "team2": "Haiti",
+      "score": {
+        "ft": [
+          4,
+          2
+        ]
+      },
+      "source": "Morocco 4-2 Haiti (Morocco 2nd in Group C) — CBS Sports/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Turkey",
+      "team2": "USA",
+      "score": {
+        "ft": [
+          3,
+          2
+        ]
+      },
+      "source": "Türkiye 3-2 USA (Kaan Ayhan stoppage-time winner; USA still advance) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Paraguay",
+      "team2": "Australia",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "Paraguay 0-0 Australia (Australia 2nd in Group D on GD, Paraguay 3rd) — ESPN/FIFA/FOX Sports/Al Jazeera"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Curaçao",
+      "team2": "Ivory Coast",
+      "score": {
+        "ft": [
+          0,
+          2
+        ]
+      },
+      "source": "Curaçao 0-2 Ivory Coast (CBS 'Curacao 0, Ivory Coast 2') — CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Ecuador",
+      "team2": "Germany",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Ecuador 2-1 Germany (upset; Germany still win Group E on GD, Ecuador 3rd advance) — Yahoo/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Japan",
+      "team2": "Sweden",
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
+      "source": "Japan 1-1 Sweden (Japan 2nd in Group F) — CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 15",
+      "date": "2026-06-25",
+      "team1": "Tunisia",
+      "team2": "Netherlands",
+      "score": {
+        "ft": [
+          1,
+          3
+        ]
+      },
+      "source": "Tunisia 1-3 Netherlands (Netherlands win Group F) — CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "Egypt",
+      "team2": "Iran",
+      "score": {
+        "ft": [
+          1,
+          1
+        ]
+      },
+      "source": "Egypt 1-1 Iran — CBS Sports/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "New Zealand",
+      "team2": "Belgium",
+      "score": {
+        "ft": [
+          1,
+          5
+        ]
+      },
+      "source": "New Zealand 1-5 Belgium (CBS 'Belgium 5, New Zealand 1'; feed team1=New Zealand) — CBS Sports/NBC News/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "Cape Verde",
+      "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "Cape Verde 0-0 Saudi Arabia (Cape Verde advance from Group H) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "Uruguay",
+      "team2": "Spain",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "Uruguay 0-1 Spain (Spain win Group H; Uruguay eliminated) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "Norway",
+      "team2": "France",
+      "score": {
+        "ft": [
+          1,
+          4
+        ]
+      },
+      "source": "Norway 1-4 France (Dembélé hat-trick inside 32 min) — NBC News/CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 16",
+      "date": "2026-06-26",
+      "team1": "Senegal",
+      "team2": "Iraq",
+      "score": {
+        "ft": [
+          5,
+          0
+        ]
+      },
+      "source": "Senegal 5-0 Iraq — CBS Sports/ESPN"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "Algeria",
+      "team2": "Austria",
+      "score": {
+        "ft": [
+          3,
+          3
+        ]
+      },
+      "source": "Algeria 3-3 Austria (wild draw; both advance from Group J) — CBS Sports/Yahoo/ESPN"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "Jordan",
+      "team2": "Argentina",
+      "score": {
+        "ft": [
+          1,
+          3
+        ]
+      },
+      "source": "Jordan 1-3 Argentina (Lo Celso 19', Lautaro 31' pen, Messi 80'; Altamari 55' for JOR; Argentina finish with perfect record) — ESPN/FIFA/FOX Sports/Barca Blaugranes"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "Colombia",
+      "team2": "Portugal",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "source": "Colombia 0-0 Portugal (Colombia win Group K) — NBC News/CBS Sports/Yahoo"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "DR Congo",
+      "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          3,
+          1
+        ]
+      },
+      "source": "DR Congo 3-1 Uzbekistan (DR Congo advance) — NBC News/CBS Sports"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "Panama",
+      "team2": "England",
+      "score": {
+        "ft": [
+          0,
+          2
+        ]
+      },
+      "source": "Panama 0-2 England (Bellingham & Kane; England win Group L) — CBS Sports/ESPN/Yahoo"
+    },
+    {
+      "round": "Matchday 17",
+      "date": "2026-06-27",
+      "team1": "Croatia",
+      "team2": "Ghana",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Croatia 2-1 Ghana (Vlašić late winner; Croatia 2nd in Group L) — CBS Sports/Yahoo/ESPN"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-28",
+      "team1": "2A",
+      "team2": "2B",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "South Africa 0-1 Canada (2A=South Africa, 2B=Canada; Canada's first-ever WC knockout win) — CBS Sports/Olympics.com"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-29",
+      "team1": "1E",
+      "team2": "3A/B/C/D/F",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "p": [
+          3,
+          4
+        ]
+      },
+      "source": "Germany 1-1 Paraguay, Paraguay win 4-3 on penalties (1E=Germany, 3A/B/C/D/F=Paraguay/Group D 3rd) — Sky Sports/ESPN/Al Jazeera/CBS Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-29",
+      "team1": "1F",
+      "team2": "2C",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "p": [
+          2,
+          3
+        ]
+      },
+      "source": "Netherlands 1-1 Morocco, Morocco win 3-2 on penalties (1F=Netherlands, 2C=Morocco) — ESPN/Al Jazeera/CBS Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-29",
+      "team1": "1C",
+      "team2": "2F",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Brazil 2-1 Japan (1C=Brazil, 2F=Japan) — CBS Sports/Olympics.com"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-30",
+      "team1": "1I",
+      "team2": "3C/D/F/G/H",
+      "score": {
+        "ft": [
+          3,
+          0
+        ]
+      },
+      "source": "France 3-0 Sweden, Mbappé brace (1I=France, 3C/D/F/G/H=Sweden/Group F 3rd) — ESPN/FIFA/CBS Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-30",
+      "team1": "2E",
+      "team2": "2I",
+      "score": {
+        "ft": [
+          1,
+          2
+        ]
+      },
+      "source": "Ivory Coast 1-2 Norway, Haaland winner (2E=Ivory Coast, 2I=Norway) — FIFA/ESPN/Outlook"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-06-30",
+      "team1": "1A",
+      "team2": "3C/E/F/H/I",
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "source": "Mexico 2-0 Ecuador, Quiñones & Jiménez (1A=Mexico, 3C/E/F/H/I=Ecuador/Group E 3rd) — ESPN/FIFA/Yahoo/Al Jazeera"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-01",
+      "team1": "1L",
+      "team2": "3E/H/I/J/K",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "England 2-1 DR Congo (1L=England, 3E/H/I/J/K=DR Congo/Group K 3rd) — Yahoo Sports/Olympics.com/CBS Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-01",
+      "team1": "1D",
+      "team2": "3B/E/F/I/J",
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "source": "USA 2-0 Bosnia & Herzegovina, Tillman free-kick (1D=USA, 3B/E/F/I/J=Bosnia & Herzegovina/Group B 3rd) — CBS News/US Soccer/Yahoo Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-01",
+      "team1": "1G",
+      "team2": "3A/E/H/I/J",
+      "score": {
+        "ft": [
+          3,
+          2
+        ]
+      },
+      "source": "Belgium 3-2 Senegal after extra time, Tielemans penalty winner in 125th min (1G=Belgium, 3A/E/H/I/J=Senegal/Group I 3rd) — Yahoo Sports/Olympics.com"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-02",
+      "team1": "2K",
+      "team2": "2L",
+      "score": {
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "source": "Portugal 2-1 Croatia (2K=Portugal/Group K runner-up, 2L=Croatia/Group L runner-up) — ESPN MD21 recap/Yahoo Sports/CBS Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-02",
+      "team1": "1H",
+      "team2": "2J",
+      "score": {
+        "ft": [
+          3,
+          0
+        ]
+      },
+      "source": "Spain 3-0 Austria, Oyarzabal opener (1H=Spain/Group H winner, 2J=Austria/Group J runner-up) — ESPN MD21 recap/Yahoo Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-02",
+      "team1": "1B",
+      "team2": "3E/F/G/I/J",
+      "score": {
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "source": "Switzerland 2-0 Algeria, Embolo & Ndoye (1B=Switzerland/Group B winner, 3E/F/G/I/J=Algeria/Group J third) — ESPN MD21 recap/Yahoo Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-03",
+      "team1": "1J",
+      "team2": "2H",
+      "score": {
+        "ft": [
+          3,
+          2
+        ]
+      },
+      "source": "Argentina 3-2 Cape Verde after extra time, Messi goal + late own-goal winner (1J=Argentina/Group J winner, 2H=Cape Verde/Group H runner-up) — ESPN MD22 recap/Yahoo Sports/NBC News"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-03",
+      "team1": "1K",
+      "team2": "3D/E/I/J/L",
+      "score": {
+        "ft": [
+          1,
+          0
+        ]
+      },
+      "source": "Colombia 1-0 Ghana (1K=Colombia/Group K winner, 3D/E/I/J/L=Ghana/Group L third) — ESPN MD22 recap/Yahoo Sports"
+    },
+    {
+      "round": "Round of 32",
+      "date": "2026-07-03",
+      "team1": "2D",
+      "team2": "2G",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "p": [
+          2,
+          4
+        ]
+      },
+      "source": "Australia 1-1 Egypt, Egypt win 4-2 on penalties, Ashour opener + Hany OG (2D=Australia/Group D runner-up, 2G=Egypt/Group G runner-up) — Sky Sports/Al Jazeera/ESPN/Yahoo Sports"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-04",
+      "team1": "W74",
+      "team2": "W77",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "Paraguay 0-1 France, Kylian Mbappé penalty in Philadelphia (W74=Paraguay/winner of R32 match 74, W77=France/winner of R32 match 77) — CNN/ESPN MD23 recap/FOX Sports"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-04",
+      "team1": "W73",
+      "team2": "W75",
+      "score": {
+        "ft": [
+          0,
+          3
+        ]
+      },
+      "source": "Canada 0-3 Morocco, Azzedine Ounahi brace (50', 82') + Rahimi late in Houston (W73=Canada/winner of R32 match 73, W75=Morocco/winner of R32 match 75) — CNN/ESPN MD23 recap/FOX Sports"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-05",
+      "team1": "W76",
+      "team2": "W78",
+      "score": {
+        "ft": [
+          1,
+          2
+        ]
+      },
+      "source": "Brazil 1-2 Norway, Erling Haaland brace (79' header + long drive), Neymar stoppage-time penalty; Norway reach first-ever QF, Brazil's earliest exit since 1990 (W76=Brazil/winner of R32 match 76, W78=Norway/winner of R32 match 78) — ESPN/Al Jazeera/Sky Sports/FOX Sports"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-05",
+      "team1": "W79",
+      "team2": "W80",
+      "score": {
+        "ft": [
+          2,
+          3
+        ]
+      },
+      "source": "Mexico 2-3 England at Estadio Azteca, Bellingham brace (two goals in 98 seconds) + Kane penalty; Quiñones & Jiménez pen for Mexico; England hold on with 10 men after Quansah red (W79=Mexico/winner of R32 match 79, W80=England/winner of R32 match 80) — ESPN/FOX Sports/NBC Sports/CBS Sports/Olympics.com"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-06",
+      "team1": "W83",
+      "team2": "W84",
+      "score": {
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "source": "Portugal 0-1 Spain, Mikel Merino 90+1' winner (Ferran Torres assist) at Dallas/Arlington; Cristiano Ronaldo's final World Cup match (W83=Portugal/winner of R32 match 83, W84=Spain/winner of R32 match 84) — FIFA.com/ESPN/Al Jazeera"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-06",
+      "team1": "W81",
+      "team2": "W82",
+      "score": {
+        "ft": [
+          1,
+          4
+        ]
+      },
+      "source": "USA 1-4 Belgium at Seattle; De Ketelaere brace, Vanaken and Lukaku (stoppage time); Malik Tillman free-kick equaliser for USA; USMNT eliminated (W81=USA/winner of R32 match 81, W82=Belgium/winner of R32 match 82) — ESPN/CNN/NBC News/Yahoo Sports"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-07",
+      "team1": "W86",
+      "team2": "W88",
+      "score": {
+        "ft": [
+          3,
+          2
+        ]
+      },
+      "source": "Argentina 3-2 Egypt at Atlanta; Egypt led 2-0 (Yasser Ibrahim, Mostafa Zico) and Messi had a penalty saved, then Cristian Romero header, Messi 83' equaliser and Enzo Fernández 90+2' winner completed the comeback (W86=Argentina/winner of R32 match 86, W88=Egypt/winner of R32 match 88) — FIFA.com/ESPN/Al Jazeera/FOX Sports/NPR/NBC News"
+    },
+    {
+      "round": "Round of 16",
+      "date": "2026-07-07",
+      "team1": "W85",
+      "team2": "W87",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "p": [
+          4,
+          3
+        ]
+      },
+      "source": "Switzerland 0-0 Colombia at Vancouver, Switzerland win 4-3 on penalties (Rubén Vargas scored the winning spot-kick) after 120 goalless minutes (W85=Switzerland/winner of R32 match 85, W87=Colombia/winner of R32 match 87) — FIFA.com/ESPN/Al Jazeera/Yahoo Sports"
     }
   ]
 }

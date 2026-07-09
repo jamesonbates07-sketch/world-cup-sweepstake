@@ -55,6 +55,61 @@ const SLOT_OVERRIDES = {
   "UEFA Path D winner": "Czech Republic",         // Group A
   "IC Path 1 winner": "Congo DR",                 // Group K
   "IC Path 2 winner": "Iraq",                     // Group I
+
+  // Once the group stage finished (27 Jun 2026), the feed's Round of 32 fixtures
+  // switched to positional slot codes (1A = Group A winner, 2A = Group A runner-up,
+  // "3A/B/C/D/F" = best-placed advancing 3rd-place team drawn from that combo of
+  // groups, etc). openfootball hasn't back-filled real names into these slots, so
+  // without an override every team that has advanced (but hasn't played its R32
+  // match) gets miscounted as "eliminated at group stage" and R32 bonus points
+  // don't get attributed to anyone. Resolved from final group tables + the
+  // official R32 bracket (FIFA.com / CBS Sports / Sky Sports, as of 29 Jun 2026).
+  // Safe to edit — if the feed ever publishes real names for these slots, these
+  // entries just stop matching.
+  "1A": "Mexico", "2A": "South Africa",
+  "1B": "Switzerland", "2B": "Canada",
+  "1C": "Brazil", "2C": "Morocco",
+  "1D": "USA", "2D": "Australia",
+  "1E": "Germany", "2E": "Ivory Coast",
+  "1F": "Netherlands", "2F": "Japan",
+  "1G": "Belgium", "2G": "Egypt",
+  "1H": "Spain", "2H": "Cape Verde",
+  "1I": "France", "2I": "Norway",
+  "1J": "Argentina", "2J": "Austria",
+  "1K": "Colombia", "2K": "Portugal",
+  "1L": "England", "2L": "Croatia",
+  // Best-8-of-12 third-placed teams, mapped to their specific bracket slot:
+  "3A/B/C/D/F": "Paraguay",     // Group D 3rd
+  "3C/D/F/G/H": "Sweden",       // Group F 3rd
+  "3C/E/F/H/I": "Ecuador",      // Group E 3rd
+  "3E/H/I/J/K": "DR Congo",     // Group K 3rd
+  "3B/E/F/I/J": "Bosnia and Herzegovina", // Group B 3rd
+  "3A/E/H/I/J": "Senegal",      // Group I 3rd
+  "3E/F/G/I/J": "Algeria",      // Group J 3rd
+  "3D/E/I/J/L": "Ghana",        // Group L 3rd
+
+  // Round of 16 fixtures reference the winners of the Round of 32 ties as "W73"…"W88"
+  // (W73 = winner of R32 match 73, etc.). The feed hasn't back-filled real names, so
+  // without these overrides the R16 results score against nobody and the advancing
+  // teams get miscounted. Resolved from the verified R32 results in manual-scores.json
+  // (ESPN / CBS Sports / Sky Sports / Al Jazeera, as of 5 Jul 2026). Safe to edit —
+  // if the feed ever publishes real names for these slots, these entries just stop matching.
+  "W73": "Canada",        // South Africa 0-1 Canada
+  "W74": "Paraguay",      // Germany 1-1 Paraguay (Paraguay 4-3 pens)
+  "W75": "Morocco",       // Netherlands 1-1 Morocco (Morocco 3-2 pens)
+  "W76": "Brazil",        // Brazil 2-1 Japan
+  "W77": "France",        // France 3-0 Sweden
+  "W78": "Norway",        // Ivory Coast 1-2 Norway
+  "W79": "Mexico",        // Mexico 2-0 Ecuador
+  "W80": "England",       // England 2-1 DR Congo
+  "W81": "United States", // USA 2-0 Bosnia and Herzegovina
+  "W82": "Belgium",       // Belgium 3-2 Senegal (AET)
+  "W83": "Portugal",      // Portugal 2-1 Croatia
+  "W84": "Spain",         // Spain 3-0 Austria
+  "W85": "Switzerland",   // Switzerland 2-0 Algeria
+  "W86": "Argentina",     // Argentina 3-2 Cape Verde (AET)
+  "W87": "Colombia",      // Colombia 1-0 Ghana
+  "W88": "Egypt",         // Australia 1-1 Egypt (Egypt 4-2 pens)
 };
 
 const PARTICIPANTS = [
