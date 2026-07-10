@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T10:48:21.673Z",
+  "lastUpdated": "2026-07-10T09:22:47.030Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -7,7 +7,7 @@
     "Andrea": 21,
     "Bella": 23,
     "Charlotte": 5,
-    "Dan": 23,
+    "Dan": 36,
     "Darryl": 4,
     "Dermot": 4,
     "Derran": 0,
@@ -57,7 +57,7 @@
     "Andrea": 9,
     "Bella": 14,
     "Charlotte": 3,
-    "Dan": 14,
+    "Dan": 16,
     "Darryl": 2,
     "Dermot": 5,
     "Derran": 2,
@@ -2323,7 +2323,7 @@
     },
     {
       "utcDate": "2026-07-09T16:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
@@ -2335,12 +2335,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2506,7 +2506,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Switzerland 0-0 Colombia | Argentina 3-2 Egypt | United States 1-4 Belgium | Portugal 0-1 Spain | Mexico 2-3 England. Leaderboard updated!",
+  "summaryText": "Recent action: France 2-0 Morocco | Switzerland 0-0 Colombia | Argentina 3-2 Egypt | United States 1-4 Belgium | Portugal 0-1 Spain. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2540,8 +2540,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 96,
-    "totalGoals": 280,
+    "matchesPlayed": 97,
+    "totalGoals": 282,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2549,9 +2549,9 @@
       "loser": "Qatar"
     },
     "goldenBoot": {
-      "holder": "Bella",
-      "team": "Argentina",
-      "goals": 14
+      "holder": "Dan",
+      "team": "France",
+      "goals": 16
     },
     "champion": null
   }
