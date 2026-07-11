@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-10T09:22:47.030Z",
+  "lastUpdated": "2026-07-11T07:44:21.589Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
-    "Andrea": 21,
+    "Andrea": 34,
     "Bella": 23,
     "Charlotte": 5,
     "Dan": 36,
@@ -54,7 +54,7 @@
     "Abi": 6,
     "Adrian": 5,
     "Alex": 1,
-    "Andrea": 9,
+    "Andrea": 11,
     "Bella": 14,
     "Charlotte": 3,
     "Dan": 16,
@@ -68,7 +68,7 @@
     "George": 2,
     "Hayley": 10,
     "Holly": 5,
-    "Jack": 13,
+    "Jack": 14,
     "Jake": 2,
     "James G": 11,
     "Jameson B": 4,
@@ -2346,7 +2346,7 @@
     },
     {
       "utcDate": "2026-07-10T12:00:00-07:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
@@ -2358,12 +2358,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       }
     },
@@ -2506,7 +2506,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: France 2-0 Morocco | Switzerland 0-0 Colombia | Argentina 3-2 Egypt | United States 1-4 Belgium | Portugal 0-1 Spain. Leaderboard updated!",
+  "summaryText": "Recent action: Spain 2-1 Belgium | France 2-0 Morocco | Switzerland 0-0 Colombia | Argentina 3-2 Egypt | United States 1-4 Belgium. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2540,8 +2540,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 97,
-    "totalGoals": 282,
+    "matchesPlayed": 98,
+    "totalGoals": 285,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
