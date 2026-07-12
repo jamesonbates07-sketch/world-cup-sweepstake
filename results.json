@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-07-11T07:44:21.589Z",
+  "lastUpdated": "2026-07-12T08:05:13.654Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
     "Andrea": 34,
-    "Bella": 23,
+    "Bella": 36,
     "Charlotte": 5,
     "Dan": 36,
     "Darryl": 4,
@@ -45,7 +45,7 @@
     "Sam M": 14,
     "Sammi Hughes": 3,
     "Stuart Staves": 11,
-    "Tina": 21,
+    "Tina": 34,
     "Ugne": 13,
     "Wendy": 19,
     "Augustin": 10
@@ -55,7 +55,7 @@
     "Adrian": 5,
     "Alex": 1,
     "Andrea": 11,
-    "Bella": 14,
+    "Bella": 17,
     "Charlotte": 3,
     "Dan": 16,
     "Darryl": 2,
@@ -75,7 +75,7 @@
     "Jonathan B": 7,
     "Karl D": 2,
     "Katie O'Hara": 6,
-    "Leena": 12,
+    "Leena": 13,
     "Liliana": 3,
     "Louise": 11,
     "Mark G": 1,
@@ -95,9 +95,9 @@
     "Sam M": 5,
     "Sammi Hughes": 2,
     "Stuart Staves": 8,
-    "Tina": 11,
+    "Tina": 13,
     "Ugne": 10,
-    "Wendy": 9,
+    "Wendy": 10,
     "Augustin": 9
   },
   "matches": [
@@ -2369,7 +2369,7 @@
     },
     {
       "utcDate": "2026-07-11T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
@@ -2381,18 +2381,18 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       }
     },
     {
       "utcDate": "2026-07-11T20:00:00-05:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "homeTeam": {
@@ -2404,12 +2404,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       }
     },
@@ -2419,10 +2419,10 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "homeTeam": {
-        "name": "W97"
+        "name": "France"
       },
       "awayTeam": {
-        "name": "W98"
+        "name": "Spain"
       },
       "penalties": null,
       "score": {
@@ -2506,7 +2506,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: Spain 2-1 Belgium | France 2-0 Morocco | Switzerland 0-0 Colombia | Argentina 3-2 Egypt | United States 1-4 Belgium. Leaderboard updated!",
+  "summaryText": "Recent action: Argentina 3-1 Switzerland | Norway 1-2 England | Spain 2-1 Belgium | France 2-0 Morocco | Switzerland 0-0 Colombia. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2540,8 +2540,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 98,
-    "totalGoals": 285,
+    "matchesPlayed": 100,
+    "totalGoals": 292,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2549,9 +2549,9 @@
       "loser": "Qatar"
     },
     "goldenBoot": {
-      "holder": "Dan",
-      "team": "France",
-      "goals": 16
+      "holder": "Bella",
+      "team": "Argentina",
+      "goals": 17
     },
     "champion": null
   }
