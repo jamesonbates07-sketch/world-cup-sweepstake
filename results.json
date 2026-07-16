@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-07-15T07:54:55.683Z",
+  "lastUpdated": "2026-07-16T08:00:33.118Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
     "Alex": 3,
     "Andrea": 52,
-    "Bella": 36,
+    "Bella": 54,
     "Charlotte": 5,
     "Dan": 36,
     "Darryl": 4,
@@ -55,7 +55,7 @@
     "Adrian": 5,
     "Alex": 1,
     "Andrea": 13,
-    "Bella": 17,
+    "Bella": 19,
     "Charlotte": 3,
     "Dan": 16,
     "Darryl": 2,
@@ -95,7 +95,7 @@
     "Sam M": 5,
     "Sammi Hughes": 2,
     "Stuart Staves": 8,
-    "Tina": 13,
+    "Tina": 14,
     "Ugne": 10,
     "Wendy": 10,
     "Augustin": 9
@@ -2438,7 +2438,7 @@
     },
     {
       "utcDate": "2026-07-15T15:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "group": null,
       "homeTeam": {
@@ -2450,12 +2450,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     },
@@ -2465,10 +2465,10 @@
       "stage": "THIRD_PLACE",
       "group": null,
       "homeTeam": {
-        "name": "L101"
+        "name": "France"
       },
       "awayTeam": {
-        "name": "L102"
+        "name": "England"
       },
       "penalties": null,
       "score": {
@@ -2488,10 +2488,10 @@
       "stage": "FINAL",
       "group": null,
       "homeTeam": {
-        "name": "W101"
+        "name": "Spain"
       },
       "awayTeam": {
-        "name": "W102"
+        "name": "Argentina"
       },
       "penalties": null,
       "score": {
@@ -2506,7 +2506,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: France 0-2 Spain | Argentina 3-1 Switzerland | Norway 1-2 England | Spain 2-1 Belgium | France 2-0 Morocco. Leaderboard updated!",
+  "summaryText": "Recent action: England 1-2 Argentina | France 0-2 Spain | Argentina 3-1 Switzerland | Norway 1-2 England | Spain 2-1 Belgium. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2540,8 +2540,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 101,
-    "totalGoals": 294,
+    "matchesPlayed": 102,
+    "totalGoals": 297,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2551,7 +2551,7 @@
     "goldenBoot": {
       "holder": "Bella",
       "team": "Argentina",
-      "goals": 17
+      "goals": 19
     },
     "champion": null
   }
