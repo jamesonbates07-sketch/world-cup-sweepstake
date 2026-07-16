@@ -417,6 +417,50 @@ b { font-weight: 700; }
   .round { min-width: 180px; }
 }
 
+/* ===== THE FINAL — special edition ===== */
+.final-edition { max-width: var(--maxw); margin: 1.4rem auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+.fe-inner {
+  position: relative; overflow: hidden; border-radius: var(--radius-lg); padding: clamp(1.4rem, 4vw, 2.4rem);
+  background:
+    radial-gradient(120% 120% at 50% -20%, rgba(245,197,24,.18), transparent 60%),
+    linear-gradient(160deg, rgba(28,22,4,.9), rgba(18,26,46,.92));
+  border: 1px solid rgba(245,197,24,.5); box-shadow: var(--glow-gold), var(--shadow);
+}
+.fe-kicker { text-align: center; font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; color: var(--gold-2); margin-bottom: 1.2rem; }
+.fe-h2h { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: clamp(.6rem, 3vw, 2rem); }
+.fe-side { text-align: center; }
+.fe-flag { width: clamp(88px, 22vw, 128px); height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: 10px; margin: 0 auto .7rem; box-shadow: 0 10px 30px rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.12); }
+.fe-flag.blank { background: repeating-linear-gradient(45deg,#1a2236,#1a2236 6px,#141a2c 6px,#141a2c 12px); }
+.fe-team { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.2rem, 4vw, 1.9rem); line-height: 1; }
+.fe-owner { font-family: var(--font-display); font-weight: 700; color: var(--neon); margin-top: .3rem; font-size: clamp(.95rem, 2.5vw, 1.1rem); }
+.fe-cur { color: var(--text-mute); font-size: .8rem; margin-top: .15rem; }
+.fe-mid { display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+.fe-vs { font-family: var(--font-cond); font-weight: 700; font-size: clamp(1.4rem, 5vw, 2.2rem); color: var(--gold); letter-spacing: .05em; }
+.fe-countdown { font-family: var(--font-cond); font-size: clamp(1rem, 3.4vw, 1.5rem); font-weight: 600; color: var(--gold-2); background: rgba(0,0,0,.3); border: 1px solid rgba(245,197,24,.3); border-radius: 999px; padding: .25rem .8rem; white-space: nowrap; }
+.fe-ko { color: var(--hot); font-family: var(--font-display); font-weight: 800; }
+.fe-pot-head { text-align: center; margin: 1.6rem auto .9rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(.95rem, 2.6vw, 1.15rem); color: var(--text); }
+.fe-scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; max-width: 760px; margin: 0 auto; }
+.fe-scn { display: flex; align-items: center; justify-content: center; gap: .5rem; flex-wrap: wrap; text-align: center; background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; }
+.fe-scn-if { font-family: var(--font-display); font-weight: 800; color: var(--gold-2); }
+.fe-scn-arrow { color: var(--text-mute); }
+.fe-scn-win { color: var(--text-dim); }
+.fe-scn-win b { color: #fff; font-weight: 800; }
+.fe-scn-win small { display: block; color: var(--text-mute); font-size: .72rem; margin-top: .1rem; }
+/* champion state */
+.fe-champ { text-align: center; }
+.fe-trophy { font-size: clamp(2.6rem, 9vw, 4rem); filter: drop-shadow(0 6px 20px rgba(245,197,24,.55)); }
+.fe-champ .fe-flag { margin-top: .5rem; }
+.fe-champ-team { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.6rem, 6vw, 2.8rem); background: linear-gradient(135deg, var(--gold-2), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.fe-champ-owner { font-family: var(--font-display); font-weight: 700; color: var(--neon); font-size: 1.15rem; margin-top: .3rem; }
+.fe-finalscore { font-family: var(--font-cond); font-size: 1.3rem; color: var(--text-dim); margin-top: .5rem; }
+.fe-finalscore small { font-size: .8rem; color: var(--text-mute); }
+.fe-pot { text-align: center; margin-top: 1.3rem; font-size: 1.1rem; color: var(--text); background: rgba(245,197,24,.1); border: 1px solid rgba(245,197,24,.35); border-radius: var(--radius); padding: .9rem 1.2rem; }
+.fe-pot b { color: var(--gold-2); }
+@media (max-width: 560px) {
+  .fe-scenarios { grid-template-columns: 1fr; }
+  .fe-h2h { gap: .4rem; }
+}
+
 /* ===== TITLE RACE ===== */
 .race-chart-wrap {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg);

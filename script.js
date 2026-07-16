@@ -217,6 +217,7 @@ async function fetchResults() {
 
 function renderAll() {
   renderHero();
+  renderFinalEdition();
   renderToday();
   renderBracket();
   renderPredictPanel();
@@ -348,6 +349,110 @@ function renderTitleRace() {
       el.style.opacity = (!focus || el.getAttribute('data-name') === focus) ? '1' : '0.14';
     });
   }));
+}
+
+// ===== THE FINAL — special edition showpiece =====
+let __feTimer = null;
+function potWinnerNow() {
+  const s = [...PARTICIPANTS].sort((a, b) => getPoints(b.name) - getPoints(a.name) || getGoals(b.name) - getGoals(a.name) || a.name.localeCompare(b.name));
+  return s.length ? { name: s[0].name, team: s[0].team, pts: getPoints(s[0].name) } : null;
+}
+function renderFinalEdition() {
+  const sec = document.getElementById('final-section');
+  const box = document.getElementById('fe-inner');
+  if (!sec || !box) return;
+  const fm = matchByNum[STAGE_BASE.FINAL];
+  if (!fm) { sec.style.display = 'none'; if (__feTimer) { clearInterval(__feTimer); __feTimer = null; } return; }
+
+  const [tA, tB] = slotTeams(STAGE_BASE.FINAL);
+  const pA = tA ? findParticipant(tA) : null;
+  const pB = tB ? findParticipant(tB) : null;
+  const feFlag = (p, team, big) => p
+    ? `<img class="fe-flag" src="${flagUrl(p.code, big ? 320 : 160)}" alt="${esc(team || '')}" onerror="this.style.display='none'">`
+    : `<div class="fe-flag blank"></div>`;
+  sec.style.display = 'block';
+
+  // ---- Final already played: crown the champion ----
+  if (matchFinished(fm)) {
+    if (__feTimer) { clearInterval(__feTimer); __feTimer = null; }
+    const winTeam = winnerOfNum(STAGE_BASE.FINAL);
+    const loseTeam = winTeam === tA ? tB : (winTeam === tB ? tA : null);
+    const champP = winTeam ? findParticipant(winTeam) : null;
+    const pot = potWinnerNow();
+    let scoreLine = `${fm.hs} – ${fm.as}`;
+    if (fm.penalties) scoreLine += ` <small>(pens ${fm.penalties[0]}–${fm.penalties[1]})</small>`;
+    box.innerHTML = `
+      <div class="fe-kicker">Full time · Champions of the World</div>
+      <div class="fe-champ">
+        <div class="fe-trophy">🏆</div>
+        ${feFlag(champP, winTeam, true)}
+        <div class="fe-champ-team">${esc(winTeam || 'TBD')}</div>
+        ${champP ? `<div class="fe-champ-owner">${esc(champP.name)}'s team lift the trophy</div>` : ''}
+        <div class="fe-finalscore">${esc(winTeam || '')} ${scoreLine} ${esc(loseTeam || '')}</div>
+      </div>
+      ${pot ? `<div class="fe-pot won">🤑 <b>${esc(pot.name)}</b> wins the £96 pot — finishing champion on <b>${pot.pts}</b> pts</div>` : ''}`;
+    if (!sec.dataset.celebrated && typeof confetti === 'function') {
+      sec.dataset.celebrated = '1';
+      try {
+        confetti({ particleCount: 180, spread: 100, origin: { y: 0.4 } });
+        setTimeout(() => confetti({ particleCount: 120, angle: 60, spread: 70, origin: { x: 0 } }), 250);
+        setTimeout(() => confetti({ particleCount: 120, angle: 120, spread: 70, origin: { x: 1 } }), 450);
+      } catch (e) {}
+    }
+    return;
+  }
+
+  // ---- Final still to come: the showdown ----
+  const projIf = (team) => {
+    if (!team) return null;
+    const owner = (findParticipant(team) || {}).name;
+    const proj = {};
+    PARTICIPANTS.forEach(p => proj[p.name] = getPoints(p.name) + (p.name === owner ? 23 : 0));
+    const s = [...PARTICIPANTS].sort((a, b) => proj[b.name] - proj[a.name] || getGoals(b.name) - getGoals(a.name) || a.name.localeCompare(b.name));
+    return { winnerName: s[0].name, winnerTeam: s[0].team, pts: proj[s[0].name] };
+  };
+  const scA = projIf(tA), scB = projIf(tB);
+  const kickoff = fm.utcDate ? new Date(fm.utcDate) : null;
+  const dateStr = kickoff ? kickoff.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }) : 'coming up';
+
+  box.innerHTML = `
+    <div class="fe-kicker">🔥 The Final · ${esc(dateStr)}</div>
+    <div class="fe-h2h">
+      <div class="fe-side">
+        ${feFlag(pA, tA, true)}
+        <div class="fe-team">${esc(tA || 'TBD')}</div>
+        <div class="fe-owner">${pA ? esc(pA.name) : '—'}</div>
+        <div class="fe-cur">${pA ? getPoints(pA.name) + ' pts now' : ''}</div>
+      </div>
+      <div class="fe-mid">
+        <div class="fe-vs">VS</div>
+        <div class="fe-countdown" id="fe-countdown"></div>
+      </div>
+      <div class="fe-side">
+        ${feFlag(pB, tB, true)}
+        <div class="fe-team">${esc(tB || 'TBD')}</div>
+        <div class="fe-owner">${pB ? esc(pB.name) : '—'}</div>
+        <div class="fe-cur">${pB ? getPoints(pB.name) + ' pts now' : ''}</div>
+      </div>
+    </div>
+    <div class="fe-pot-head">🤑 The £96 is riding on this one match — winner takes all</div>
+    <div class="fe-scenarios">
+      ${scA ? `<div class="fe-scn"><span class="fe-scn-if">${esc(tA)} win</span><span class="fe-scn-arrow">→</span><span class="fe-scn-win">🏆 <b>${esc(scA.winnerName)}</b> takes the pot <small>${scA.pts} pts</small></span></div>` : ''}
+      ${scB ? `<div class="fe-scn"><span class="fe-scn-if">${esc(tB)} win</span><span class="fe-scn-arrow">→</span><span class="fe-scn-win">🏆 <b>${esc(scB.winnerName)}</b> takes the pot <small>${scB.pts} pts</small></span></div>` : ''}
+    </div>`;
+
+  if (__feTimer) { clearInterval(__feTimer); __feTimer = null; }
+  if (kickoff) {
+    const el = document.getElementById('fe-countdown');
+    const tick = () => {
+      if (!el) return;
+      const diff = kickoff - new Date();
+      if (diff <= 0) { el.innerHTML = '<span class="fe-ko">🔴 KICK-OFF</span>'; if (__feTimer) { clearInterval(__feTimer); __feTimer = null; } return; }
+      const d = Math.floor(diff / 864e5), h = Math.floor(diff % 864e5 / 36e5), mn = Math.floor(diff % 36e5 / 6e4), s = Math.floor(diff % 6e4 / 1e3);
+      el.textContent = (d > 0 ? d + 'd ' : '') + String(h).padStart(2, '0') + ':' + String(mn).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    };
+    tick(); __feTimer = setInterval(tick, 1000);
+  }
 }
 
 // ===== BRACKET INDEX + RESOLVERS =====

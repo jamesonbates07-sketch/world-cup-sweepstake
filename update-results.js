@@ -110,6 +110,33 @@ const SLOT_OVERRIDES = {
   "W86": "Argentina",     // Argentina 3-2 Cape Verde (AET)
   "W87": "Colombia",      // Colombia 1-0 Ghana
   "W88": "Egypt",         // Australia 1-1 Egypt (Egypt 4-2 pens)
+
+  // Quarter-final fixtures reference the Round-of-16 winners as "W89"…"W96"
+  // (W89 = winner of R16 match 89, etc.). Same situation as the R16 slots above — the feed
+  // hasn't back-filled real names, so without these the QF results score against nobody.
+  // Resolved from the verified R16 results already in manual-scores.json, and cross-checked
+  // against FIFA.com / ESPN / Al Jazeera / Yahoo coverage (6–9 Jul 2026) — e.g. France's 2-0
+  // QF win over Morocco, and the confirmed "France faces Spain or Belgium in the semis" bracket
+  // note (W93=Spain, W94=Belgium). Safe to edit — stops matching if the feed publishes names.
+  "W89": "France",        // Paraguay 0-1 France (R16 match 89)
+  "W90": "Morocco",       // Canada 0-3 Morocco (R16 match 90)
+  "W91": "Norway",        // Brazil 1-2 Norway (R16 match 91)
+  "W92": "England",       // Mexico 2-3 England (R16 match 92)
+  "W93": "Spain",         // Portugal 0-1 Spain (R16 match 93)
+  "W94": "Belgium",       // USA 1-4 Belgium (R16 match 94)
+  "W95": "Argentina",     // Argentina 3-2 Egypt (R16 match 95)
+  "W96": "Switzerland",   // Switzerland 0-0 Colombia, Switzerland 4-3 pens (R16 match 96)
+
+  // Semi-final fixtures reference the Quarter-final winners as "W97"…"W100"
+  // (W97 = winner of QF match 97, etc.). Same situation as the rounds above — the feed
+  // hasn't back-filled real names. Resolved from the verified QF results in manual-scores.json,
+  // cross-checked against ESPN / FIFA.com / Al Jazeera / NPR / England Football coverage
+  // (9–11 Jul 2026). Gives SF #101 = France vs Spain (Dallas, 14 Jul) and SF #102 =
+  // England vs Argentina (Atlanta, 15 Jul). Safe to edit — stops matching if the feed publishes names.
+  "W97": "France",        // France 2-0 Morocco (QF match 97)
+  "W98": "Spain",         // Spain 2-1 Belgium (QF match 98)
+  "W99": "England",       // Norway 1-2 England, AET (QF match 99)
+  "W100": "Argentina",    // Argentina 3-1 Switzerland, AET (QF match 100)
 };
 
 const PARTICIPANTS = [
