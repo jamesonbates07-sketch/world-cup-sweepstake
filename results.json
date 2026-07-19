@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T07:38:23.587Z",
+  "lastUpdated": "2026-07-19T08:04:22.461Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -45,7 +45,7 @@
     "Sam M": 14,
     "Sammi Hughes": 3,
     "Stuart Staves": 11,
-    "Tina": 34,
+    "Tina": 37,
     "Ugne": 13,
     "Wendy": 19,
     "Augustin": 10
@@ -57,7 +57,7 @@
     "Andrea": 13,
     "Bella": 19,
     "Charlotte": 3,
-    "Dan": 16,
+    "Dan": 20,
     "Darryl": 2,
     "Dermot": 5,
     "Derran": 2,
@@ -95,7 +95,7 @@
     "Sam M": 5,
     "Sammi Hughes": 2,
     "Stuart Staves": 8,
-    "Tina": 14,
+    "Tina": 20,
     "Ugne": 10,
     "Wendy": 10,
     "Augustin": 9
@@ -2461,7 +2461,7 @@
     },
     {
       "utcDate": "2026-07-18T17:00:00-04:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "THIRD_PLACE",
       "group": null,
       "homeTeam": {
@@ -2473,12 +2473,12 @@
       "penalties": null,
       "score": {
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 6
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         }
       }
     },
@@ -2506,7 +2506,7 @@
       }
     }
   ],
-  "summaryText": "Recent action: England 1-2 Argentina | France 0-2 Spain | Argentina 3-1 Switzerland | Norway 1-2 England | Spain 2-1 Belgium. Leaderboard updated!",
+  "summaryText": "Recent action: France 4-6 England | England 1-2 Argentina | France 0-2 Spain | Argentina 3-1 Switzerland | Norway 1-2 England. Leaderboard updated!",
   "awards": {
     "rustySpoon": {
       "holder": "Mark G",
@@ -2540,8 +2540,8 @@
     }
   },
   "stats": {
-    "matchesPlayed": 102,
-    "totalGoals": 297,
+    "matchesPlayed": 103,
+    "totalGoals": 307,
     "biggestWin": {
       "margin": 6,
       "score": "6–0",
@@ -2549,9 +2549,9 @@
       "loser": "Qatar"
     },
     "goldenBoot": {
-      "holder": "Bella",
-      "team": "Argentina",
-      "goals": 19
+      "holder": "Dan",
+      "team": "France",
+      "goals": 20
     },
     "champion": null
   }
