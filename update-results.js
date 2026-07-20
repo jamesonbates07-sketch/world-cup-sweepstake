@@ -137,6 +137,19 @@ const SLOT_OVERRIDES = {
   "W98": "Spain",         // Spain 2-1 Belgium (QF match 98)
   "W99": "England",       // Norway 1-2 England, AET (QF match 99)
   "W100": "Argentina",    // Argentina 3-1 Switzerland, AET (QF match 100)
+
+  // Third-place playoff (match 103) references the semi-final LOSERS as "L101"/"L102"
+  // and the Final (match 104) references the semi-final WINNERS as "W101"/"W102". The
+  // feed hasn't back-filled real names, so without these the third-place and final
+  // results score against nobody. Resolved from the verified semi-final results above
+  // (SF101 France 0-2 Spain -> W101=Spain, L101=France; SF102 England 1-2 Argentina ->
+  // W102=Argentina, L102=England), cross-checked against FIFA.com / ESPN / CNN / CBS /
+  // ABC (final) and ESPN / Al Jazeera / Sky Sports / Euronews / Olympics.com (third place),
+  // 18–19 Jul 2026. Safe to edit — stops matching if the feed publishes real names.
+  "W101": "Spain",        // Spain won SF101 (France 0-2 Spain) -> Final team1
+  "W102": "Argentina",    // Argentina won SF102 (England 1-2 Argentina) -> Final team2
+  "L101": "France",       // France lost SF101 -> third-place team1
+  "L102": "England",      // England lost SF102 -> third-place team2
 };
 
 const PARTICIPANTS = [

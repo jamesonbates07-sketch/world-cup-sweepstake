@@ -526,6 +526,169 @@ b { font-weight: 700; }
   .rc-xlab, .rc-ylab { font-size: 12px; }
 }
 
+/* ============================================================================
+   🏆 CHAMPIONS EDITION — SPAIN WIN THE 2026 WORLD CUP
+   A scoped celebration skin. Everything lives under body.champions-es /
+   #hero.is-champions so the base "Knockouts" theme is untouched if the JS
+   ever flips back. La Roja red (#AA151B/#C60B1E) + gold (#F1BF00/#FFC400).
+   ========================================================================== */
+:root {
+  --es-red: #C60B1E; --es-red-deep: #AA151B; --es-red-dark: #7d0f16;
+  --es-gold: #F1BF00; --es-gold-2: #FFD75A; --es-gold-lite: #FFEFB0;
+}
+
+/* Warm the ambient aurora to red & gold for the whole page. */
+body.champions-es::before {
+  background:
+    radial-gradient(42vw 42vw at 78% 4%, rgba(241,191,0,.24), transparent 62%),
+    radial-gradient(48vw 48vw at 8% 14%, rgba(198,11,30,.26), transparent 62%),
+    radial-gradient(44vw 44vw at 64% 100%, rgba(255,215,90,.16), transparent 62%),
+    radial-gradient(38vw 38vw at 96% 72%, rgba(170,21,27,.20), transparent 62%);
+}
+body.champions-es .nav-logo b { color: var(--es-gold); }
+body.champions-es ::selection { background: rgba(198,11,30,.4); color: #fff; }
+
+/* ---- Hero stage: spotlight, rays & vignette ---- */
+#hero.is-champions {
+  padding-top: clamp(2.4rem, 8vh, 4.5rem);
+  background:
+    radial-gradient(120vw 92vh at 50% -12%, rgba(198,11,30,.38), transparent 58%),
+    radial-gradient(80vw 62vh at 50% 118%, rgba(241,191,0,.20), transparent 60%);
+}
+#hero.is-champions::before {
+  content: ''; position: absolute; inset: -25% -25% auto -25%; height: 150%; z-index: -2;
+  background: repeating-conic-gradient(from 0deg at 50% 34%,
+    rgba(255,239,176,.14) 0deg 5deg, transparent 5deg 12deg);
+  -webkit-mask: radial-gradient(closest-side at 50% 34%, #000, transparent 78%);
+          mask: radial-gradient(closest-side at 50% 34%, #000, transparent 78%);
+  opacity: .6; transform-origin: 50% 34%; animation: raysSpin 70s linear infinite; pointer-events: none;
+}
+#hero.is-champions .beam.b1 { background: linear-gradient(180deg, rgba(241,191,0,.55), transparent 70%); }
+#hero.is-champions .beam.b2 { background: linear-gradient(180deg, rgba(198,11,30,.50), transparent 70%); }
+#hero.is-champions .beam.b3 { background: linear-gradient(180deg, rgba(255,239,176,.50), transparent 70%); }
+#hero.is-champions .beam.b4 { background: linear-gradient(180deg, rgba(170,21,27,.55), transparent 70%); }
+
+/* ---- Badge ---- */
+.hero-badge.champ {
+  color: var(--es-gold-lite); border-color: rgba(241,191,0,.5);
+  background: linear-gradient(135deg, rgba(198,11,30,.28), rgba(241,191,0,.12));
+}
+.hero-badge.champ .dot { background: var(--es-gold); box-shadow: 0 0 0 0 rgba(241,191,0,.7); }
+
+/* ---- Two gold stars (2010 + 2026) ---- */
+.champ-stars {
+  font-size: clamp(1.3rem, 4vw, 2rem); letter-spacing: .5rem; margin: .4rem 0 -.2rem;
+  color: var(--es-gold); text-shadow: 0 0 18px rgba(241,191,0,.75), 0 2px 6px rgba(0,0,0,.4);
+  animation: starPulse 2.6s ease-in-out infinite;
+}
+
+/* ---- Flag medallion + rotating halo ---- */
+.champ-crest-wrap { position: relative; display: inline-block; margin: .7rem auto .3rem; }
+.champ-crest {
+  position: relative; z-index: 2; width: clamp(118px, 26vw, 168px); height: auto;
+  border-radius: 16px; border: 3px solid rgba(255,224,130,.92);
+  box-shadow: 0 12px 42px rgba(0,0,0,.5), 0 0 0 6px rgba(170,21,27,.35), 0 0 64px rgba(241,191,0,.55);
+  animation: crestFloat 5s ease-in-out infinite;
+}
+.champ-crest.noimg { visibility: hidden; }
+.champ-crest-ring {
+  position: absolute; z-index: 1; top: 50%; left: 50%; width: 240px; height: 240px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(241,191,0,0), rgba(241,191,0,.8), rgba(198,11,30,.45), rgba(241,191,0,.8), rgba(241,191,0,0));
+  filter: blur(15px); opacity: .8; animation: goldSpin 12s linear infinite;
+}
+
+/* ---- ¡CAMPEONES! title ---- */
+.hero-title.champ-title {
+  margin: .6rem 0 .4rem;
+  background: linear-gradient(100deg, var(--es-gold) 0%, #fffdf3 24%, var(--es-gold-2) 40%, #fff 52%, var(--es-gold-2) 64%, var(--es-gold) 100%);
+  background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 4px 2px rgba(125,15,22,.55)) drop-shadow(0 8px 40px rgba(241,191,0,.4));
+  animation: shine 5s linear infinite;
+}
+.champ-sub { color: var(--es-gold-lite); font-size: clamp(1.05rem, 2.6vw, 1.4rem); font-weight: 600; }
+.champ-sub b { color: #fff; }
+.champ-sub span { color: var(--es-gold); font-family: var(--font-cond); letter-spacing: .02em; }
+
+/* ---- Final scoreline chip ---- */
+.champ-score {
+  display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; justify-content: center;
+  margin: 1rem auto 0; padding: .55rem 1.1rem; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(170,21,27,.55), rgba(125,15,22,.4));
+  border: 1px solid rgba(241,191,0,.45); box-shadow: 0 8px 26px rgba(0,0,0,.35);
+  font-family: var(--font-cond); font-size: clamp(1rem, 2.6vw, 1.3rem); color: var(--text);
+}
+.champ-score b { font-family: var(--font-display); font-weight: 900; font-size: 1.25em; color: var(--es-gold-2); padding: 0 .15rem; }
+.champ-score .cs-w { font-weight: 700; color: #fff; }
+.champ-score .cs-l { color: var(--text-dim); }
+.champ-score em { font-style: normal; color: var(--es-gold-lite); opacity: .85; font-size: .82em; letter-spacing: .04em; }
+
+/* ---- The money line: pot winner ---- */
+.champ-pot {
+  display: inline-block; margin: 1rem auto 0; padding: .8rem 1.3rem; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--es-gold-2), var(--es-gold)); color: #2a1c00;
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(.95rem, 2.4vw, 1.12rem);
+  box-shadow: 0 12px 36px rgba(241,191,0,.4), inset 0 1px 0 rgba(255,255,255,.5);
+  animation: potGlow 3s ease-in-out infinite;
+}
+.champ-pot b { font-weight: 900; }
+.champ-runner {
+  margin: .7rem auto 0; font-size: .95rem; color: var(--text-dim);
+  background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 999px;
+  padding: .4rem 1rem; display: inline-block;
+}
+.champ-runner b { color: #dfe6ff; }
+
+/* ---- CTAs in Spain colours ---- */
+#hero.is-champions .cta.primary { background: linear-gradient(135deg, var(--es-gold-2), var(--es-gold)); color: #2a1c00; }
+#hero.is-champions .cta.primary:hover { box-shadow: 0 0 0 1px rgba(241,191,0,.5), 0 0 36px rgba(241,191,0,.4); transform: translateY(-1px); }
+#hero.is-champions .cta.ghost { border: 1px solid rgba(241,191,0,.5); color: var(--es-gold-lite); }
+#hero.is-champions .cta.ghost:hover { border-color: var(--es-gold); color: #fff; }
+
+/* ---- Champion banner (sticky headline strip) ---- */
+body.champions-es .cb-in {
+  background: linear-gradient(135deg, rgba(198,11,30,.35), rgba(241,191,0,.2) 60%, rgba(198,11,30,.35));
+  background-size: 220% 100%; border-color: rgba(241,191,0,.5);
+  box-shadow: 0 0 0 1px rgba(241,191,0,.3), 0 0 40px rgba(241,191,0,.22);
+  animation: sheen 7s linear infinite;
+}
+body.champions-es .cb-in b { color: var(--es-gold-2); }
+body.champions-es .cb-trophy { filter: drop-shadow(0 2px 10px rgba(241,191,0,.7)); }
+
+/* ---- The Final showpiece, crowned in red & gold ---- */
+body.champions-es .fe-champ-team {
+  background: linear-gradient(135deg, #fff, var(--es-gold-2) 55%, var(--es-gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 3px 20px rgba(241,191,0,.4));
+}
+body.champions-es .fe-champ-owner { color: var(--es-gold-2); }
+body.champions-es .fe-trophy { filter: drop-shadow(0 6px 22px rgba(241,191,0,.7)); animation: crestFloat 5s ease-in-out infinite; }
+body.champions-es .fe-champ .fe-flag {
+  border-radius: 14px; border: 3px solid rgba(255,224,130,.9);
+  box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 56px rgba(241,191,0,.45);
+}
+body.champions-es .fe-pot.won, body.champions-es .fe-pot {
+  background: linear-gradient(135deg, var(--es-gold-2), var(--es-gold)); color: #2a1c00; border-color: transparent;
+  box-shadow: 0 12px 34px rgba(241,191,0,.36);
+}
+body.champions-es .fe-pot b { color: var(--es-red-dark); }
+
+/* ---- Champion keyframes ---- */
+@keyframes goldSpin { to { transform: translate(-50%, -50%) rotate(360deg); } } /* centred halo */
+@keyframes raysSpin { to { transform: rotate(360deg); } }                        /* inset rays */
+@keyframes crestFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes starPulse { 0%,100% { opacity: .82; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes potGlow {
+  0%,100% { box-shadow: 0 12px 36px rgba(241,191,0,.34), inset 0 1px 0 rgba(255,255,255,.5); }
+  50% { box-shadow: 0 12px 48px rgba(241,191,0,.6), inset 0 1px 0 rgba(255,255,255,.6); }
+}
+@keyframes sheen { 0% { background-position: 0% 0; } 100% { background-position: 220% 0; } }
+
+@media (max-width: 560px) {
+  .champ-crest-ring { width: 190px; height: 190px; }
+  .champ-score { font-size: 1rem; }
+}
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

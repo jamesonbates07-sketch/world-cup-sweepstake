@@ -607,6 +607,50 @@ function nextMatch() {
   return up[0] || null;
 }
 function renderHero() {
+  const champ = championName();
+  const heroEl = document.getElementById('hero');
+  const content = heroEl ? heroEl.querySelector('.hero-content') : null;
+  // Skin the whole page for the winners.
+  document.body.classList.toggle('has-champion', !!champ);
+  document.body.classList.toggle('champions-es', champ === 'Spain');
+  if (heroEl) heroEl.classList.toggle('is-champions', !!champ);
+
+  // ---- Champion takeover: the tournament is won ----
+  if (champ && content) {
+    const cp = findParticipant(champ);
+    const fm = matchByNum[STAGE_BASE.FINAL];
+    let tA = null, tB = null;
+    try { [tA, tB] = slotTeams(STAGE_BASE.FINAL); } catch (e) {}
+    let winTeam = champ;
+    try { winTeam = winnerOfNum(STAGE_BASE.FINAL) || champ; } catch (e) {}
+    const loseTeam = winTeam === tA ? tB : (winTeam === tB ? tA : null);
+    const rp = loseTeam ? findParticipant(loseTeam) : null;
+    let wScore = null, lScore = null;
+    if (fm && typeof fm.hs === 'number' && typeof fm.as === 'number') {
+      wScore = (winTeam === tB) ? fm.as : fm.hs;
+      lScore = (winTeam === tB) ? fm.hs : fm.as;
+    }
+    const isES = champ === 'Spain';
+    content.innerHTML = `
+      <div class="hero-badge champ"><span class="dot"></span> FIFA World Cup 2026 · Champions crowned</div>
+      ${isES ? `<div class="champ-stars" aria-label="Two-time world champions" title="Winners in 2010 &amp; 2026">★ ★</div>` : ''}
+      <div class="champ-crest-wrap">
+        <img class="champ-crest" src="${flagUrl(cp ? cp.code : '', 320)}" alt="${esc(winTeam)}" onerror="this.classList.add('noimg')">
+        <span class="champ-crest-ring" aria-hidden="true"></span>
+      </div>
+      <h1 class="hero-title champ-title">${isES ? '¡CAMPEONES!' : 'CHAMPIONS'}</h1>
+      <p class="champ-sub"><b>${esc(winTeam)}</b> are Champions of the World${isES ? ' · <span>Campeones del Mundo 2026</span>' : ''}</p>
+      ${wScore != null ? `<div class="champ-score"><span class="cs-w">${esc(winTeam)}</span><b>${wScore}–${lScore}</b><span class="cs-l">${esc(loseTeam || '')}</span><em>The Final${isES ? ' · a.e.t.' : ''}</em></div>` : ''}
+      ${cp ? `<div class="champ-pot">🤑 <b>${esc(cp.name)}</b> wins the £96 pot — sweepstake champion on <b>${getPoints(cp.name)}</b> pts</div>` : ''}
+      ${rp && loseTeam ? `<div class="champ-runner">🥈 <b>${esc(loseTeam)}</b> runners-up — ${esc(rp.name)}</div>` : ''}
+      <div class="hero-cta">
+        <a href="#leaderboard-section" class="cta primary">🏅 Final leaderboard</a>
+        <a href="#final-section" class="cta ghost">🎬 Relive the final</a>
+      </div>`;
+    return;
+  }
+
+  // ---- Pre-champion state (during the tournament) ----
   const badge = document.getElementById('hero-stage-badge');
   const meta = document.getElementById('hero-meta');
   const info = currentStageInfo();
@@ -615,8 +659,6 @@ function renderHero() {
     const bits = [];
     if (info) bits.push(`<b>${STAGE_LABEL[info.stage]}</b> · ${info.played} of ${info.total} played`);
     if (state.stats && state.stats.matchesPlayed) bits.push(`${safeInt(state.stats.matchesPlayed)} matches · ${safeInt(state.stats.totalGoals) || 0} goals`);
-    const champ = championName();
-    if (champ) { const cp = findParticipant(champ); bits.length = 0; bits.push(`🏆 Champions: <b>${esc(cp ? cp.team : champ)}</b>${cp ? ` — ${esc(cp.name)}` : ''}`); }
     meta.innerHTML = bits.map(b => `<span class="hm-pill">${b}</span>`).join('');
   }
   startCountdown();
@@ -826,7 +868,21 @@ function renderR32Strip() {
 }
 
 function celebratePick() {
-  if (typeof confetti === 'function') confetti({ particleCount: 120, spread: 80, origin: { y: 0.4 }, colors: ['#f5c518', '#ffd95a', '#37e6c0', '#ff2d78'] });
+  if (typeof confetti !== 'function') return;
+  // La Roja colours — Spanish red & gold, with white.
+  const ES = ['#AA151B', '#C60B1E', '#F1BF00', '#FFC400', '#ffffff'];
+  const burst = (opts) => { try { confetti(Object.assign({ colors: ES, disableForReducedMotion: true }, opts)); } catch (e) {} };
+  // Opening bang from centre…
+  burst({ particleCount: 220, spread: 115, startVelocity: 58, origin: { y: 0.36 } });
+  // …then cannons from the wings…
+  setTimeout(() => burst({ particleCount: 150, angle: 60, spread: 82, origin: { x: 0, y: 0.7 } }), 180);
+  setTimeout(() => burst({ particleCount: 150, angle: 120, spread: 82, origin: { x: 1, y: 0.7 } }), 320);
+  // …and a rolling gold-and-red rain finale.
+  let hits = 0;
+  const finale = setInterval(() => {
+    burst({ particleCount: 70, spread: 100, startVelocity: 45, origin: { x: Math.random(), y: Math.random() * 0.28 } });
+    if (++hits >= 7) clearInterval(finale);
+  }, 360);
 }
 
 // ===== PREDICT PANEL / PROJECTED BOARD =====

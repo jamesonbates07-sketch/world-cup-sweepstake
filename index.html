@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Cup 2026 Sweepstake · The Knockouts 🏆</title>
-  <meta name="description" content="The knockout stage is here. Live bracket, predict-the-rest what-if, projected leaderboard and who's still standing — 48 players, one champion.">
-  <meta name="theme-color" content="#f5c518">
+  <title>🏆 Spain are World Champions · World Cup 2026 Sweepstake</title>
+  <meta name="description" content="Spain beat Argentina 1-0 in the 2026 World Cup final — and Andrea takes the £96 sweepstake pot. Final leaderboard, the bracket, awards and every result. 48 players, one champion.">
+  <meta name="theme-color" content="#AA151B">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
   <!-- Social share preview -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="World Cup 2026 Sweepstake · The Knockouts 🏆">
-  <meta property="og:description" content="Live bracket, predict-the-rest what-if and the projected leaderboard. Who takes the £96 pot?">
+  <meta property="og:title" content="🏆 Spain are World Champions · World Cup 2026 Sweepstake">
+  <meta property="og:description" content="Spain 1-0 Argentina in the final — Andrea takes the £96 pot. See the final leaderboard, the bracket and every result.">
   <meta property="og:url" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/">
   <meta property="og:image" content="https://jamesonbates07-sketch.github.io/world-cup-sweepstake/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -24,13 +24,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="champions-es has-champion">
 
   <!-- ===== NAV ===== -->
   <nav id="navbar">
     <div class="nav-logo">🏆 <span>KNOCKOUTS <b>’26</b></span></div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#final-section">The Final</a></li>
+      <li><a href="#final-section">🏆 Champions</a></li>
       <li><a href="#bracket-section">Bracket</a></li>
       <li><a href="#predict-section">Predict</a></li>
       <li><a href="#leaderboard-section">Leaderboard</a></li>
@@ -46,20 +46,23 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <header id="hero">
+  <header id="hero" class="is-champions">
     <div class="hero-lights" aria-hidden="true">
       <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span><span class="beam b4"></span>
     </div>
     <div class="hero-noise" aria-hidden="true"></div>
     <div class="hero-content">
-      <div class="hero-badge"><span class="dot"></span> <span id="hero-stage-badge">FIFA World Cup 2026 · Knockouts</span></div>
-      <h1 class="hero-title">THE<br><span>FINAL</span></h1>
-      <p class="hero-tag">48 down to 2. One match decides the £96.</p>
+      <!-- Static fallback (JS fills the full data-driven version on load) -->
+      <div class="hero-badge champ"><span class="dot"></span> <span id="hero-stage-badge">FIFA World Cup 2026 · Champions crowned</span></div>
+      <div class="champ-stars" aria-label="Two-time world champions">★ ★</div>
+      <h1 class="hero-title champ-title">¡CAMPEONES!</h1>
+      <p class="champ-sub"><b>Spain</b> are Champions of the World · <span>Campeones del Mundo 2026</span></p>
+      <div class="champ-pot">🤑 <b>Andrea</b> wins the £96 pot — sweepstake champion</div>
       <div class="hero-meta" id="hero-meta"></div>
       <div id="countdown" class="countdown"></div>
       <div class="hero-cta">
-        <a href="#bracket-section" class="cta primary">📊 View the bracket</a>
-        <a href="#predict-section" class="cta ghost">🔮 Predict the rest</a>
+        <a href="#leaderboard-section" class="cta primary">🏅 Final leaderboard</a>
+        <a href="#final-section" class="cta ghost">🎬 Relive the final</a>
       </div>
     </div>
     <div class="scroll-hint" aria-hidden="true">▾</div>

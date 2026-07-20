@@ -1320,22 +1320,6 @@
         ]
       },
       "source": "England 1-2 Argentina (semi-final, Atlanta, 15 Jul 2026; Anthony Gordon opener early in the 2nd half, Enzo Fernandez 85' equaliser, Lautaro Martinez 90+2' winner from a Messi cross; Argentina reach final). Feed lists team1=W99=England, team2=W100=Argentina, so ft=[England 1, Argentina 2]. Cross-checked: ESPN, FOX Sports, FIFA.com, NBC, Yahoo Sports, Al Jazeera."
-    },
-    {
-      "round": "Match for third place",
-      "date": "2026-07-18",
-      "team1": "L101",
-      "team2": "L102",
-      "score": { "ft": [4, 6] },
-      "source": "England 6-4 France (third-place playoff, Miami/Miami Gardens, 18 Jul 2026; England led 4-0 at half-time with a Bukayo Saka hat-trick, plus Declan Rice and Ezri Konsa; France rallied through Kylian Mbappe (x2) and Bradley Barcola but fell short. Most goals in a World Cup match since 1982; Mbappe became the all-time World Cup top scorer with 22. Feed lists team1=L101=France (lost SF101 to Spain), team2=L102=England (lost SF102 to Argentina), so ft=[France 4, England 6]. Cross-checked: ESPN, Al Jazeera, Sky Sports, Euronews, Olympics.com, Yahoo Sports."
-    },
-    {
-      "round": "Final",
-      "date": "2026-07-19",
-      "team1": "W101",
-      "team2": "W102",
-      "score": { "ft": [0, 0], "et": [1, 0] },
-      "source": "Spain 1-0 Argentina after extra time (FIFA World Cup 2026 Final, New York/New Jersey, 19 Jul 2026). Goalless after 90 minutes; Ferran Torres scored the winner in the 105th minute. Argentina played extra time a man down after Enzo Fernandez was sent off in first-half stoppage time. Spain's 2nd World Cup title, first since 2010. Feed lists team1=W101=Spain (won SF101), team2=W102=Argentina (won SF102); ft=[0,0], et=[Spain 1, Argentina 0]. Cross-checked: FIFA.com, ESPN, CNN, CBS News, ABC News."
     }
   ]
 }
