@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T08:45:50.235Z",
+  "lastUpdated": "2026-07-21T08:13:12.864Z",
   "points": {
     "Abi": 4,
     "Adrian": 6,
@@ -2500,8 +2500,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       }
     }
